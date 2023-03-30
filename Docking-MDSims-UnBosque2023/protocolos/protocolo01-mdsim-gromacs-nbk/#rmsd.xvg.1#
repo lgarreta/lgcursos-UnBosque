@@ -1,0 +1,29 @@
+# This file was created Wed Mar 22 11:16:23 2023
+# Created by:
+#               :-) GROMACS - gmx rms, 2021.4-Ubuntu-2021.4-2 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+# Command line:
+#   gmx rms -s simulacion_prod.tpr -f simulacion_prod_noPBC.xtc -o rmsd.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "Backbone after lsq fit to Backbone"
+   0.0000000    0.0004939
+   0.0002000    0.0343705
+   0.0004000    0.0440101
+   0.0006000    0.0485878
+   0.0008000    0.0537234
+   0.0010000    0.0567339
+   0.0012000    0.0603792
+   0.0014000    0.0618341
+   0.0016000    0.0606566
+   0.0018000    0.0643872
+   0.0020000    0.0656270

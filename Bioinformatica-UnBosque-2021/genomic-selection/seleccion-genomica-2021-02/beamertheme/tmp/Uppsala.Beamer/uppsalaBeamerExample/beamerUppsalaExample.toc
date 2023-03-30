@@ -1,0 +1,8 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Cool Stuff}{5}{0}{2}
+\beamer@sectionintoc {3}{Coloured Boxes}{12}{0}{3}
+\beamer@subsectionintoc {3}{1}{Alerts and Examples}{13}{0}{3}
+\beamer@subsectionintoc {3}{2}{Theorems and Definitons}{17}{0}{3}
+\beamer@subsectionintoc {3}{3}{Other Boxes}{18}{0}{3}
+\beamer@sectionintoc {4}{Conclusions}{20}{0}{4}

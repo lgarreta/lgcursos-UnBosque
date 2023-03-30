@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="167.52444mm"
+   height="109.9727mm"
+   viewBox="0 0 167.52444 109.9727"
+   version="1.1"
+   id="svg37"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="genomic-selection-how-it-works.svg">
+  <defs
+     id="defs31" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7392819"
+     inkscape:cx="465.36082"
+     inkscape:cy="161.74416"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="864"
+     inkscape:window-x="-2"
+     inkscape:window-y="-2"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-12.584987,-14.322947)">
+    <image
+       sodipodi:absref="/home/lg/docs/lgdocs/courses/UNIBOSQUE/genomic-selection/img/genomic-selection-how-it-works.png"
+       xlink:href="genomic-selection-how-it-works.png"
+       y="19.950624"
+       x="18.537779"
+       id="image66"
+       preserveAspectRatio="none"
+       height="102.12917"
+       width="118.53333" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       x="139.89586"
+       y="43.255836"
+       id="text71"><tspan
+         sodipodi:role="line"
+         id="tspan69"
+         x="139.89586"
+         y="43.255836"
+         style="font-size:5.64444447px;fill:#ff0000;stroke-width:0.26458332;font-weight:bold">(1) Training</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot73"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:#0000ff"
+       transform="matrix(0.26458333,0,0,0.26458333,-14.370364,3.7041668)"><flowRegion
+         id="flowRegion75"
+         style="font-size:21.33333397px;fill:#0000ff;stroke:#0000ff"><rect
+           id="rect77"
+           width="147.33061"
+           height="24.555124"
+           x="583.05304"
+           y="337.27887"
+           style="font-size:21.33333397px;fill:#0000ff;stroke:#0000ff" /></flowRegion><flowPara
+         id="flowPara79"
+         style="font-size:21.33333397px;fill:#0000ff;stroke:#0000ff">(2) Selection</flowPara></flowRoot>    <rect
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.3;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect81"
+       width="167.27031"
+       height="57.791142"
+       x="12.712049"
+       y="14.450007" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.3;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect890"
+       width="167.26993"
+       height="50.879185"
+       x="12.712243"
+       y="73.289207" />
+  </g>
+</svg>

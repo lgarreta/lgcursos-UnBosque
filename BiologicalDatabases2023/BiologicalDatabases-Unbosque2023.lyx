@@ -1,0 +1,2765 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{/Amsterdamred-noSubs}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Bases de Datos (BD) Biológicas 
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Institute
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad el Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Avances en biología molecular y tecnología de secuenciación
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Actualmente, se están descubriendo enormes cantidades de información biológica,
+ como conjuntos de datos de secuenciación sin procesar, proteomas, etc.,
+ a un ritmo muy rápido.
+ .
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/biological-DBs-stats-chart.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Todo esto debido al rápido avance de la biología molecular, la proteómica
+ y las tecnologías de secuenciación del genoma de bajo costo y alto rendimiento,
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bases de datos biológicas
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Los conjuntos de datos relevantes para las ciencias biológicas, como la
+ biología molecular y la bioinformática, se denominan bases de datos biológicas.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/biological-databases-net.png
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+¿Por qué son importantes los BD biológicos?? 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Las BD biológicas tienen un propósito crítico en la recopilación y organización
+ de datos relacionados con los sistemas biológicos.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Brindan soporte computacional y una interfaz fácil de usar para análizar
+ los datos biológicos (e.g.secuencias de genes y proteínas, estructuras moleculare
+s, etc).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Otros propósitos:
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Ayudan a comprender el mecanismo molecular de las enfermedades (humanos,
+ plantas, o animales)
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Ayuda al desarrollo de la medicina personalizada para recetar el fármaco
+ más adecuado.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Ayuda en el diseño y desarrollo de fármacos, mejora de cultivos y mejora
+ de la calidad nutricional.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conceptos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Que es una base de datos (BD)?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Una colección organizada de datos o información que se almacena electrónicamente
+ y es accesible desde un sistema informático.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/what-is-database.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+La naturaleza organizada de la BD facilita el acceso, la gestión, la actualizaci
+ón periódica y la búsqueda rápida de los datos/información necesarios desde
+ un sistema informático adecuado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Elementos generales de una base de datos 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\color blue
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Entidad
+\series default
+\color inherit
+: una entidad se refiere a lo que queremos almacenar en una base de datos.
+ P.ej.
+ Secuencias de ADN, Genes, Referencias bibliográficas, etc.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Registros
+\series default
+\color inherit
+: un registro típico se refiere a una combinación de todos los campos de
+ una entidad determinada.
+ Por ej.
+ Registro del gen BRCA1 en GenBank.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Identificador
+\series default
+\color inherit
+: el nombre único que identifica un registro.
+ En el caso de una base de datos simple, un solo archivo contiene múltiples
+ registros.
+ Entre estos 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Campos
+\series default
+\color inherit
+: las propiedades de una entidad se denominan campos.
+ P.
+ ej.
+ Nombre del gen, secuencia del gen, mutación (si la hay), etc.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejemplo de una base de datos tabular 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/example-tabular-database.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clasificación
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos de bases de datos biológicas 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/biological-databases-types.pdf
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bases de datos primarias 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Contienen datos derivados experimentalmente como:
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Secuencias de nucleótidos
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Secuencias de proteínas
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Información estructural de macromoléculas.
+ 
+\end_layout
+
+\end_inset
+
+
+\size scriptsize
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Esta información básica puede ir acompañada de:
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Anotación funcional, 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Bibliografías, y 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Enlaces a otras bases de datos.
+ 
+\end_layout
+
+\end_inset
+
+
+\size scriptsize
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Los datos son enviados directamente por los investigadores.
+\end_layout
+
+\end_inset
+
+
+\size scriptsize
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+A cada dato envíado se les asigna un 
+\series bold
+\color blue
+número de acceso
+\series default
+\color inherit
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Este número es permanente y pasa a formar parte del registro científico.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bases de datos secundarias 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+Almacenan la información derivada del análisis de conjuntos de datos primarios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+Contienen información altamente seleccionada derivada del análisis de recursos
+ primarios y literatura, usando: 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Análisis computacional complejo 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Análisis manual 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+Estas bases de datos suelen almacenar información sobre :
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Estructura/secuencias de dominio conservadas
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Secuencias de señales 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Residuos del sitios activo 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aspectos esenciales de las bases de datos primarias y secundarias 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="1.1cm">
+<column alignment="center" valignment="top" width="4.1cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Base de datos principal 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Base de datos secundaria 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Sinónimos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+BD de archivo 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+BD curada; base de conocimientos 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Fuente de datos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Envío directo de datos derivados experimentalmente de los investigadores
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Resultados de análisis, investigación e interpretación de la literatura,
+ a menudo de datos en las base de datos primarias
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Ejemplos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\color blue
+ENA
+\color inherit
+, 
+\begin_inset CommandInset href
+LatexCommand href
+name "GenBank"
+target "https://www.ncbi.nlm.nih.gov/genbank/"
+literal "false"
+
+\end_inset
+
+ and DDBJ (secuencia de nucleótidos ) 
+\color blue
+ArrayExpress
+\color inherit
+ and 
+\color blue
+GEO
+\color inherit
+ (datos de genómica funcional ) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Protein Data Bank "
+target "https://www.rcsb.org/"
+literal "false"
+
+\end_inset
+
+(PDB; ccoordenadas de estructuras macromoleculares tridimensionales )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset CommandInset href
+LatexCommand href
+name "InterPro"
+target "https://www.ebi.ac.uk/interpro/"
+literal "false"
+
+\end_inset
+
+ (familias de proteínas, motivos y dominios) 
+\color blue
+UniProt Knowledgebase
+\color inherit
+ (secuencia e información funcional sobre proteínas ) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Ensembl"
+target "https://www.ensembl.org/index.html"
+literal "false"
+
+\end_inset
+
+ (variación, función, regulación y más en capas en secuencias del genoma
+ completo )
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Otra clasificación: por contenido / tipo de datos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tiny
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0.8cm">
+<column alignment="left" valignment="top" width="3cm">
+<column alignment="left" valignment="top" width="5.5cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Integrales
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Especializadas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fuente de datos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Contienen datos de muchos organismos y muchos tipos diferentes de secuencias
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Contienen datos de organismos individuales, categorías/funciones específicas
+ de secuencias o datos generados por tecnologías de secuenciación específicas.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejemplos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Nucleotidos
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "GenBank"
+target "http://www.ncbi.nlm.nih.gov/Genbank/"
+literal "false"
+
+\end_inset
+
+ (USA),
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "EMBL"
+target "http://www.ebi.ac.uk/"
+literal "false"
+
+\end_inset
+
+ (EUROPA),
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "DDBJ"
+target "http://www.ddbj.nig.ac.jp/"
+literal "false"
+
+\end_inset
+
+ (Japón)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Específico del organismo
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Human Genome Sequencing"
+target "http://www.ncbi.nlm.nih.gov/genome/seq/"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "GDB"
+target "http://gdbwww.gdb.org/"
+literal "false"
+
+\end_inset
+
+: Genome Database (human mapping information) 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "MGD"
+target "http://www.informatics.jax.org/"
+literal "false"
+
+\end_inset
+
+: Mouse Genome Database 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "SGD"
+target "http://www.yeastgenome.org/"
+literal "false"
+
+\end_inset
+
+: Saccharomyces Genome Database
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Proteínas
+\color inherit
+: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrez Protein"
+target "http://www.ncbi.nlm.nih.gov/sites/entrez?db=protein"
+literal "false"
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Swiss-Prot"
+target "http://www.expasy.ch/"
+literal "false"
+
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "UniProt"
+target "http://www.uniprot.org/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Categorías de secuencia o funciones
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "TRANSFAC"
+target "http://www.gene-regulation.com/"
+literal "false"
+
+\end_inset
+
+: Transcription Factors 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Vector Database"
+target "http://seq.yeastgenome.org/vectordb/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Estructuras de la proteínas
+\color inherit
+: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "PDB"
+target "http://www.rcsb.org/pdb/"
+literal "false"
+
+\end_inset
+
+: Protein Data Bank,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "MMDB"
+target "http://www.ncbi.nlm.nih.gov/Structure/MMDB/mmdb.shtml"
+literal "false"
+
+\end_inset
+
+: Molecular Modeling Database
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Datos generados por tecnologías de secuenciación específicas
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "EST"
+target "http://www.ncbi.nlm.nih.gov/dbEST/"
+literal "false"
+
+\end_inset
+
+: Expressed Sequence Tags
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "GSS"
+target "http://www.ncbi.nlm.nih.gov/dbGSS/"
+literal "false"
+
+\end_inset
+
+: Genome Survey Sequences 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "STS"
+target "http://www.ncbi.nlm.nih.gov/dbSTS/"
+literal "false"
+
+\end_inset
+
+: Sequence Tagged Sites 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "HTG"
+target "http://www.ncbi.nlm.nih.gov/HTGS/"
+literal "false"
+
+\end_inset
+
+: High Throughput Sequences
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Genomas y mapas
+\color inherit
+: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Entrez Genome"
+target "http://www.ncbi.nlm.nih.gov/sites/entrez?db=Genome"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Uso
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pregunta 01: Cuál es la secuencia de nucleótidos completa del gen Bcl-2
+ de humanos?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Se cree ampliamente que Bcl-2 es un gen supresor de la apoptosis.
+ La sobreexpresión de la proteína en las células cancerosas puede bloquear
+ o retrasar el inicio de la apoptosis.
+\end_layout
+
+\begin_layout Itemize
+Acceda al NCBI o GenBank 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.ncbi.nlm.nih.gov/genbank/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Seleccionar la BD de nucleótidos
+\end_layout
+
+\begin_layout Itemize
+Buscar el término: 
+\begin_inset Quotes eld
+\end_inset
+
+gen bcl-2 homo sapiens
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Seleccionar la entrada de interés.
+\end_layout
+
+\begin_layout Itemize
+Descargue la secuencia en formato FASTA.
+\end_layout
+
+\begin_layout Itemize
+Descargue la proteína(s) (secuencia de aminoácidos) que expresa este gen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pregunta 02: Cuál es la estructura Tridimensional de una proteína de la
+ familia Bcl-2 ?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Un surco hidrofóbico prominente está presente en la superficie de las proteínas
+ antiapoptóticas.
+ Este surco es el sitio de unión de péptidos que imitan la región BH3 de
+ varias proteínas proapoptóticas como Bak y Bad.
+\end_layout
+
+\begin_layout Itemize
+Acceda al Protein Data Bank o PDB: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.rcsb.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Realize la búsqueda ingresando la secuencia de aminoácidos de la proteína.
+\end_layout
+
+\begin_layout Itemize
+Seleccione una entrada.
+\end_layout
+
+\begin_layout Itemize
+Descargue el archivo de la estructura.
+\end_layout
+
+\begin_layout Itemize
+Visualizela en un visor de estructuras de proteínas (e.g.
+ VMD o rasmol).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pregunta 03: Qué literatura científica hay sobre la familia de proteínas
+ Bcl-2 ?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Las proteínas Bcl-2 forman una familia de proteínas relacionadas evolutivamente
+ que son esenciales para mantener el equilibrio entre la muerte celular
+ y la proliferación celular, con diferentes miembros de la familia actuando
+ como moduladores positivos o negativos de la apoptosis.
+ 
+\end_layout
+
+\begin_layout Itemize
+Acceda ra la página de inicio del NCBI (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.ncbi.nlm.nih.gov/
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Seleccione la BD de literatura científica Pubmed.
+\end_layout
+
+\begin_layout Itemize
+Busqué el término 
+\begin_inset Quotes eld
+\end_inset
+
+bcl-2 protein family
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Descargue un artículo de interés.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Formatos
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formato FASTA
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.ncbi.nlm.nih.gov/genbank/fastaformat/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+El formato FASTA es un formato basado en texto para representar secuencias
+ de nucleótidos o secuencias de péptidos mediante códigos de una sola letra.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Una secuencia en formato FASTA comienza con una descripción de una sola
+ línea, seguida de líneas de datos de secuencia.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+La línea de descripción se distingue de los datos de secuencia por un símbolo
+ mayor que (">") en la primera columna.
+ Se recomienda que todas las líneas de texto tengan menos de 80 caracteres
+ de longitud.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejemplo Formato FASTA
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Nucleótidos:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "basicstyle={\tiny\rmfamily},breaklines=true,linewidth=10cm,frame=single"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>XR_002086427.1 Candida albicans SC5314 uncharacterized ncRNA (SCR1), ncRNA
+\end_layout
+
+\begin_layout Plain Layout
+
+TGGCTGTGATGGCTTTTAGCGGAAGCGCGCTGTTCGCGTACCTGCTGTTTGTTGAAAATTTAAGAGCAAA
+\end_layout
+
+\begin_layout Plain Layout
+
+GTGTCCGGCTCGATCCCTGCGAATTGAATTCTGACGCTAGAGTAATCAGTGTCTTTCAAGTTCTGGTAAT
+\end_layout
+
+\begin_layout Plain Layout
+
+GTTTAGCATAACCACTGGAGGGAAGCAATTCAGCACAGTAATGCTAATCGTGGTGGAGGCGAATCCGGTG
+\end_layout
+
+\begin_layout Plain Layout
+
+GCACCTTGTTTGTTGATAAATAGTGCGGTATCTAGTGTTGCAACTCTATTTTT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Aminoácidos:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "basicstyle={\tiny\rmfamily},breaklines=true,linewidth=10cm,frame=single"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>gi|186681228|ref|YP_001864424.1| phycoerythrobilin:ferredoxin oxidoreductase
+\end_layout
+
+\begin_layout Plain Layout
+
+MNSERSDVTLYQPFLDYAIAYMRSRLDLEPYPIPTGFESNSAVVGKGKNQEEVVTTSYAFQTAKLRQIRA
+\end_layout
+
+\begin_layout Plain Layout
+
+AHVQGGNSLQVLNFVIFPHLNYDLPFFGADLVTLPGGHLIALDMQPLFRDDSAYQAKYTEPILPIFHAHQ
+\end_layout
+
+\begin_layout Plain Layout
+
+QHLSWGGDFPEEAQPFFSPAFLWTRPQETAVVETQVFAAFKDYLKAYLDFVEQAEAVTDSQNLVAIKQAQ
+\end_layout
+
+\begin_layout Plain Layout
+
+LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formato Genbank
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Formato más completo que presenta tres secciones: Definición, Características
+ y Secuencia.
+ 
+\end_layout
+
+\begin_layout Itemize
+En definición podemos ver información acerca de la longitud, número de acceso,
+ anotación y referencias bibliográficas donde aparece.
+ 
+\end_layout
+
+\begin_layout Itemize
+En características tenemos información sobre la secuencia codificante, secuencia
+ de aminoácidos y otras características (como dominios proteicos, exónes
+ e intrónes).
+ 
+\end_layout
+
+\begin_layout Itemize
+En la de secuencia aparecen las coordenadas iniciales de cada línea seguida
+ por la secuencia nucleotídica.
+ 
+\end_layout
+
+\begin_layout Itemize
+El formato acaba en //.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejemplo Formato Genbank
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/genbank-file-format.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formato PDB Estructuras de Proteínas
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length -0.3cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.rcsb.org/docs/general-help/structures-without-legacy-pdb-format-files
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El formato PDB consta de líneas de información en un archivo de texto.
+ 
+\end_layout
+
+\begin_layout Itemize
+Cada línea de información en el archivo se llama registro.
+ 
+\end_layout
+
+\begin_layout Itemize
+Un archivo PDB generalmente contiene varios tipos diferentes de registros,
+ dispuestos en un orden específico para describir una estructura.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los registros HEADER, TITLE y AUTHOR.
+\end_layout
+
+\begin_layout Itemize
+Los registros REMARK
+\end_layout
+
+\begin_layout Itemize
+Los registros SEQRES
+\end_layout
+
+\begin_layout Itemize
+Los registros ATOM
+\end_layout
+
+\begin_layout Itemize
+Los registros HETATM
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejemplo de Archivo en Formato PDB
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "101col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tiny
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "basicstyle={\tiny\ttfamily},tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+HEADER    EXTRACELLULAR MATRIX                    22-JAN-98   1A3I
+\end_layout
+
+\begin_layout Plain Layout
+
+TITLE     X-RAY CRYSTALLOGRAPHIC DETERMINATION OF A COLLAGEN-LIKE
+\end_layout
+
+\begin_layout Plain Layout
+
+TITLE    2 PEPTIDE WITH THE REPEATING SEQUENCE (PRO-PRO-GLY)
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+EXPDTA    X-RAY DIFFRACTION
+\end_layout
+
+\begin_layout Plain Layout
+
+AUTHOR    R.Z.KRAMER,L.VITAGLIANO,J.BELLA,R.BERISIO,L.MAZZARELLA,
+\end_layout
+
+\begin_layout Plain Layout
+
+AUTHOR   2 B.BRODSKY,A.ZAGARI,H.M.BERMAN
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+REMARK 350 BIOMOLECULE: 1
+\end_layout
+
+\begin_layout Plain Layout
+
+REMARK 350 APPLY THE FOLLOWING TO CHAINS: A, B, C
+\end_layout
+
+\begin_layout Plain Layout
+
+REMARK 350   BIOMT1   1  1.000000  0.000000  0.000000        0.00000
+\end_layout
+
+\begin_layout Plain Layout
+
+REMARK 350   BIOMT2   1  0.000000  1.000000  0.000000        0.00000
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+SEQRES   1 A    9  PRO PRO GLY PRO PRO GLY PRO PRO GLY
+\end_layout
+
+\begin_layout Plain Layout
+
+SEQRES   1 B    6  PRO PRO GLY PRO PRO GLY
+\end_layout
+
+\begin_layout Plain Layout
+
+SEQRES   1 C    6  PRO PRO GLY PRO PRO GLY
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+ATOM      1  N   PRO A   1       8.316  21.206  21.530  1.00 17.44          
+ N
+\end_layout
+
+\begin_layout Plain Layout
+
+ATOM      2  CA  PRO A   1       7.608  20.729  20.336  1.00 17.44          
+ C
+\end_layout
+
+\begin_layout Plain Layout
+
+ATOM      3  C   PRO A   1       8.487  20.707  19.092  1.00 17.44          
+ C
+\end_layout
+
+\begin_layout Plain Layout
+
+ATOM      4  O   PRO A   1       9.466  21.457  19.005  1.00 17.44          
+ O
+\end_layout
+
+\begin_layout Plain Layout
+
+ATOM      5  CB  PRO A   1       6.460  21.723  20.211  1.00 22.26          
+ C
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+HETATM  130  C   ACY   401       3.682  22.541  11.236  1.00 21.19          
+ C
+\end_layout
+
+\begin_layout Plain Layout
+
+HETATM  131  O   ACY   401       2.807  23.097  10.553  1.00 21.19          
+ O
+\end_layout
+
+\begin_layout Plain Layout
+
+HETATM  132  OXT ACY   401       4.306  23.101  12.291  1.00 21.19          
+ O
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

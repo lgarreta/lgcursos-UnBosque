@@ -1,0 +1,151 @@
+             :-) GROMACS - gmx pdb2gmx, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx pdb2gmx, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/lg/repos/lgcursos/DockingMDSims-UnBosque2023/practicas/notebook-gromacs
+Command line:
+  gmx pdb2gmx -f ./protein.pdb -o proteinF.gro -p topol.top -i posres.itp -water tip3p -ff amber99sb -noignh -merge all
+
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/aminoacids.r2b
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/dna.r2b
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/rna.r2b
+WARNING: all CONECT records are ignored
+there were 0 atoms with zero occupancy and 16 atoms with          occupancy unequal to one (out of 1643 atoms). Check your pdb file.
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/atomtypes.atp
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/aminoacids.rtp
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/dna.rtp
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/rna.rtp
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/aminoacids.hdb
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/dna.hdb
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/rna.hdb
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/aminoacids.n.tdb
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/aminoacids.c.tdb
+
+Back Off! I just backed up topol.top to ./#topol.top.2#
+Analysing hydrogen-bonding network for automated assignment of histidine
+ protonation. 310 donors and 322 acceptors were found.
+There are 446 hydrogen bonds
+Will use HISE for residue 77
+Will use HISE for residue 154
+Will use HISE for residue 189
+Will use HISE for residue 210
+8 out of 8 lines of specbond.dat converted successfully
+Special Atom Distance matrix:
+                   MET30   HIS77   MET98  MET119  MET130  HIS154  MET180
+                   SD110  NE2491   SD650   SD810   SD885 NE21072  SD1270
+   HIS77  NE2491   2.704
+   MET98   SD650   1.407   1.679
+  MET119   SD810   1.168   3.480   2.166
+  MET130   SD885   2.041   3.155   2.448   1.447
+  HIS154 NE21072   2.293   1.742   0.921   2.935   3.107
+  MET180  SD1270   2.112   0.999   1.132   3.091   3.206   1.362
+  HIS189 NE21339   1.468   1.960   1.618   2.560   2.911   2.365   1.333
+  HIS210 NE21527   2.226   2.320   2.331   2.295   1.306   2.987   2.616
+                  HIS189
+                 NE21339
+  HIS210 NE21527   2.345
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/aminoacids.arn
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/dna.arn
+Opening force field file /usr/share/gromacs/top/amber99sb.ff/rna.arn
+Before cleaning: 8690 pairs
+Before cleaning: 8735 dihedrals
+Keeping all generated dihedrals
+
+Back Off! I just backed up posres.itp to ./#posres.itp.2#
+
+GROMACS reminds you: "You wouldn't walk into a chemistry lab and mix two clear liquids together just because they look pretty much the same, would you?" (Justin Lemkul)
+
+Using the Amber99sb force field in directory amber99sb.ff
+
+going to rename amber99sb.ff/aminoacids.r2b
+
+going to rename amber99sb.ff/dna.r2b
+
+going to rename amber99sb.ff/rna.r2b
+Reading ./protein.pdb...
+Read 'HEAT SHOCK PROTEIN HSP 90-ALPHA; 5 PROTEIN 2,LPS-ASSOCIATED PROTEIN 2,RENAL CARCINOMA ANTIGEN NY-REN-38;', 1643 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 0 blocks of water and 208 residues with 1643 atoms
+
+  chain  #res #atoms
+
+  1 'A'   208   1643  
+
+there were 0 atoms with zero occupancy and 16 atoms with          occupancy unequal to one (out of 1643 atoms). Check your pdb file.
+
+Reading residue database... (Amber99sb)
+
+Processing chain 1 'A' (1643 atoms, 208 residues)
+
+Identified residue VAL17 as a starting terminus.
+
+Identified residue LYS224 as a ending terminus.
+
+Checking for duplicate atoms....
+
+Now there are 1635 atoms. Deleted 8 duplicates.
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 208 residues with 3280 atoms
+
+Making bonds...
+
+Number of bonds was 3307, now 3306
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are 8735 dihedrals,  629 impropers, 5985 angles
+          8636 pairs,     3306 bonds and     0 virtual sites
+
+Total mass 23230.542 a.m.u.
+
+Total charge -6.000 e
+
+Writing topology
+
+Writing coordinate file...
+
+		--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: ./protein.pdb.
+
+The Amber99sb force field and the tip3p water model are used.
+
+		--------- ETON ESAELP ------------

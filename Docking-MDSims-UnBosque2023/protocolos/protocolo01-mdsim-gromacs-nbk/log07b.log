@@ -1,0 +1,87 @@
+               :-) GROMACS - gmx rms, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx rms, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+Command line:
+  gmx rms -s simulacion_prod.tpr -f simulacion_prod_noPBC.xtc -o rmsd.xvg -tu ns
+
+Reading file simulacion_prod.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Reading file simulacion_prod.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has 62149 elements
+Group     1 (        Protein) has  4682 elements
+Group     2 (      Protein-H) has  2426 elements
+Group     3 (        C-alpha) has   326 elements
+Group     4 (       Backbone) has   978 elements
+Group     5 (      MainChain) has  1305 elements
+Group     6 (   MainChain+Cb) has  1596 elements
+Group     7 (    MainChain+H) has  1618 elements
+Group     8 (      SideChain) has  3064 elements
+Group     9 (    SideChain-H) has  1121 elements
+Group    10 (    Prot-Masses) has  4682 elements
+Group    11 (    non-Protein) has 57467 elements
+Group    12 (          Water) has 57429 elements
+Group    13 (            SOL) has 57429 elements
+Group    14 (      non-Water) has  4720 elements
+Group    15 (            Ion) has    38 elements
+Group    16 (             NA) has    38 elements
+Group    17 ( Water_and_ions) has 57467 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has 62149 elements
+Group     1 (        Protein) has  4682 elements
+Group     2 (      Protein-H) has  2426 elements
+Group     3 (        C-alpha) has   326 elements
+Group     4 (       Backbone) has   978 elements
+Group     5 (      MainChain) has  1305 elements
+Group     6 (   MainChain+Cb) has  1596 elements
+Group     7 (    MainChain+H) has  1618 elements
+Group     8 (      SideChain) has  3064 elements
+Group     9 (    SideChain-H) has  1121 elements
+Group    10 (    Prot-Masses) has  4682 elements
+Group    11 (    non-Protein) has 57467 elements
+Group    12 (          Water) has 57429 elements
+Group    13 (            SOL) has 57429 elements
+Group    14 (      non-Water) has  4720 elements
+Group    15 (            Ion) has    38 elements
+Group    16 (             NA) has    38 elements
+Group    17 ( Water_and_ions) has 57467 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time    0.000   Reading frame       2 time    0.000   Reading frame       3 time    0.001   Reading frame       4 time    0.001   Reading frame       5 time    0.001   Reading frame       6 time    0.001   Reading frame       7 time    0.001   Reading frame       8 time    0.002   Reading frame       9 time    0.002   Reading frame      10 time    0.002   Last frame         10 time    0.002   
+
+Back Off! I just backed up rmsd.xvg to ./#rmsd.xvg.1#
+
+GROMACS reminds you: "Creativity in science, as in art, cannot be organized. It arises spontaneously from individual talent. Well-run laboratories can foster it, but hierarchical organizations, inflexible bureaucratic rules, and mountains of futile paperwork can kill it." (Max Perutz)
+
+Selected 4: 'Backbone'
+Selected 4: 'Backbone'

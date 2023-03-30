@@ -1,0 +1,1496 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usepackage{charter}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Selección Genómica
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mejoramiento Genético
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+El mejoramiento genético vegetal o animal es la ciencia, el arte y el negocio
+ de mejorar los organismos para el beneficio de los seres humanos.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El Mejoramiento como ciencia...
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Como una ciencia, el mejoramiento se sustenta sobre el conocimiento teórico
+ y empírico de la genética.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El Mejoramiento como Arte...
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Como un arte, requiere juicios subjetivos en el diseño y la implementación
+ de un programa de mejoramiento.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El Mejoramiento Como Negocio..
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Finalmente, como un negocio, necesita de inversiones de tiempo y dinero
+ en distintos recursos tales como: técnicos, equipamiento y materiales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El Mejoramiento a través del tiempo
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+La importancia relativa del arte y la ciencia en el mejoramiento ha cambiado
+ a lo largo del tiempo.
+ 
+\end_layout
+
+\begin_layout Itemize
+En los comienzos del mejoramiento, la habilidad de una persona para identificar
+ visualmente los individuos más deseados era la única herramienta disponible.
+ 
+\end_layout
+
+\begin_layout Itemize
+Así, la apariencia de un individuo o de un grupo de individuos, denominada
+ 
+\series bold
+fenotipo
+\series default
+, determinaba si el individuo resultaba elegido.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El 
+\series bold
+\color blue
+fenotipo
+\series default
+\color inherit
+ hace referencia a la 
+\series bold
+\color blue
+apariencia
+\series default
+\color inherit
+ o medición de un carácter
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejemplos de caracteres fenotipicos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Algunos ejemplos de caracteres fenotípicos son: 
+\end_layout
+
+\begin_layout Itemize
+La altura,
+\end_layout
+
+\begin_layout Itemize
+El peso de un individuo, 
+\end_layout
+
+\begin_layout Itemize
+El rendimiento en grano de un cultivo, 
+\end_layout
+
+\begin_layout Itemize
+La resistencia a enfermedades, entre otros.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Configuración genética
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+A pesar de que la apariencia visual continúa siendo parte del mejoramiento,
+ actualmente no es la única fuente de información.
+\end_layout
+
+\begin_layout Itemize
+Ahora, es posible planear un programa de mejoramiento con información basada
+ en la configuración genética, o 
+\series bold
+\color blue
+genotipo
+\series default
+\color inherit
+, de un individuo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El 
+\series bold
+\color blue
+genotipo
+\series default
+\color inherit
+ comprende los 
+\series bold
+genes
+\series default
+ que controlan ese carácter
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fenotipo, Genotipo, y Ambiente
+\end_layout
+
+\end_inset
+
+
+\color red
+ 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+La expresión del fenotipo de un individuo depende de dos clases de factores:
+ ambientales y genéticos.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mientras que , 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El 
+\series bold
+\color blue
+genotipo
+\series default
+\color inherit
+ comprende los 
+\series bold
+genes
+\series default
+ que controlan ese carácter y 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El 
+\series bold
+\color blue
+ambiente
+\series default
+\color inherit
+, incluye todos los 
+\series bold
+factores externos
+\series default
+ que pueden influir en la expresión de esos genes.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Entre los factores ambientales se pueden mencionar: temperatura, fertilidad
+ del suelo y el manejo del cultivo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Los caracteres fenotípicos pueden ser de naturaleza cualitativa o cuantitativa
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Los 
+\series bold
+\color blue
+cualitativos
+\series default
+\color inherit
+ son variables fenotípicas que se registran como categorías o clases, por
+ ejemplo: 
+\end_layout
+
+\begin_layout Itemize
+Coloración del grano, 
+\end_layout
+
+\begin_layout Itemize
+Color de la flor, o 
+\end_layout
+
+\begin_layout Itemize
+Resistencia a cierta enfermedad.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+En general, este tipo de carácter suele estar controlado por uno o unos
+ pocos 
+\series bold
+\color blue
+genes
+\series default
+\color inherit
+ y se los denomina caracteres simples.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Por otro lado, los caracteres cuantitativos...
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Se distinguen por ser variables que se miden en una escala numérica, por
+ ejemplo:
+\end_layout
+
+\begin_layout Itemize
+Altura de una planta, 
+\end_layout
+
+\begin_layout Itemize
+Rendimiento en grano, 
+\end_layout
+
+\begin_layout Itemize
+Peso de un animal, entre otros.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Muchos caracteres de 
+\series bold
+\color blue
+interés agronómico
+\series default
+\color inherit
+ son de naturaleza cuantitativa y se encuentran controlados por 
+\series bold
+\color blue
+múltiples genes de efectos pequeños
+\series default
+\color inherit
+ y por ello reciben el nombre de 
+\series bold
+caracteres poligénicos
+\series default
+, cuantitativos o complejos 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Loci de Rasgos Cuantitativos (QTLs)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Las regiones dentro del genoma que contienen genes asociados a un carácter
+ cuantitativo se conocen con el nombre de QTL, del inglés Quantitative Trait
+ Loci.
+ 
+\end_layout
+
+\begin_layout Itemize
+La localización de tales regiones basada únicamente en la evaluación fenotípica
+ no es posible.
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto, uno de los mayores avances en el estudio de la arquitectura
+ genética de estos caracteres fue conducido por el desarrollo de la genómica
+ estructural.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Marcadores Moleculares (MM)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Los marcadores moleculares (MM) son una herramienta que permite estudiar
+ variaciones genéticas directamente al nivel del ácido desoxirribonucleico
+ (ADN).
+ 
+\end_layout
+
+\begin_layout Itemize
+Los MM tienen la ventaja de no variar con el ambiente y pueden ser observados
+ en etapas tempranas del ciclo de vida de un individuo.
+ 
+\end_layout
+
+\begin_layout Itemize
+Por estas razones, desde los años 1980s, los MM han sido ampliamente utilizados
+ y estudiados para responder en qué medida pueden optimizar esquemas de
+ mejoramiento genético.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mapas de ligamento
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Los MM permiten no sólo caracterizar el genoma de un individuo sino también,
+ la construcción de mapas de ligamiento.
+ 
+\end_layout
+
+\begin_layout Itemize
+Estos mapas pueden ser utilizados para localizar regiones del cromosoma
+ que contienen genes que controlan caracteres simples o complejos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Si los MM están asociados a los QTL, se dice que se encuentran en desequilibrio
+ de ligamiento.
+ 
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto, tanto los marcadores localizados sobre genes como los ligados
+ a los QTL se pueden convertir en una herramienta molecular que ayuda en
+ el proceso de selección de los individuos en el mejoramiento genético.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El desarrollo de nuevos enfoques de selección asistida por marcadores ha
+ sido alentado por la combinación de varios hechos.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Relación cáracter vs genes.
+\end_layout
+
+\begin_layout Enumerate
+Los valores genéticos
+\end_layout
+
+\begin_layout Enumerate
+Las nuevas tecnologías.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1.
+ Relación cáracter vs genes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+En primer lugar, hay un consenso general en que 
+\series bold
+\color blue
+muchos caracteres
+\series default
+\color inherit
+ están afectados por un 
+\series bold
+\color blue
+gran número de genes de efectos pequeños.
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto, su estudio requiere la consideración de un gran número de
+ variantes genéticas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2.
+ Valores Genéticos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Por otro lado, para el mejoramiento genético de caracteres complejos en
+ animales y plantas, es clave predecir los 
+\series bold
+\color blue
+valores genéticos
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Es decir, cuánto se desvía cada individuo respecto del promedio de la población
+ a la que pertenece.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+3.
+ Nuevas Tecnologías
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Finalmente, el advenimiento de 
+\series bold
+\color blue
+nuevas tecnologías
+\series default
+\color inherit
+ que permiten identificar 
+\series bold
+\color blue
+grandes cantidades de MM más rápidamente y a menor costo
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Esto ha motivado el uso de MM a gran escala en los programas de mejoramiento.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selección Genómica
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+En el 2001: se introdujeron nuevas técnicas enmarcadas dentro del 
+\series bold
+\color blue
+mejoramiento animal
+\series default
+\color inherit
+ que se conocen como métodos de 
+\series bold
+\color blue
+selección genómica 
+\series default
+\color inherit
+(SG) o en inglés, Genome-Wide Selection o 
+\series bold
+\color blue
+Predicción Genómica
+\series default
+\color inherit
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Se propone la incorporación de numerosos MM en los modelos estadísticos
+ utilizados para 
+\series bold
+\color blue
+estimar el valor genético 
+\series default
+\color inherit
+de un individuo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Valor genético estimado
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Una idea simple pero poderosa: 
+\series bold
+\emph on
+\color blue
+expresar los fenotipos sobre todos los marcadores disponibles usando un
+ modelo lineal:
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $Y_{i}=g(x_{i})+e_{i}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ es el fenotipo observado del individuo 
+\begin_inset Formula $i(i=1,...n)$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ es un vector (1xm) de MM (genotipo) del individuo.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g(x_{i})$
+\end_inset
+
+ : Es un función que relaciona los genotipos con los fenotipos.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e$
+\end_inset
+
+ : Error o término residual
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+La aplicación de SG consiste de dos grandes etapas.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+La primera comprende el desarrollo de un modelo basado en un conjunto de
+ individuos para los cuales se cuenta tanto con datos fenotípicos como con
+ datos provenientes de una alta densidad de MM ubicados a lo largo del genoma.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En la segunda etapa, se utiliza dicho modelo con el fin de predecir los
+ valores genéticos de otros individuos para los cuales sólo se dispone de
+ datos de MM.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

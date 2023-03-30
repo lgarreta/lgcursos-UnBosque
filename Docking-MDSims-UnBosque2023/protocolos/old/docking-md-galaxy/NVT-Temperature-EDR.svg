@@ -1,0 +1,35 @@
+# This file was created Sun Mar 19 14:11:49 2023
+# Created by:
+#                 :-) GROMACS - gmx energy, 2022-conda_forge (-:
+# 
+# Executable:   /usr/local/bin.AVX_256/gmx
+# Data prefix:  /usr/local
+# Working dir:  /corral4/main/jobs/049/036/49036077/working
+# Command line:
+#   gmx energy -f ./edr_input.edr -o ./energy.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(K)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Temperature"
+    0.000000    0.039253
+    0.500000  272.097351
+    1.000000  295.808289
+    1.500000  297.434326
+    2.000000  298.127808
+    2.500000  298.725922
+    3.000000  298.268433
+    3.500000  298.799194
+    4.000000  301.952148
+    4.500000  297.433441
+    5.000000  297.171387

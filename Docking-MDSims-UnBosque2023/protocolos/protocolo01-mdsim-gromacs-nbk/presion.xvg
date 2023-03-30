@@ -1,0 +1,35 @@
+# This file was created Wed Mar 22 11:39:49 2023
+# Created by:
+#              :-) GROMACS - gmx energy, 2021.4-Ubuntu-2021.4-2 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+# Command line:
+#   gmx energy -f simulacion_npt.edr -o presion.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  -85.720482
+    0.200000  -88.831604
+    0.400000   65.258995
+    0.600000  -104.901520
+    0.800000   58.837727
+    1.000000  183.513474
+    1.200000  -59.940018
+    1.400000   20.944592
+    1.600000  124.210442
+    1.800000  103.503151
+    2.000000   67.274422

@@ -1,0 +1,206 @@
+             :-) GROMACS - gmx pdb2gmx, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx pdb2gmx, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+Command line:
+  gmx pdb2gmx -f proteina_limpia.pdb -o proteina_gromacs
+
+Opening force field file /usr/share/gromacs/top/amber03.ff/watermodels.dat
+Opening force field file /usr/share/gromacs/top/amber03.ff/aminoacids.r2b
+Opening force field file /usr/share/gromacs/top/amber03.ff/dna.r2b
+Opening force field file /usr/share/gromacs/top/amber03.ff/rna.r2b
+WARNING: all CONECT records are ignored
+All occupancies are one
+Opening force field file /usr/share/gromacs/top/amber03.ff/atomtypes.atp
+Opening force field file /usr/share/gromacs/top/amber03.ff/aminoacids.rtp
+Opening force field file /usr/share/gromacs/top/amber03.ff/dna.rtp
+Opening force field file /usr/share/gromacs/top/amber03.ff/rna.rtp
+Opening force field file /usr/share/gromacs/top/amber03.ff/aminoacids.hdb
+Opening force field file /usr/share/gromacs/top/amber03.ff/dna.hdb
+Opening force field file /usr/share/gromacs/top/amber03.ff/rna.hdb
+Opening force field file /usr/share/gromacs/top/amber03.ff/aminoacids.n.tdb
+Opening force field file /usr/share/gromacs/top/amber03.ff/aminoacids.c.tdb
+
+Back Off! I just backed up topol.top to ./#topol.top.2#
+Analysing hydrogen-bonding network for automated assignment of histidine
+ protonation. 452 donors and 520 acceptors were found.
+There are 733 hydrogen bonds
+Will use HISE for residue 53
+8 out of 8 lines of specbond.dat converted successfully
+Special Atom Distance matrix:
+                   CYS45   CYS50   HIS53   MET80  MET199  CYS206  CYS210
+                   SG349   SG380  NE2404   SD607  SD1503  SG1551  SG1571
+   CYS50   SG380   0.199
+   HIS53  NE2404   1.016   0.823
+   MET80   SD607   0.883   0.932   1.382
+  MET199  SD1503   4.385   4.279   3.745   3.942
+  CYS206  SG1551   3.967   3.909   3.612   3.298   1.418
+  CYS210  SG1571   3.765   3.709   3.427   3.092   1.500   0.207
+  MET246  SD1810   3.489   3.391   2.882   3.249   1.452   2.059   2.005
+  CYS250  SG1838   3.871   3.711   2.963   3.769   1.776   2.821   2.789
+  CYS283  SG2085   3.780   3.625   2.896   3.639   1.604   2.614   2.581
+  MET290  SD2133   2.397   2.342   2.089   1.907   2.164   1.716   1.534
+                  MET246  CYS250  CYS283
+                  SD1810  SG1838  SG2085
+  CYS250  SG1838   1.558
+  CYS283  SG2085   1.418   0.209
+  MET290  SD2133   1.498   2.459   2.281
+Linking CYS-45 SG-349 and CYS-50 SG-380...
+Linking CYS-206 SG-1551 and CYS-210 SG-1571...
+Linking CYS-250 SG-1838 and CYS-283 SG-2085...
+Opening force field file /usr/share/gromacs/top/amber03.ff/aminoacids.arn
+Opening force field file /usr/share/gromacs/top/amber03.ff/dna.arn
+Opening force field file /usr/share/gromacs/top/amber03.ff/rna.arn
+Before cleaning: 12419 pairs
+Before cleaning: 12524 dihedrals
+Keeping all generated dihedrals
+
+Back Off! I just backed up posre.itp to ./#posre.itp.1#
+
+Back Off! I just backed up proteina_gromacs.gro to ./#proteina_gromacs.gro.1#
+
+GROMACS reminds you: "I was told I'd never make it to VP rank because I was too outspoken. Maybe so, but I think men will always find an excuse for keeping women in their 'place.' So, let's make that place the executive suite and start more of our own companies." (Jean Bartik, ENIAC developer)
+
+Select the Force Field:
+
+From '/usr/share/gromacs/top':
+
+ 1: AMBER03 protein, nucleic AMBER94 (Duan et al., J. Comp. Chem. 24, 1999-2012, 2003)
+
+ 2: AMBER94 force field (Cornell et al., JACS 117, 5179-5197, 1995)
+
+ 3: AMBER96 protein, nucleic AMBER94 (Kollman et al., Acc. Chem. Res. 29, 461-469, 1996)
+
+ 4: AMBER99 protein, nucleic AMBER94 (Wang et al., J. Comp. Chem. 21, 1049-1074, 2000)
+
+ 5: AMBER99SB protein, nucleic AMBER94 (Hornak et al., Proteins 65, 712-725, 2006)
+
+ 6: AMBER99SB-ILDN protein, nucleic AMBER94 (Lindorff-Larsen et al., Proteins 78, 1950-58, 2010)
+
+ 7: AMBERGS force field (Garcia & Sanbonmatsu, PNAS 99, 2782-2787, 2002)
+
+ 8: CHARMM27 all-atom force field (CHARM22 plus CMAP for proteins)
+
+ 9: GROMOS96 43a1 force field
+
+10: GROMOS96 43a2 force field (improved alkane dihedrals)
+
+11: GROMOS96 45a3 force field (Schuler JCC 2001 22 1205)
+
+12: GROMOS96 53a5 force field (JCC 2004 vol 25 pag 1656)
+
+13: GROMOS96 53a6 force field (JCC 2004 vol 25 pag 1656)
+
+14: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
+
+15: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
+
+Using the Amber03 force field in directory amber03.ff
+
+Select the Water Model:
+
+ 1: TIP3P     TIP 3-point, recommended
+
+ 2: TIP4P     TIP 4-point
+
+ 3: TIP4P-Ew  TIP 4-point optimized with Ewald
+
+ 4: TIP5P     TIP 5-point (see https://gitlab.com/gromacs/gromacs/-/issues/1348 for issues)
+
+ 5: SPC       simple point charge
+
+ 6: SPC/E     extended simple point charge
+
+ 7: None
+
+going to rename amber03.ff/aminoacids.r2b
+
+going to rename amber03.ff/dna.r2b
+
+going to rename amber03.ff/rna.r2b
+Reading proteina_limpia.pdb...
+Read 'PEPSIN', 2426 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 0 blocks of water and 326 residues with 2426 atoms
+
+  chain  #res #atoms
+
+  1 'A'   326   2426  
+
+All occupancies are one
+
+Reading residue database... (Amber03)
+
+Processing chain 1 'A' (2426 atoms, 326 residues)
+
+Identified residue ILE1 as a starting terminus.
+
+Identified residue ALA327 as a ending terminus.
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 326 residues with 4682 atoms
+
+Making bonds...
+
+Number of bonds was 4741, now 4740
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are 12524 dihedrals,  971 impropers, 8518 angles
+          12314 pairs,     4740 bonds and     0 virtual sites
+
+Total mass 34421.598 a.m.u.
+
+Total charge -38.000 e
+
+Writing topology
+
+Writing coordinate file...
+
+		--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: proteina_limpia.pdb.
+
+The Amber03 force field and the tip3p water model are used.
+
+		--------- ETON ESAELP ------------

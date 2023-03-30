@@ -1,0 +1,1000 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usepackage{charter}
+\usetheme{Boadilla}
+%\usetheme{Darmstadt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introducción al Acoplamiento Molecular: (Docking)
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Institute
+
+\lang english
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+INTRODUCCIÓN 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+El acoplamiento molecular o 
+\emph on
+docking
+\emph default
+ es un método que predice la orientación preferida de una molécula o 
+\series bold
+\emph on
+\color blue
+ligando
+\series default
+\emph default
+\color inherit
+ cuando se une a un sitio activo de otra molécula o 
+\series bold
+\emph on
+\color blue
+receptor
+\series default
+\emph default
+\color inherit
+ para formar un complejo estable.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-ligand-receptor-complex.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Acoplamiento de un ligando de molécula pequeña con un receptor de proteína
+ para producir un 
+\series bold
+\emph on
+\color blue
+complejo proteína-ligando
+\series default
+\emph default
+\color inherit
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Esquema Llave-Candado
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Encontrar la mejor orientación de la "llave" que abrirá la "cerradura".
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-lock-key.png
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En moléculas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No solo encontrar la mejor posición
+\end_layout
+
+\begin_layout Itemize
+Sino también, la mejor interacción
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ACOPLAMIENTO MOLECULAR 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Objetivo:
+\end_layout
+
+\end_inset
+
+ Lograr una 
+\series bold
+\emph on
+\color blue
+conformación y orientación optimizada
+\series default
+\emph default
+\color inherit
+ tanto para el receptor como para el ligando de modo que se minimice la
+ 
+\series bold
+\emph on
+\color blue
+energía libre del sistema
+\series default
+\emph default
+\color inherit
+ general.
+ 
+\end_layout
+
+\begin_layout Block
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-protein-ligand-pocket.pdf
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Importancia del Docking Molecular
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Para el diseño de nuevos fármacos: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los resultados del acoplamiento se pueden utilizar para encontrar inhibidores
+ de proteínas diana específicas.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Es cada vez más necesario a medida que aumenta el número de proteínas cuya
+ estructura se conoce.
+ 
+\end_layout
+
+\begin_layout Itemize
+Identificación de la geometría de unión correcta (postura) del ligando en
+ el sitio de unión.
+ 
+\end_layout
+
+\begin_layout Itemize
+Transducción de señales.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos de acoplamiento 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Acoplamiento rígido (cerradura y llave):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+En el acoplamiento rígido, la geometría interna tanto del receptor como
+ del ligando se tratan como rígidas.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Acoplamiento flexible (ajuste inducido):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se realiza una enumeración de las rotaciones de una de las moléculas (normalment
+e la más pequeña).
+ 
+\end_layout
+
+\begin_layout Itemize
+Cada rotación se calcula la energía; 
+\end_layout
+
+\begin_layout Itemize
+Al final, se seleccionan la(s) pose(s) más óptimas.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El acoplamiento puede ser entre....
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-types-ProtLig-ProtProt-ProtNucl.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+TIPOS DE INTERACCIONES 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Fuerzas electrostáticas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Las fuerzas con origen electrostático se deben a las cargas que residen
+ en la materia.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fuerzas electrodinámicas: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La más conocida es probablemente la interacción de van der Waals.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fuerzas estéricas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Son causadas por la entropía.
+ Por ejemplo, en casos donde la entropía es limitada, puede haber fuerzas
+ para minimizar la energía libre del sistema.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fuerzas relacionadas con el solvente:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se deben a los cambios estructurales del solvente.
+ 
+\end_layout
+
+\begin_layout Itemize
+Estos cambios estructurales se generan cuando iones, coloides, proteínas,
+ etc., se agregan a la estructura del solvente.
+ 
+\end_layout
+
+\begin_layout Itemize
+Las más comunes son el enlace de hidrógeno y las interacciones hidrofóbicas.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Etapas clave en el acoplamiento
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Docking-pasos-generales.png
+	height 7cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selección y preparación de receptores 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Construcción del Receptor
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se debe considerar la estructura 3D del receptor que se puede descargar
+ desde PDB.
+ 
+\end_layout
+
+\begin_layout Itemize
+La estructura disponible debe ser procesada.
+ 
+\end_layout
+
+\begin_layout Itemize
+El receptor debe ser biológicamente activo y estable.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Identificación del Sitio Activo
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Debe identificarse el sitio activo dentro del receptor.
+ 
+\end_layout
+
+\begin_layout Itemize
+El receptor puede tener muchos sitios activos, pero debe seleccionarse el
+ de interés.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selección y preparación de ligandos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Selección
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los ligandos se pueden obtener de varias bases de datos como ZINC, PubChem,
+ PDB o se pueden diseñar usando herramientas como Chemsketch.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Docking
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El ligando se acopla al receptor y se comprueban las interacciones.
+ 
+\end_layout
+
+\begin_layout Itemize
+La función de puntuación genera una puntuación
+\end_layout
+
+\begin_layout Itemize
+Se escoge los mejores ligandos según los mejores puntajes de afinamiento.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Software
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+AUTODOCK - Scripps Research Institute,USA (autodock.scripps.edu/)
+\end_layout
+
+\begin_layout Itemize
+AutoDock Vina, https://vina.scripps.edu/
+\end_layout
+
+\begin_layout Itemize
+GOLD – University of Cambridge ,UK
+\end_layout
+
+\begin_layout Itemize
+SWISSDOCK, http://www.swissdock.ch/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,35 @@
+# This file was created Wed Mar 22 11:39:00 2023
+# Created by:
+#              :-) GROMACS - gmx energy, 2021.4-Ubuntu-2021.4-2 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+# Command line:
+#   gmx energy -f simulacion_nvt.edr -o temperatura.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(K)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Temperature"
+    0.000000  299.668823
+    0.200000  252.627548
+    0.400000  279.245911
+    0.600000  290.823273
+    0.800000  295.276733
+    1.000000  296.573853
+    1.200000  295.911224
+    1.400000  295.590668
+    1.600000  299.093872
+    1.800000  298.150848
+    2.000000  302.060181

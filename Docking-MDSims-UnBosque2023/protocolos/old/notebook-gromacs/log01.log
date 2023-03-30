@@ -1,0 +1,200 @@
+             :-) GROMACS - gmx pdb2gmx, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx pdb2gmx, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/lg/repos/lgcursos/DockingMDSims-UnBosque2023/practicas/notebook-gromacs
+Command line:
+  gmx pdb2gmx -f 3HTB_clean.pdb -o 3HTB_processed.gro
+
+Opening force field file /usr/share/gromacs/top/amber96.ff/watermodels.dat
+Opening force field file /usr/share/gromacs/top/amber96.ff/aminoacids.r2b
+Opening force field file /usr/share/gromacs/top/amber96.ff/dna.r2b
+Opening force field file /usr/share/gromacs/top/amber96.ff/rna.r2b
+WARNING: all CONECT records are ignored
+there were 0 atoms with zero occupancy and 178 atoms with          occupancy unequal to one (out of 1364 atoms). Check your pdb file.
+Opening force field file /usr/share/gromacs/top/amber96.ff/atomtypes.atp
+Opening force field file /usr/share/gromacs/top/amber96.ff/aminoacids.rtp
+Opening force field file /usr/share/gromacs/top/amber96.ff/dna.rtp
+Opening force field file /usr/share/gromacs/top/amber96.ff/rna.rtp
+Opening force field file /usr/share/gromacs/top/amber96.ff/aminoacids.hdb
+Opening force field file /usr/share/gromacs/top/amber96.ff/dna.hdb
+Opening force field file /usr/share/gromacs/top/amber96.ff/rna.hdb
+Opening force field file /usr/share/gromacs/top/amber96.ff/aminoacids.n.tdb
+Opening force field file /usr/share/gromacs/top/amber96.ff/aminoacids.c.tdb
+
+Back Off! I just backed up topol.top to ./#topol.top.2#
+Analysing hydrogen-bonding network for automated assignment of histidine
+ protonation. 273 donors and 248 acceptors were found.
+There are 347 hydrogen bonds
+Will use HISD for residue 31
+8 out of 8 lines of specbond.dat converted successfully
+Special Atom Distance matrix:
+                    MET1    MET6   HIS31   CYS54   CYS97  MET106
+                    SD10    SD56  NE2276   SG446   SG808   SD883
+    MET6    SD56   0.631
+   HIS31  NE2276   2.196   1.931
+   CYS54   SG446   2.781   2.718   1.052
+   CYS97   SG808   0.820   0.539   2.117   2.897
+  MET106   SD883   1.900   1.314   1.848   2.841   1.635
+  MET120   SD982   2.525   2.014   3.286   4.293   2.112   1.520
+Opening force field file /usr/share/gromacs/top/amber96.ff/aminoacids.arn
+Opening force field file /usr/share/gromacs/top/amber96.ff/dna.arn
+Opening force field file /usr/share/gromacs/top/amber96.ff/rna.arn
+Before cleaning: 6889 pairs
+Before cleaning: 6924 dihedrals
+Keeping all generated dihedrals
+
+Back Off! I just backed up posre.itp to ./#posre.itp.1#
+
+Back Off! I just backed up 3HTB_processed.gro to ./#3HTB_processed.gro.1#
+
+GROMACS reminds you: "Every revolutionary idea seems to evoke three stages of reaction. They may be summed up by the phrases: (1) It's completely impossible. (2) It's possible, but not worth doing. (3) I said it was a good idea all along." (Arthur C. Clarke)
+
+Select the Force Field:
+
+From current directory:
+
+ 1: CHARMM36 all-atom force field (March 2019)
+
+From '/usr/share/gromacs/top':
+
+ 2: AMBER03 protein, nucleic AMBER94 (Duan et al., J. Comp. Chem. 24, 1999-2012, 2003)
+
+ 3: AMBER94 force field (Cornell et al., JACS 117, 5179-5197, 1995)
+
+ 4: AMBER96 protein, nucleic AMBER94 (Kollman et al., Acc. Chem. Res. 29, 461-469, 1996)
+
+ 5: AMBER99 protein, nucleic AMBER94 (Wang et al., J. Comp. Chem. 21, 1049-1074, 2000)
+
+ 6: AMBER99SB protein, nucleic AMBER94 (Hornak et al., Proteins 65, 712-725, 2006)
+
+ 7: AMBER99SB-ILDN protein, nucleic AMBER94 (Lindorff-Larsen et al., Proteins 78, 1950-58, 2010)
+
+ 8: AMBERGS force field (Garcia & Sanbonmatsu, PNAS 99, 2782-2787, 2002)
+
+ 9: CHARMM27 all-atom force field (CHARM22 plus CMAP for proteins)
+
+10: GROMOS96 43a1 force field
+
+11: GROMOS96 43a2 force field (improved alkane dihedrals)
+
+12: GROMOS96 45a3 force field (Schuler JCC 2001 22 1205)
+
+13: GROMOS96 53a5 force field (JCC 2004 vol 25 pag 1656)
+
+14: GROMOS96 53a6 force field (JCC 2004 vol 25 pag 1656)
+
+15: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
+
+16: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
+
+Using the Amber96 force field in directory amber96.ff
+
+Select the Water Model:
+
+ 1: TIP3P     TIP 3-point, recommended
+
+ 2: TIP4P     TIP 4-point
+
+ 3: TIP4P-Ew  TIP 4-point optimized with Ewald
+
+ 4: TIP5P     TIP 5-point (see https://gitlab.com/gromacs/gromacs/-/issues/1348 for issues)
+
+ 5: SPC       simple point charge
+
+ 6: SPC/E     extended simple point charge
+
+ 7: None
+
+going to rename amber96.ff/aminoacids.r2b
+
+going to rename amber96.ff/dna.r2b
+
+going to rename amber96.ff/rna.r2b
+Reading 3HTB_clean.pdb...
+Read 'LYSOZYME', 1364 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 0 blocks of water and 163 residues with 1364 atoms
+
+  chain  #res #atoms
+
+  1 'A'   163   1364  
+
+there were 0 atoms with zero occupancy and 178 atoms with          occupancy unequal to one (out of 1364 atoms). Check your pdb file.
+
+Reading residue database... (Amber96)
+
+Processing chain 1 'A' (1364 atoms, 163 residues)
+
+Identified residue MET1 as a starting terminus.
+
+Identified residue ASN163 as a ending terminus.
+
+Checking for duplicate atoms....
+
+Now there are 1300 atoms. Deleted 64 duplicates.
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 163 residues with 2614 atoms
+
+Making bonds...
+
+Number of bonds was 2635, now 2634
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are 6924 dihedrals,  522 impropers, 4751 angles
+          6847 pairs,     2634 bonds and     0 virtual sites
+
+Total mass 18512.384 a.m.u.
+
+Total charge 6.000 e
+
+Writing topology
+
+Writing coordinate file...
+
+		--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: 3HTB_clean.pdb.
+
+The Amber96 force field and the tip3p water model are used.
+
+		--------- ETON ESAELP ------------

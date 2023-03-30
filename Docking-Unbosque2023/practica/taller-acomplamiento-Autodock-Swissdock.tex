@@ -1,0 +1,96 @@
+%% LyX 2.3.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{color}
+\usepackage[spanish]{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{charter}
+
+\makeatother
+
+\begin{document}
+\title{Taller Docking Molecular con Autodock4 y SwissDock}
+\author{Basado en el taller de Carlos Eduardo Bonilla}
+\maketitle
+
+\section{Objetivo}
+
+Realizar el acomplamiento molecular de una proteína y un ligando usando dos herramientas: Autodock tools y SwissDock. La primera se descarga e instala localmente mientras que la segunda se realiza el proceso en un servidor WEB.
+
+\section{Moleculas}
+\begin{description}
+\item [{Proteína:}] BCL-XL es una de las principales proteínas que estimulan la supervivencia celular mediante la inhibición de la apoptosis al unirse e inhibir a proteínas pro-apoptóticas (Bax, Bak y posiblemente Bok) o a proteínas BH3(1).
+\item [{Ligando:}] La genisteína, un químico producido de forma natural presente en la soya, ha atraído el interés científico por sus posibles beneficios en la prevención del cáncer y enfermedad cardíaca. La genisteína es un tipo de químico llamado fitoestrógeno - una sustancia similar al estrógeno presente en algunas plantas. Hay dos tipos principales de fitoestrógenos: isoflavonas y lignanos. La soya es la fuente más abundante de isoflavonas, con la genisteína como la isoflavona más abundante en la soya. El trébol rojo también es una buena fuente de genisteína (https://www.wnyurology.com/content.aspx?chunkiid=125001).
+\end{description}
+
+\section{Procedimiento}
+
+\subsection{Instalación software}
+\begin{enumerate}
+\item Descargar e instalar Autodock tools
+\item Descargar e instalar Software Chimera.
+\end{enumerate}
+
+\subsection{Configurar carpeta de trabajo}
+\begin{enumerate}
+\item Crear una carpeta en su equipo donde van a guardarse las moléculas y los resultados de la práctica.
+\item Configurar esta carpeta en preferencias de Autodock: Menú \textbf{File} \textrightarrow{} \textbf{Preferences}, se ajusta el Startup Directory con la ruta de su carpeta de trabaja y se selecciona \textquotedblleft Set\textquotedblright .
+\end{enumerate}
+
+\subsection{Descargar moléculas }
+
+Todos los resultados guardarlos en la carpeta de trabajo
+\begin{enumerate}
+\item Descargar estructura de la proteína BCL-XL (PDB Id: 1lxl) desde el Protein Data Bank, en formato PDB. 
+\begin{center}
+\includegraphics[scale=0.7]{images/PDB}
+\par\end{center}
+\item Descargar la estructura de ligando: \href{https://pubchem.ncbi.nlm.nih.gov/compound/Genistein}{genisteína} (genistein) desde Pubchem (\url{https://pubchem.ncbi.nlm.nih.gov/compound/Genistein}), estructura 3D, formato SDF.
+\begin{center}
+\includegraphics[scale=0.4]{images/pubchem-genistein}
+\par\end{center}
+\item Convertir archivo SDF de genisteina a formato mol2 utilizando el servidor de OpenBabel (\url{http://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html})
+\begin{center}
+\includegraphics[scale=0.5]{images/openbabel-converter}
+\par\end{center}
+\end{enumerate}
+
+\subsection{Cargar moléculas a Autodock Tools}
+\begin{enumerate}
+\item Se carga ahora el archivo de la proteína 1lxl.pdb: Menú \textbf{File} \textrightarrow{} \textbf{Read Molecule}. 
+\begin{center}
+\includegraphics[scale=0.5]{images/Protein-load}
+\par\end{center}
+\item Cambiar la representación gráfica de la molécula de ''Lineas (Lines)'' a ''Cintas (Ribons)'', de-seleccione \textbf{''L'' }y seleccione \textbf{''R''}
+\begin{center}
+\includegraphics[scale=0.5]{images/Protein-representation2}
+\par\end{center}
+\item Preparar la proteína: 
+\begin{itemize}
+\item En \textbf{Menú Edit}, se adicionan H+ polares (para añadir cargas), se da OK. 
+\item Luego se da click a Merge Non Polar. 
+\item Y se adicionan cargas de Kollman para la proteína. Las cargas de Kollman añadidas son de -22.328
+\begin{center}
+\includegraphics[scale=0.5]{images/Protein-charges}
+\par\end{center}
+\end{itemize}
+\item Guardar los cambios de la molécula en formata PDBQ: Menú File , 
+\item seleccionamos Save y luego Write PDB, se selecciona Sort Nodes (verificar dirección de guardado). Sobreesecribir
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,3 @@
+Trait,Model,Threshold,Marker,Chrom,Position,Ref,Alt,Score,Effect
+tuber_shape,additive,4.82,c2_25471,10,48808404,C,T,6.23,0.34
+tuber_shape,additive,4.82,c1_8019,10,48863165,A,G,9.48,-0.42

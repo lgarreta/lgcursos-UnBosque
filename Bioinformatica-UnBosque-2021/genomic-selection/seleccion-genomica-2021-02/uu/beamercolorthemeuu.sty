@@ -1,0 +1,90 @@
+\ProvidesPackage{beamercolorthemeuu}[2007/04/04]
+
+% Copyright 2003 by Till Tantau   <tantau@users.sourceforge.net>
+%       and 2007 by Frédéric Haziza <daz@it.uu.se>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+
+%% ------------------------------------------------------
+%% Outer theme colors
+%% ------------------------------------------------------
+
+%%\definecolor{uugrey}{RGB}{227,228,229}
+\definecolor{uured}{RGB}{154,0,0} %\definecolor{uured}{RGB}{171,22,0}
+\usecolortheme[RGB={154,0,0}]{structure}
+
+%% ------------------------------------------------------
+%% Inner theme colors
+%% ------------------------------------------------------
+\usecolortheme{orchid}
+
+%% ------------------------------------------------------
+%% Beamer mode
+%% ------------------------------------------------------
+\mode
+<beamer>
+
+\setbeamercolor*{title}{fg=uured,bg=white}
+
+\setbeamercolor{date in head/foot}{fg=white,bg=uured}
+\setbeamercolor{page number in head/foot}{use=structure,fg=black,bg=white}
+\setbeamercolor{author in head/foot}{fg=black,bg=white}
+\setbeamercolor{institute in head/foot}{fg=black,bg=white}
+
+\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
+  
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=structure.fg!10}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
+\setbeamercolor*{palette sidebar quaternary}{fg=white}
+
+\ifbeamer@sidebarshades
+  %% Block-shades in the sidebar
+  \setbeamercolor*{section in sidebar shaded}{parent=palette sidebar primary}
+  \setbeamercolor*{section in sidebar}
+		  {parent=section in sidebar shaded,use={sidebar,section in sidebar shaded},%
+		    bg=sidebar.bg!70!black}%section in sidebar shaded.fg}
+		  
+  \setbeamercolor*{subsection in sidebar shaded}{parent=palette sidebar primary}
+  \setbeamercolor*{subsection in sidebar}
+		  {parent=subsection in sidebar shaded,use=section in sidebar,%
+		    bg=sidebar.bg!80!black}%section in sidebar.bg}
+\else%
+  %% white block and red font
+  \ifbeamer@whiteblock%
+  \setbeamercolor*{section in sidebar}{use=sidebar,bg=white,fg=sidebar.bg}
+  \setbeamercolor*{subsection in sidebar}{parent=section in sidebar}%use=sidebar,bg=white,fg=sidebar.bg}
+  \setbeamercolor*{subsubsection in sidebar}{parent=subsection in sidebar}%use=sidebar,bg=white,fg=sidebar.bg}
+  \fi%
+\fi%
+
+\ifbeamer@menutop%
+ \setbeamercolor*{section in head/foot}{use=structure,fg=white,bg=structure.fg}
+\fi%
+
+%% ------------------------------------------------------
+%% Handout mode
+%% ------------------------------------------------------
+\mode
+<handout>
+
+\usecolortheme{whale}
+\setbeamercolor*{title}{fg=uured,bg=white}
+\setbeamercolor{title in head/foot}{fg=black,bg=white}
+
+%% ------------------------------------------------------
+%% Trans mode
+%% ------------------------------------------------------
+\mode
+<trans>
+
+%\usecolortheme{whale}
+\setbeamercolor*{title}{fg=black,bg=white}
+\setbeamercolor*{subtitle}{fg=black,bg=white}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+\setbeamercolor{framesubtitle}{fg=black,bg=white}
+
+\mode
+<all>

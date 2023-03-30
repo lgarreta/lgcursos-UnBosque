@@ -1,0 +1,11 @@
+Instalar las siguientes herramientas:
+-------------------------------------
+1. Autodock tools para Docking:
+https://ccsb.scripps.edu/mgltools/downloads/
+
+2. VMD viewer para Análisis de Simulaciones (Se tiene que registrar):
+https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD
+
+3. Descargar los siguientes datos de una trajectoria del siguiente repositorio:
+https://github.com/luisgarreta/docking-clase/archive/refs/heads/main.zip
+

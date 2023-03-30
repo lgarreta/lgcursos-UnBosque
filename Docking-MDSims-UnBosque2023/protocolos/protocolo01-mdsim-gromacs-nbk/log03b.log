@@ -1,0 +1,110 @@
+              :-) GROMACS - gmx genion, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx genion, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+Command line:
+  gmx genion -s parametros_iones.tpr -p topol.top -neutral -o proteina_iones.gro
+
+Reading file parametros_iones.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Reading file parametros_iones.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Group     0 (         System) has 62225 elements
+Group     1 (        Protein) has  4682 elements
+Group     2 (      Protein-H) has  2426 elements
+Group     3 (        C-alpha) has   326 elements
+Group     4 (       Backbone) has   978 elements
+Group     5 (      MainChain) has  1305 elements
+Group     6 (   MainChain+Cb) has  1596 elements
+Group     7 (    MainChain+H) has  1618 elements
+Group     8 (      SideChain) has  3064 elements
+Group     9 (    SideChain-H) has  1121 elements
+Group    10 (    Prot-Masses) has  4682 elements
+Group    11 (    non-Protein) has 57543 elements
+Group    12 (          Water) has 57543 elements
+Group    13 (            SOL) has 57543 elements
+Group    14 (      non-Water) has  4682 elements
+Select a group: Number of (3-atomic) solvent molecules: 19181
+
+Back Off! I just backed up topol.top to ./#topol.top.4#
+Using random seed -1087307777.
+Replacing solvent molecule 17064 (atom 55874) with NA
+Replacing solvent molecule 16505 (atom 54197) with NA
+Replacing solvent molecule 18543 (atom 60311) with NA
+Replacing solvent molecule 17843 (atom 58211) with NA
+Replacing solvent molecule 19034 (atom 61784) with NA
+Replacing solvent molecule 7823 (atom 28151) with NA
+Replacing solvent molecule 373 (atom 5801) with NA
+Replacing solvent molecule 6154 (atom 23144) with NA
+Replacing solvent molecule 18060 (atom 58862) with NA
+Replacing solvent molecule 16975 (atom 55607) with NA
+Replacing solvent molecule 9222 (atom 32348) with NA
+Replacing solvent molecule 7740 (atom 27902) with NA
+Replacing solvent molecule 5345 (atom 20717) with NA
+Replacing solvent molecule 10981 (atom 37625) with NA
+Replacing solvent molecule 5899 (atom 22379) with NA
+Replacing solvent molecule 4970 (atom 19592) with NA
+Replacing solvent molecule 18786 (atom 61040) with NA
+Replacing solvent molecule 8804 (atom 31094) with NA
+Replacing solvent molecule 17553 (atom 57341) with NA
+Replacing solvent molecule 13855 (atom 46247) with NA
+Replacing solvent molecule 14590 (atom 48452) with NA
+Replacing solvent molecule 1479 (atom 9119) with NA
+Replacing solvent molecule 16 (atom 4730) with NA
+Replacing solvent molecule 11889 (atom 40349) with NA
+Replacing solvent molecule 5081 (atom 19925) with NA
+Replacing solvent molecule 2190 (atom 11252) with NA
+Replacing solvent molecule 16569 (atom 54389) with NA
+Replacing solvent molecule 17660 (atom 57662) with NA
+Replacing solvent molecule 16391 (atom 53855) with NA
+Replacing solvent molecule 12658 (atom 42656) with NA
+Replacing solvent molecule 2193 (atom 11261) with NA
+Replacing solvent molecule 18438 (atom 59996) with NA
+Replacing solvent molecule 13240 (atom 44402) with NA
+Replacing solvent molecule 15025 (atom 49757) with NA
+Replacing solvent molecule 6327 (atom 23663) with NA
+Replacing solvent molecule 11742 (atom 39908) with NA
+Replacing solvent molecule 3997 (atom 16673) with NA
+Replacing solvent molecule 11981 (atom 40625) with NA
+
+
+Back Off! I just backed up proteina_iones.gro to ./#proteina_iones.gro.1#
+
+GROMACS reminds you: "Schrödinger's backup: The condition of any backup is unknown until a restore is attempted." (Anonymous)
+
+Will try to add 38 NA ions and 0 CL ions.
+Select a continuous group of solvent molecules
+Selected 13: 'SOL'
+
+Processing topology
+Replacing 38 solute molecules in topology file (topol.top)  by 38 NA and 0 CL ions.

@@ -1,0 +1,3098 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{/Amsterdamred}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+
+
+%\setbeamerfont{subheadline}{size=\large}
+\definecolor{darkblue}{RGB}{0,0,74}
+\setbeamerfont*{subsection in head/foot}
+{size=\huge, series=\bfseries}
+
+\setbeamercolor*{palette secondary}{use=structure,fg=yellow,bg=darkblue}
+%\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
+
+% PDF notes, DUAL screen
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen=bottom}
+\setbeamertemplate{note page}[plain]
+
+\setbeamerfont{note page}{size=\tiny}
+\addtobeamertemplate{note page}{
+\setbeamerfont{itemize/enumerate subbody}{size=\tiny}}{}
+
+
+ \setbeamercolor*{palette secondary}{use=structure,fg=blue,bg=white}
+ %\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=green}
+
+% Change char shapé for item
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamerfont{itemize/enumerate subbody}{size=\small}
+\setbeamertemplate{enumerate items}[default]
+\end_preamble
+\options 9pt
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Descubrimiento de Motivos en Secuencias 
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Institute
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivo de secuencia: definiciones
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+En bioinformática, un 
+\emph on
+\color blue
+motivo de secuencia
+\emph default
+\color inherit
+ es un 
+\emph on
+\color blue
+patron de secuencia
+\emph default
+\color inherit
+ de nucleótidos o de aminoácidos que 
+\emph on
+\color blue
+se repite
+\emph default
+\color inherit
+ en varias partes de la misma secuencia o entre varias secuencias y ha sido
+ probado o asumido que tiene un significado biológico.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Una vez que conocemos el patrón de secuencia del motivo, podemos usar distintos
+ métodos de búsqueda para encontrarlo en las secuencias (es decir, algoritmo
+ de Boyer-Moore, Rabin-Karp, árboles de sufijos, etc.) 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El problema es descubrir los motivos, es decir, cuál es el 
+\emph on
+\color blue
+orden de las letras 
+\emph default
+\color inherit
+que componen el motivo particular.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejemplos de motivos en el ADN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+TATA BOX
+\emph default
+\color inherit
+: La secuencia del promotor TATA es un ejemplo de un motivo de secuencia
+ de ADN altamente conservado que se encuentra en eucariotas.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Sitios de unión
+\emph default
+\color inherit
+: Otro ejemplo de motivos son los sitios de unión para factores de transcripción
+ (TF) cerca de regiones promotoras de genes, etc.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-examples.png
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivo de secuencia: notaciones
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Un ejemplo de un motivo en una proteína: 
+\end_layout
+
+\begin_layout Itemize
+N, seguido de cualquier cosa menos P, seguido de S o T, seguido de cualquier
+ cosa menos P
+\end_layout
+
+\begin_layout Itemize
+Una convención es escribir: 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+N {P} [ST] {P} 
+\end_layout
+
+\begin_layout Plain Layout
+Donde 
+\end_layout
+
+\begin_layout Itemize
+{X} significa cualquier aminoácido excepto X; 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+[XYZ] significa X o Y o Z.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Descubrimiento de motivos de secuencia a partir de la conservación
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Los motivos de secuencia son secuencias conservadas de patrones similares
+ o idénticos que pueden ocurrir dentro de ácidos nucleicos (ADN, ARN) o
+ proteínas, ya sea:
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+dentro de diferentes moléculas producidas por el mismo organismo, o
+\end_layout
+
+\begin_layout Itemize
+dentro de moléculas de múltiples especies de organismos
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+En el caso de la conservación de especies cruzadas, el motivo conservado
+ indica que un patrón de secuencia particular puede haberse conservado durante
+ la evolución para realizar una función vital en esas especies.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La conservación de motivos es la base del descubrimiento de motivos mediante
+ el estudio de genes (o proteínas) similares en diferentes especies;
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Descubrimiento de motivos basado en la alineación
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+También se conoce como 
+\emph on
+\color blue
+análisis de perfil
+\emph default
+\color inherit
+.
+ Los pasos son:
+\end_layout
+
+\begin_layout Itemize
+Primero, se construye un 
+\emph on
+\color blue
+alineamiento local 
+\emph default
+\color inherit
+de múltiples secuencias, 
+\end_layout
+
+\begin_layout Itemize
+Segundo, se aíslan las 
+\emph on
+\color blue
+regiones altamente conservadas
+\emph default
+\color inherit
+, en base a su alta puntuación de alineamiento
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/motifs-local-aligment.png
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Descubrimiento de motivos basado en la alineación
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Después de aislar las regiones altamente conservadas, se utilizan para construir
+ 
+\emph on
+\color blue
+matrices de perfil
+\emph default
+\color inherit
+ para cada región conservada.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La matriz de perfil para un motivo dado contiene 
+\emph on
+\color blue
+conteos de frecuencia
+\emph default
+\color inherit
+ para cada letra en cada posición de la región conservada.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/motifs-local-aligment-with-counts.png
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Logotipo de secuencia y secuencia consenso 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Podemos extraer la llamada 
+\emph on
+\color blue
+secuencia de consenso
+\emph default
+\color inherit
+, es decir, la cadena de letras más frecuentes:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motis-consensus-sequence.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Una representación gráfica de la secuencia de consenso se denomina 
+\emph on
+\color blue
+logotipo de secuencia
+\emph default
+\color inherit
+:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-sequence-logo.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La altura de las diferentes letras en la misma posición es proporcional
+ a su frecuencia en los motivos: 
+\emph on
+\color blue
+cuanto mejor sea la conservación de la base en esa posición, más altas serán
+ las letras
+\emph default
+\color inherit
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Descubriendo motivos sin alineación 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Primero, supongamos que sabemos dónde comienza el motivo en el conjunto
+ de secuencias de referencia.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Las posiciones de inicio del motivo en secuencias se pueden representar
+ como el conjunto 
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+donde 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ es el índice de posición
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-alignmente-unknown-start-position.png
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Puntuación de motivos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Dado 
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+, alineamos 
+\emph on
+\color blue
+t
+\emph default
+\color inherit
+ motivos de longitud 
+\emph on
+\color blue
+l
+\emph default
+\color inherit
+ de todas las secuencias
+\end_layout
+
+\begin_layout Itemize
+Construimos la matriz de perfil
+\end_layout
+
+\begin_layout Itemize
+Dado el motivo s = 
+\begin_inset Quotes fld
+\end_inset
+
+ACGTACGT
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Puntuación de motivo (s) =
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Queremos calcular la puntación del motivo 
+\emph on
+\color blue
+s = 
+\begin_inset Quotes fld
+\end_inset
+
+ACGTACGT
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5cm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dado 
+\color red
+
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+
+\color inherit
+ alineamos 
+\emph on
+\color blue
+t
+\emph default
+\color inherit
+ motivos de longitud 
+\emph on
+\color blue
+l
+\emph default
+\color inherit
+ de todas las secuencias:
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5cm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/motifs-aligment-sequences.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5cm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Construimos una matrix de perfiles:
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5cm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/motifs-aligment-sequences-profile-matrix.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5cm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Calculamos el puntaje del motivo 
+\emph on
+\color blue
+s = 
+\begin_inset Quotes fld
+\end_inset
+
+ACGTACGT
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\color{red}Score(s)=}$
+\end_inset
+
+
+\color blue
+
+\begin_inset Formula ${\displaystyle \stackrel[i=1]{l}{\sum}\underset{k\epsilon\{A,C,G,T\}}{max}[count(k,i)]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5cm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Score=3+4+4+5+3+4+3+4
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\series bold
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Score = 30
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problema de búsqueda de motivos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+El problema es encontrar las posiciones iniciales 
+\color red
+
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+
+\color inherit
+ para maximizar la puntuación (s) de la matriz de perfil resultante.
+\end_layout
+
+\begin_layout Itemize
+Se utilizan varios tipos de matrices de perfiles:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+\color blue
+Una matriz de frecuencia de posición (PFM)
+\emph default
+\color inherit
+ registra la frecuencia dependiente de la posición 
+\emph on
+\color blue
+f
+\emph default
+\color inherit
+ de cada letra, es decir, cuántas veces aparece una letra en una posición
+ determinada en 
+\emph on
+\color blue
+N
+\emph default
+\color inherit
+ secuencias.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Una matriz de probabilidad de posición (PPM)
+\emph default
+\color inherit
+.
+ Cuando se normaliza a 1, esta frecuencia se convierte en una probabilidad,
+ es decir, P = 
+\emph on
+\color blue
+f
+\emph default
+\color inherit
+ / 
+\emph on
+\color blue
+N
+\emph default
+\color inherit
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Una 
+\color red
+matriz de peso de posición (PWM)
+\color inherit
+:
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motif-equation-PWM.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Corrección en las Frecuencias Genómicas del ADN de Fondo
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Se asume una frecuencia igual de ocurrencia de las bases:
+\end_layout
+
+\begin_layout Itemize
+f(A) = f(C) = f(G) = f(T) = 
+\color red
+1/4 = 0.25
+\end_layout
+
+\begin_layout Itemize
+Pero el contenido G+C de los genomas cambia por especie:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+E.coli (51% GC), human (41%) : 
+\color blue
+razonable
+\end_layout
+
+\begin_layout Itemize
+S.
+ cerevisiae (38%), Caenorhabditis elegans (36%) 
+\color blue
+: 
+\color purple
+de cuidado
+\end_layout
+
+\begin_layout Itemize
+Plasmodium falciparum (19%), Streptomyces coelicolor (72%): 
+\color red
+extremo
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Contenido de Información
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $I_{i}=2+\underset{b}{\sum}f_{b,i}log_{2}f_{b,i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\color blue
+\begin_inset Formula $I_{i}=\underset{b}{-\sum}f_{b,i}log_{2}\frac{f_{b,i}}{q_{b}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Donde
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+\begin_inset Formula $I_{i}$
+\end_inset
+
+:
+\color inherit
+ Contenido de información de la posición 
+\emph on
+\color red
+i
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+\begin_inset Formula $f_{b,i}$
+\end_inset
+
+:
+\color inherit
+ Frecuencia de la base 
+\emph on
+\color red
+b
+\emph default
+\color inherit
+ en la posición 
+\emph on
+\color red
+i
+\color inherit
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+\begin_inset Formula $qpb_{b}:$
+\end_inset
+
+
+\color inherit
+ Frecuencia de fondo de la base 
+\color blue
+b
+\color inherit
+ en el genoma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Empecemos de nuevo: Problema de búsqueda de motivos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Dada una lista de 
+\shape italic
+\color blue
+t
+\shape default
+\color inherit
+ secuencias cada una de longitud 
+\shape italic
+\color blue
+n
+\shape default
+\color inherit
+, encuentre el "mejor" patrón de longitud 
+\shape italic
+\color blue
+l
+\shape default
+\color inherit
+ que aparece en cada una de las 
+\shape italic
+\color blue
+t
+\shape default
+\color inherit
+ secuencias.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sea
+\color red
+ 
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+
+\color inherit
+ el conjunto de posiciones iniciales para 
+\shape italic
+\color blue
+l-meros
+\shape default
+\color inherit
+ en nuestras secuencias 
+\shape italic
+\color blue
+t
+\shape default
+\color inherit
+.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Las cadenas correspondientes a estas posiciones iniciales formarán: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Matriz de perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+ de dimensiónes 
+\shape italic
+\color blue
+4
+\shape default
+\color inherit
+x
+\shape italic
+\color blue
+l
+\shape default
+\color inherit
+ para DNA, y
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Matriz de perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+ de dimensiones 
+\shape italic
+\color blue
+20
+\shape default
+\color inherit
+x
+\shape italic
+\color blue
+l
+\shape default
+\color inherit
+ para proteínas 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La matriz de perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+ se definirá en términos de 
+\shape italic
+\color blue
+probabilidad de letras
+\shape default
+\color inherit
+, y no como conteo de letras.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Matriz de Perfil
+\emph on
+ P
+\emph default
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Dado 
+\color red
+
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+
+\color inherit
+ alineamos 
+\emph on
+\color blue
+t
+\emph default
+\color inherit
+ 
+\emph on
+\color blue
+l-meros
+\emph default
+\color inherit
+ de todas las secuencias:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-aligment-sequences.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Construcción del perfil 
+\shape italic
+\color blue
+P:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Cada posición de la matriz tiene un peso 
+\shape italic
+\color blue
+w
+\shape default
+\emph on
+\color inherit
+ 
+\emph default
+o probabilidad.
+\end_layout
+
+\begin_layout Itemize
+Se normaliza a 1 estas frecuencias y se vuelve una probabilidad, es decir,
+ 
+\emph on
+
+\begin_inset Formula $P=f/N$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-probability-position-matrix.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+La probabilidad de los 
+\emph on
+l-meros
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\shape italic
+\color blue
+\begin_inset Formula $Pr(a|P)$
+\end_inset
+
+
+\shape default
+\color inherit
+ se define como la probabilidad de que un 
+\shape italic
+\color blue
+l-mero
+\shape default
+\color inherit
+ 
+\shape italic
+\color blue
+a
+\shape default
+\color inherit
+ fuera creado por el perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si 
+\shape italic
+\color blue
+a
+\shape default
+\color inherit
+ es muy similar a la cadena de consenso (es decir, motivo), entonces 
+\begin_inset Formula $Pr(a|P)$
+\end_inset
+
+ será alto.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si 
+\shape italic
+\color blue
+
+\begin_inset Formula $P_{ai,k}$
+\end_inset
+
+
+\shape default
+\color inherit
+ es la probabilidad de la letra 
+\shape italic
+\color blue
+
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\shape default
+\color inherit
+ en la posición 
+\shape italic
+\color blue
+k
+\shape default
+\color inherit
+, entonces la probabilidad de un 
+\shape italic
+\color blue
+l-mero
+\shape default
+\color inherit
+ 
+\shape italic
+\color blue
+a
+\shape default
+\color inherit
+ es igual al producto de las probabilidades individuales 
+\shape italic
+\color blue
+
+\begin_inset Formula $P_{ai,k}$
+\end_inset
+
+
+\shape default
+\color inherit
+, es decir:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-equation-probabilit-lmero.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Puntuación de 
+\emph on
+l-mero
+\emph default
+ con un perfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Dado un perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+ = 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-probility-lmero.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Puntuación de 
+\emph on
+l-mero
+\emph default
+ con un perfil (continuación)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Dado un perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+ =
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-equation-probabilit-lmero-resultado.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Puntuación de 
+\emph on
+l-mero
+\emph default
+ con un perfil (continuación)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Dado un perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+ =
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-equation-probabilit-lmero-2-resultados.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivo - el 
+\emph on
+l-mero
+\emph default
+ 
+\emph on
+P
+\emph default
+-más probable
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Defina el 
+\shape italic
+\color blue
+l-mero
+\shape default
+\color inherit
+ 
+\shape italic
+\color blue
+P-más probable
+\shape default
+\color inherit
+ de una secuencia como un 
+\shape italic
+\color blue
+l-mero
+\shape default
+\color inherit
+ en esa secuencia que tiene la mayor probabilidad de ser creado a partir
+ del perfil 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Tarea
+\color inherit
+: dada una secuencia 
+\color blue
+ctataaaccttacatc
+\color inherit
+ y el perfil conocido 
+\shape italic
+\color blue
+P
+\shape default
+\color inherit
+, encuentre el 
+\shape italic
+\color blue
+P-6-mero
+\shape default
+\color inherit
+ más probable:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-perfil-P-tarea.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+l-mero
+\emph default
+ 
+\emph on
+P
+\emph default
+-más probable
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/motifs-lmero-p.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Deslice la ventana para evaluar cada 6-mer posible 
+\end_layout
+
+\begin_layout Itemize
+Enfoque de fuerza bruta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+l-mero
+\emph default
+ 
+\emph on
+P
+\emph default
+-más probable
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Calcule 
+\begin_inset Formula $Pr(a|P)$
+\end_inset
+
+ para cada 6-mero posible:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-plmero-01.png
+	scale 90
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\shape italic
+\color blue
+P-6-mero
+\shape default
+\color inherit
+ más probable en la secuencia es 
+\shape italic
+\color blue
+aaacct
+\shape default
+\color inherit
+:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Algunas correcciones: Pseudoconteos en la Matriz de Frecuencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Ceros en la matriz de frecuencias pueden generar problemas en los calculos:
+\end_layout
+
+\begin_layout Itemize
+Se presentan cuando hay pocas secuencias 
+\color red
+
+\begin_inset Formula $s=(s_{1},s_{2},s_{3},...,s_{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Resulta en probabilidades iguales a 0
+\end_layout
+
+\begin_layout Itemize
+Resulta en logaritmos inválidos (log de 0 es infinito)
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Solución
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+Sumarle 1 valor que no afecte el conteo
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-aligment-sequences.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename img/motifs-aligment-sequences-profile-matrix-pseudocounts.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Algunas correcciones: logaritmos en vez de Probabilidades
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(S/M)=$
+\end_inset
+
+
+\begin_inset Formula ${\color{red}Score(s)}$
+\end_inset
+
+
+\color blue
+
+\begin_inset Formula ${\displaystyle \stackrel[i=1]{l}{\prod}f{}_{b,i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(S/M)=$
+\end_inset
+
+
+\begin_inset Formula ${\color{red}Score(s)}$
+\end_inset
+
+
+\color blue
+
+\begin_inset Formula ${\displaystyle \stackrel[i=1]{l}{\sum}log_{2}f_{b,i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Donde:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $b=A,C,G,T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $i=1...l$
+\end_inset
+
+, 
+\emph on
+l es la longitud de la sequencia
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Ejemplo:
+\end_layout
+
+\begin_layout Plain Layout
+P(
+\begin_inset Quotes fld
+\end_inset
+
+
+\color blue
+ACGTACGT
+\color inherit
+
+\begin_inset Quotes frd
+\end_inset
+
+/M)
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/motifs-probability-position-matrix-logs.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\color red
+\begin_inset Formula $P=log_{2}0.6+log_{2}0.8+log_{2}0.8+log_{2}1.0+log_{2}0.6+log_{2}0.8+log_{2}0.6+log_{2}0.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Algoritmo voraz para búsqueda de motivos de perfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Utilice los l-meros P-más probables para ajustar nuevas posiciones de inicio
+ hasta que alcancemos el "mejor" perfil; esto será el motivo.
+ 
+\end_layout
+
+\begin_layout Itemize
+Seleccione posiciones iniciales aleatorias, luego: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Cree un perfil 
+\emph on
+P
+\emph default
+ a partir de los 
+\emph on
+l-meros
+\emph default
+ en estas posiciones iniciales.
+\end_layout
+
+\begin_layout Enumerate
+Encuentre el 
+\shape italic
+\color blue
+P-l-mero
+\shape default
+\color inherit
+ 
+\shape italic
+\color blue
+a
+\shape default
+\color inherit
+ más probable en cada secuencia y cambie las posiciones iniciales a las
+ posiciones iniciales de las 
+\shape italic
+\color blue
+a
+\shape default
+\color inherit
+s.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Vaya al paso 1 y repita hasta que no podamos aumentar más la puntuación.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Resumen del descubrimiento de motivos algoritmo voraz
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Dado que elegimos posiciones iniciales al azar, hay pocas posibilidades
+ de que nuestra suposición esté cerca de un motivo óptimo, lo que significa
+ que llevará mucho tiempo encontrar el motivo óptimo.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En la práctica, este algoritmo se ejecuta muchas veces con la esperanza
+ de que las posiciones iniciales aleatorias estén cerca de la solución óptima
+ simplemente por casualidad.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El algoritmo puede mejorarse mediante el conocimiento heurístico, donde
+ aproximadamente deberíamos comenzar o mediante técnicas estadísticas más
+ sofisticadas, como el 
+\shape italic
+\color blue
+muestreo de Gibbs 
+\shape default
+\color inherit
+que estima las posiciones iniciales más probables para los motivos, donde
+ deberíamos comenzar nuestro proceso iterativo de descubrimiento de motivos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tarea: Muestreo de Gibbs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Investigar sobre el algoritmos de 
+\begin_inset Quotes fld
+\end_inset
+
+Gibbs sampling
+\begin_inset Quotes frd
+\end_inset
+
+, específicamente crear un ensayo corto en español o inglés plano que trate
+ los siguientes puntos:
+\end_layout
+
+\begin_layout Itemize
+En que consiste el algoritmos o método de 
+\begin_inset Quotes fld
+\end_inset
+
+Gibbs sampling
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Cómo soluciona este algoritmo el procedimiento voraz de búsqueda de mótivos.
+\end_layout
+
+\begin_layout Itemize
+Los dos algortimos usados comunmente en la búsqueda de motivos son 
+\begin_inset Quotes fld
+\end_inset
+
+Gibbs sampling
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+expectation-maximization
+\begin_inset Quotes frd
+\end_inset
+
+, qué diferencias existen entre estos dos algoritmos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

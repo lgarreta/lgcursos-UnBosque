@@ -1,0 +1,161 @@
+                 :-) GROMACS - gmx grompp, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX2_256/gmx
+Data prefix:  /usr/local
+Working dir:  /jetstream2/scratch/main/jobs/49000492/working
+Command line:
+  gmx grompp -f ./md.mdp -c ./inp.gro -t ./inp.cpt -r ./inp.gro -p ./top_input.top -o outp.tpr -maxwarn 0
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 1 [file top_input.top, line 18410]:
+  You are combining position restraints with Parrinello-Rahman pressure
+  coupling, which can lead to instabilities. If you really want to combine
+  position restraints with pressure coupling, we suggest to use Berendsen
+  pressure coupling instead.
+
+Number of degrees of freedom in T-Coupling group Protein is 4920.79
+Number of degrees of freedom in T-Coupling group non-Protein is 63837.21
+
+NOTE 2 [file ./md.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+Last frame         -1 time   20.000   
+
+There were 2 notes
+
+GROMACS reminds you: "There is no such thing as free energy. Anyone who advocates it does not know what he is talking about." (Alireza Haghighat)
+
+Setting the LD random seed to -213991777
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+
+The center of mass of the position restraint coord's is  3.487  3.522  3.502
+
+The center of mass of the position restraint coord's is  3.487  3.522  3.502
+Analysing residue names:
+There are:   129    Protein residues
+There are: 10636      Water residues
+There are:     8        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.450 nm
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.035 nm, buffer size 0.035 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 20 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 44x44x44, spacing 0.159 0.159 0.159
+
+Estimate for the relative computational load of the PME mesh part: 0.22
+
+This run will generate roughly 13 Mb of data
+                 :-) GROMACS - gmx mdrun, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX2_256/gmx
+Data prefix:  /usr/local
+Working dir:  /jetstream2/scratch/main/jobs/49000492/working
+Command line:
+  gmx mdrun -nt 1 -deffnm outp
+
+Reading file outp.tpr, VERSION 2022-conda_forge (single precision)
+Changing nstlist from 10 to 50, rlist from 1 to 1.115
+
+Using 1 MPI thread
+Using 1 OpenMP thread 
+
+starting mdrun 'LYSOZYME in water'
+5000 steps,     10.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      119.304      119.305      100.0
+                 (ns/day)    (hour/ns)
+Performance:        7.243        3.313
+
+GROMACS reminds you: "Ubiquitin's just a rock" (Berk Hess)
+
+
+                    title    = OPLS Lysozyme MD simulation 
+                    ; Run parameters
+                    integrator  = md    ; leap-frog integrator
+                    nsteps    = 5000  ; 2 * 500000 = 1000 ps (1 ns)
+                    dt        = 0.002    ; 2 fs
+                    ; Output control
+                    nstxout            = 500    ; save coordinates every 10.0 ps
+                    nstvout            = 500    ; save velocities every 10.0 ps
+                    nstenergy          = 500    ; save energies every 10.0 ps
+                    nstlog            = 500    ; update log file every 10.0 ps
+                    nstxout-compressed  = 500      ; save compressed coordinates every 10.0 ps
+                                                    ; nstxout-compressed replaces nstxtcout
+                    compressed-x-grps   = System    ; group(s) to write to the compressed trajectory file
+                    ; Bond parameters
+                    continuation          = yes    ; Restarting after NPT 
+                    constraint_algorithm    = lincs      ; holonomic constraints 
+                    constraints              = h-bonds  ; all bonds (even heavy atom-H bonds) constrained
+                    lincs_iter              = 1        ; accuracy of LINCS
+                    lincs_order              = 4        ; also related to accuracy
+                    ; Neighborsearching
+                    cutoff-scheme   = Verlet
+                    ns_type        = grid    ; search neighboring grid cells
+                    nstlist        = 10      ; 20 fs, largely irrelevant with Verlet scheme
+                    rcoulomb      = 1.0    ; Short-range electrostatic cut-off
+                    rlist       = 1.0 ; Cut-off distance for the short-range neighbor list.
+                    rvdw        = 1.0    ; Short-range Van der Waals cut-off
+                    ; Electrostatics
+                    coulombtype      = PME    ; method for electrostatics calculations e.g. PME
+                    pme_order      = 4        ; cubic interpolation
+                    fourierspacing  = 0.16    ; grid spacing for FFT
+                    ; Temperature coupling is on
+                    tcoupl   = V-rescale ; modified Berendsen thermostat
+                    tc-grps   = Protein Non-Protein  ; two coupling groups - more accurate
+                    tau_t    = 0.1    0.1          ; time constant, in ps
+                    ref_t    = 300 300           ; reference temperature, one for each group, in K
+                    ; Periodic boundary conditions
+                    pbc    = xyz    ; 3-D PBC
+                    ; Dispersion correction
+                    DispCorr  = EnerPres  ; account for cut-off vdW scheme
+                    ; Velocity generation
+                    gen_vel    = no    ; Velocity generation is OFF
+                    define    = -DPOSRES  ; position restrain the protein
+                    refcoord_scaling  = com
+                    ; Pressure coupling is on
+                    pcoupl            = Parrinello-Rahman      ; Pressure coupling on in NPT
+                    pcoupltype          = isotropic              ; uniform scaling of box vectors
+                    tau_p            = 2.0                ; time constant, in ps
+                    ref_p            = 1.0                ; reference pressure, in bar
+                    compressibility     = 4.5e-5              ; isothermal compressibility of water, bar^-1
+
+            

@@ -1,0 +1,2019 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usepackage{charter}
+\usetheme{Boadilla}
+%\usetheme{Darmstadt}
+
+% PDF notes, DUAL screen
+%\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen=right}
+%\setbeamertemplate{note page}[plain]
+
+%\setbeamerfont{note page}{size=\large}
+%\addtobeamertemplate{note page}{
+%  \setbeamerfont{itemize/enumerate subbody}{size=\small}
+%}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introducción al Acoplamiento Molecular: (Docking)
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Institute
+
+\lang english
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Modelado Molecular
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Modelado Molecular
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Conjunto de métodos computacionales y teóricos que se utilizan para la represent
+ación aproximada del comportamiento de moléculas, iones y partículas, consideran
+do sus características tridimensionales.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/protein-3D-representations.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/protein-ligand-example.png
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Representación 3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proteína-Ligando
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\lang english
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Métodos Computacionales: 
+\series bold
+\shape italic
+\emph on
+Campos de Fuerza
+\end_layout
+
+\end_inset
+
+
+\size scriptsize
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Itemize
+
+\lang english
+Estiman la energía potencial de un sistema bajo estudio y calculan las fuerzas
+ de interacción que actúan sobre los átomos involucrados.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename img/force-field-components.png
+	lyxscale 20
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+\lang english
+Los campos de fuerza utilizan varios tipos de cálculos y generalmente se
+ verifican con valores experimentales.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+\lang english
+Son elementos clave para el modelado y simulación de interacciones interatómicas
+ de sistemas moleculares.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Docking
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Docking: Acoplamiento Molecular 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Método de simulación computacional que busca predecir la orientación preferida
+ de una molécula o 
+\series bold
+\emph on
+\color blue
+ligando
+\series default
+\emph default
+\color inherit
+ cuando se une a un sitio activo de otra molécula o 
+\series bold
+\emph on
+\color blue
+receptor
+\series default
+\emph default
+\color inherit
+ para formar un complejo estable.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-ligand-receptor-complex.png
+	lyxscale 20
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Objetivos del Docking
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Lograr una 
+\series bold
+\emph on
+\color blue
+conformación y orientación optimizada
+\series default
+\emph default
+\color inherit
+ tanto para el receptor como para el ligando de modo que se minimice la
+ 
+\series bold
+\emph on
+\color blue
+energía libre del sistema
+\series default
+\emph default
+\color inherit
+ general.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-protein-ligand-pocket.pdf
+	lyxscale 20
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Objetivos
+\begin_inset space ~
+\end_inset
+
+Específicos: 
+\end_layout
+
+\begin_layout Enumerate
+Predecir la conformación (comunmente llamado 
+\emph on
+Pose
+\emph default
+).
+\end_layout
+
+\begin_layout Enumerate
+Evaluar su afinidad de unión.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Antecedentes
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1.
+ Teoría de llave-cerradura en la que el ligando entra en el receptor como
+ una llave en una cerradura.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/docking-theory-key-lock.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+2.
+ Modelo de ajuste inducido en el que el sitio activo de una proteína cambia
+ su conformación dependiendo de las interacciones con sus ligandos.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/docking-theory-flexible.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Consideraciones: 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Ligando y receptor deberían tratarse como flexibles, así las interacciones
+ de unión se describieran con mayor exactitud que de manera rígida.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Considerar limitaciones en computo: docking-rigido (menor costo), docking
+ flexible (mayor costo), docking rigido-flexible (costo aceptable).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Importancia del Docking
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\color blue
+Para el diseño de nuevos fármacos:
+\color inherit
+ Los resultados del acoplamiento se pueden utilizar para encontrar inhibidores
+ de proteínas diana específicas.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Para evaluar nuevas estructuras de proteínas:
+\color inherit
+ Es cada vez más necesario a medida que aumenta el número de proteínas cuya
+ estructura se conoce.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color blue
+Para identificación de la geometría de unión correcta (postura) del ligando
+ en el sitio de unión.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Algunas aplicaciones del Docking
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-applications-industry.png
+	lyxscale 20
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+note{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Principales aplicaciones del docking en el descubrimiento de fármacos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+El docking se utiliza actualmente como auxiliar para comprender las interaccione
+s que lleva a cabo un ligando hacia una diana de interés y para realizar
+ campañas de cribado virtual basados en estructura, similar a cuando se
+ desarrolló por primera vez.
+\end_layout
+
+\begin_layout Enumerate
+Además de estas aplicaciones, también se puede utilizar para identificar
+ series de dianas para los que los ligandos presentan buena complementariedad
+ (también conocidos como 
+\color blue
+target fishing y profiling
+\color inherit
+), 
+\end_layout
+
+\begin_layout Enumerate
+algunos de los cuales podrían ser potencialmente responsables de reacciones
+ adversas inesperadas (predicción de 
+\color blue
+off-targets
+\color inherit
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Además, el docking también se emplea en la actualidad para la identificación
+ de ligandos que se unan simultáneamente a un grupo de dianas de interés
+ seleccionadas (
+\color blue
+polifarmacología
+\color inherit
+) 
+\end_layout
+
+\begin_layout Enumerate
+y para identificar nuevos usos para fármacos que ya tengan perfiles de seguridad
+ optimizados (
+\color blue
+reposicionamiento de fármacos
+\color inherit
+).
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos de Docking: Flexibilidad Ligando-Receptor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Description
+Docking
+\begin_inset space ~
+\end_inset
+
+rígido
+\begin_inset space ~
+\end_inset
+
+(Llave-Cerradura): 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+
+\size scriptsize
+En el acoplamiento rígido, la geometría interna tanto del receptor como
+ del ligando se tratan como rígidas.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Docking
+\begin_inset space ~
+\end_inset
+
+rígido-flexible:
+\size scriptsize
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+
+\size scriptsize
+La proteína se trata como rígida, pero se exploran todos los grados de libertad
+ del ligando (traslacionales, rotacionales y conformacionales).
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Docking
+\begin_inset space ~
+\end_inset
+
+flexible-flexible: 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+
+\size scriptsize
+La proteína se trata como total o parcialmente flexible y se exploran todos
+ los grados de libertad del ligando.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Consideraciones:
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Generalmente, los ligandos pequeños son muy flexibles y pueden generar un
+ amplio rango de diferentes confórmeros (conocidos como poblaciones), los
+ cuales adaptan su superficie para complementar la forma de la hendidura
+ (o pocket en inglés) del receptor
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+En acoplamiento flexible:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Se realiza una enumeración de las rotaciones de una de las moléculas (normalment
+e la más pequeña).
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Cada rotación se calcula la energía.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Al final, se seleccionan la(s) pose(s) más óptimas.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Estrategías de Búsqueda de Soluciones
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+
+\size footnotesize
+Una búsqueda guiada a través del espacio conformacional en estudio.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\size footnotesize
+Una búsqueda de la solución total del espacio conformacional y 
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-methods-blind-vs-exahustive.png
+	lyxscale 20
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Algunos algoritimos utilizados comúnmento por los paquetes de software:
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Monte Carlo, 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Alineamiento simulado, 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Dinámica molecular (MD), 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Algoritmos evolutivos tales como el algoritmo genético (GA) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El acoplamiento puede ser entre....
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-types-ProtLig-ProtProt-ProtNucl.png
+	lyxscale 20
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Funciones de evaluación o score
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Las funciones de score son métodos de aproximaciones matemáticas o fisicoquímica
+s que estiman la afinidad de unión entre una diana y un ligando.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-searching-scoring.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Las funciones de score se pueden clasificar en tres tipos:
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\lang english
+Basados en campos de fuerza
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\lang english
+Basados en conocimiento
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\lang english
+Bunciones de score empíricas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fuerzas que intervienen en la interacción Proteína-Ligando
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/docking-interaction-forces.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\lang english
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Elementos de una 
+\series bold
+\shape italic
+\emph on
+Función de Evaluación
+\end_layout
+
+\end_inset
+
+
+\size scriptsize
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\size scriptsize
+\lang english
+Los campos de fuerza utilizan varios tipos de cálculos y generalmente se
+ verifican con valores experimentales.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename img/force-field-components.png
+	lyxscale 20
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Etapas clave en el acoplamiento
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Docking-pasos-generales.png
+	height 7cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selección y preparación de receptores 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Construcción del Receptor
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se debe considerar la estructura 3D del receptor que se puede descargar
+ desde PDB.
+ 
+\end_layout
+
+\begin_layout Itemize
+La estructura disponible debe ser procesada.
+ 
+\end_layout
+
+\begin_layout Itemize
+El receptor debe ser biológicamente activo y estable.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Identificación del Sitio Activo
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Debe identificarse el sitio activo dentro del receptor.
+ 
+\end_layout
+
+\begin_layout Itemize
+El receptor puede tener muchos sitios activos, pero debe seleccionarse el
+ de interés.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selección y preparación de ligandos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Selección
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los ligandos se pueden obtener de varias bases de datos como ZINC, PubChem,
+ PDB o se pueden diseñar usando herramientas como Chemsketch.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Docking
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El ligando se acopla al receptor y se comprueban las interacciones.
+ 
+\end_layout
+
+\begin_layout Itemize
+La función de puntuación genera una puntuación
+\end_layout
+
+\begin_layout Itemize
+Se escoge los mejores ligandos según los mejores puntajes de afinamiento.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Software
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+AUTODOCK - Scripps Research Institute,USA (autodock.scripps.edu/)
+\end_layout
+
+\begin_layout Itemize
+AutoDock Vina, https://vina.scripps.edu/
+\end_layout
+
+\begin_layout Itemize
+GOLD – University of Cambridge ,UK
+\end_layout
+
+\begin_layout Itemize
+SWISSDOCK, http://www.swissdock.ch/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,19 @@
+; jz4_H_GMX_OPLS.top created by acpype (v: 2022.7.21) on Mon Mar 20 20:57:12 2023
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include jz4_H_GMX.itp topology
+#include "jz4_H_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_jz4_H.itp"
+#endif
+
+[ system ]
+ jz4_H
+
+[ molecules ]
+; Compound        nmols
+ jz4_H            1     

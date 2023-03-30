@@ -1,0 +1,1 @@
+{"model_class": "History", "create_time": "2023-03-16 23:30:01.500222", "update_time": "2023-03-17 17:34:45.086326", "name": "Tutorial MD con Gromacs", "hid_counter": 38, "genome_build": "?", "annotation": null, "tags": [], "encoded_id": "5f646ff7f5741983"}

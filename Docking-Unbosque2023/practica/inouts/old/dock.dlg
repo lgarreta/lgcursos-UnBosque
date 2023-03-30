@@ -1,0 +1,46 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 18:34:22
+
+
+This file was created at:			5:00 40" p.m., 03/02/2023
+                   on host:		"lgx"
+Current Working Directory = "/home/lg/repos/lgcursos/Docking-Unbosque2023/practica/inouts"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 489429, 1677794440.
+Docking parameter file (DPF) used for this docking:		dock.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 489429, 1677794440.
+DPF> ligand_types A C HD OA               # atoms types in ligand
+
+DPF> fld GEN_ideal.maps.fld               # grid_data_file
+
+Real= 0.04,  CPU= 0.04,  System= 0.00
+autodock4: I'm sorry; I can't find or open "GEN_ideal.maps.fld"
+autodock4: FATAL ERROR: autodock4: I'm sorry; I can't find or open "GEN_ideal.maps.fld"
+
+autodock4: Unsuccessful Completion.
+

@@ -1,0 +1,16 @@
+--2023-03-25 17:49:20--  https://files.rcsb.org/download/5pep.pdb
+Resolving files.rcsb.org (files.rcsb.org)... 128.6.158.70
+Connecting to files.rcsb.org (files.rcsb.org)|128.6.158.70|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/octet-stream]
+Saving to: ‘5pep.pdb.2’
+
+     0K .......... .......... .......... .......... ..........  161K
+    50K .......... .......... .......... .......... ..........  406K
+   100K .......... .......... .......... .......... .......... 1,98M
+   150K .......... .......... .......... .......... ..........  542K
+   200K .......... .......... .......... .......... .......... 1,78M
+   250K .......                                                8,45M=0,6s
+
+2023-03-25 17:49:22 (444 KB/s) - ‘5pep.pdb.2’ saved [263250]
+

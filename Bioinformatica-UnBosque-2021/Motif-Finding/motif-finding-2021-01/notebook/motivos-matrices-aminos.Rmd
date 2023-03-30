@@ -1,0 +1,169 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+require(ggplot2)
+require(ggseqlogo)
+```
+
+# Ejemplo1: 10x9 Secuencias iniciales en formato de cadenas
+```{r}
+sequences = c (
+  "GAGGTAAAC",
+  "TCCGTAAGT",
+  "CAGGTTGGA",
+  "ACAGTCAGT",
+  "TAGGTCATT",
+  "TAGGTACTG",
+  "ATGGTAACT",
+  "CAGGTATAC",
+  "TGTGTGAGT",
+  "AAGGTAAGT")
+N = length (sequences)
+M = nchar (sequences [1])
+print (paste ("NxM: ", N, M))
+print (sequences)
+```
+
+# Ejemplo2: 12x8 Secuencias iniciales en formato de cadenas
+```{r}
+sequences = c(
+  "CCCATTGTTCTC",
+  "TTTCTGGTTCTC",
+  "TCAATTGTTTAG",
+  "CTCATTGTTGTC",
+  "TCCATTGTTCTC",
+  "CCTATTGTTCTC",
+  "TCCATTGTTCGT",
+  "CCAATTGTTTTG")
+N = length (sequences)
+M = nchar (sequences [1])
+print (paste ("NxM: ", N, M))
+print (sequences)
+```
+
+# Ejemplo3: 12x8 Secuencias iniciales en formato de cadenas
+```{r}
+sequences = c(
+"RHSHYLPFRGGARNCIGTLLRFELLPDPTR",
+"DPFSAYHFDGGARNCIGKQARLVVDTLREL",
+"FDPGRARFFGGARNCIGQFAMKVLTLVRFE",
+"DPSRFAPFDGGARNCIGFAMLKVGLRFELL",
+"DSFADPRFSGGARNCIGQAMMIVLLRFELL",
+"RAPSRSHFRGRARNRIGQFMEKASTLRELP",
+"RFPSHHAFRGRARNPIGKQLTLLRFELLPD",
+"PAPSRSHFPGRARNAIGKQFMEKAATLRDD",
+"AGSSHSHFAGRARNFIGFAMNKVALTLRFE")
+N = length (sequences)
+M = nchar (sequences [1])
+print (paste ("NxM: ", N, M))
+print (sequences)
+```
+
+# Convertimos las cadenas a matriz de caracters
+```{r}
+seqMatrix = matrix (unlist (strsplit (sequences, split="")),nrow=N,byrow = T)
+print (seqMatrix)
+```
+
+# Calculamos la matrix de frecuencias (PCM)
+```{r}
+freqMatrix = NULL
+aminos = c("A", "R", "N", "D", "C", "Q", "E", "G", "H", "I", "L", "K", "M", "F", "P", "S", "T", "W", "Y", "V", "B", "Z", "X") 
+bases = c("A","C","G","T")
+for (j in 1:M) {
+  conteos = c()
+  for (B in aminos) {
+    nB = length(which (seqMatrix[,j]==B))
+    conteos = c(conteos, nB)
+  }
+  freqMatrix = cbind (freqMatrix, conteos)
+}
+rownames (freqMatrix) = aminos
+colnames (freqMatrix) = paste0 ("p", 1:M)
+freqMatrix = freqMatrix + 0.01 # Con seudoconteo
+#freqMatrix = freqMatrix 
+freqMatrix
+```
+
+# Calculamos la matrix de posición de probabilidades o matrix ponderad de posiciones (PWM)
+```{r}
+probMatrix = freqMatrix/(N+23*0.01)# Con seudoconteo
+#probMatrix = freqMatrix/(N)
+print (round (probMatrix, 2))
+PWM = probMatrix 
+```
+
+# Contenido de Información de una posición de la matrix
+# Ii = sum (fbi*log2(fbi))
+```{r}
+i=12
+sumIi=0
+for (b in aminos) {
+  sumIi = (sumIi + PWM [b,i]*log2(PWM[b,i]))
+}
+print (2+sumIi)
+```
+
+# Creamos el logo de la matriz de probabilidades
+```{r}
+print (round (PWM,2))
+print ("")
+ggseqlogo (PWM, seq_type="aa")
+```
+
+# Calculamos P(S|PWM) la probabilidad de la secuencia S = "GAGGTAAAC"
+```{r}
+S = "CAGGTTGGA"
+seqS = unlist (strsplit (S,"",))
+
+message ("Seq S = ", seqS)
+print (round (PWM, 2))
+probabilidad = 1
+multiplicaciones = NULL
+for (j in 1:M) {
+  jBase = seqS[j]
+  probBase = PWM [jBase,j]
+  probabilidad = probabilidad * probBase
+  multiplicaciones = c (multiplicaciones, probBase)
+}
+message (paste0 (round (multiplicaciones, 2),sep=" x "))
+message("\nProbabilidad = ", probabilidad)
+```
+
+# Matrix de Contenido de Información 
+# Ii = sum (fbi*log2(fbi))
+# MCI = sum (Ii)
+```{r}
+#bA=bC=bG=bT = 1/4
+bA = bT = 0.32
+bG = bC = 0.18
+
+A = log2 (PWM ["A",]/bA)
+C = log2 (PWM ["C",]/bC)
+G = log2 (PWM ["G",]/bG)
+T = log2 (PWM ["T",]/bT)  
+ICM = rbind (A, C, G, T)
+print (round (ICM,2))
+```
+
+
+# Calculamos P(S|PWM) la probabilidad de la secuencia S = "GAGGTAAAC"
+```{r}
+S = "AACCGGTTA"
+seqS = unlist (strsplit (S,"",))
+
+message ("Seq S = ", seqS)
+print (round (ICM, 2))
+valor = 0
+sumas = NULL
+for (j in 1:M) {
+  base_j = seqS[j]
+  pesoBase =  ICM [base_j, j]
+  valor = valor + pesoBase
+  sumas = c (sumas, pesoBase)
+}
+message (paste0 (round (sumas, 2),sep=" + "))
+message("\nValorTotal = ", valor)
+```

@@ -1,0 +1,941 @@
+
+<!-- saved from url=(0140)http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#introduction -->
+<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="./Practicals of Bioinformatics - Biomolecular databases_files/course.css" media="screen,projection">
+    <title>Practicals of Bioinformatics - Biomolecular databases</title>
+  </head>
+  <body>
+
+    <h1 align="center">Practicals - Biomolecular databases</h1>
+
+
+    <a name="contents"></a>
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#introduction">Introduction</a>
+      </li><li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#resources">Resources</a>
+      </li><li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#quick_tour">A quick tour of selected databases</a>
+      </li><li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#entrez">Retrieving information from the NCBI with Entrez</a>
+      </li><li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs">Retrieving information from various databases with SRS</a>
+	<ul><i>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_library">Selecting a database</a></li>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_field">Imposing constraints on field contents</a></li>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_sequences">Retrieving sequences</a></li>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_combinations">Combining queries</a></li>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_output_fields">Selecting multiple fields</a></li>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_links">Linking databases</a></li>
+	    <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#srs_fields_multidb">Selecting custom fields across multiple databases</a></li>
+	</i></ul>
+      </li><li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#exercises">Additional exercises</a></li>
+      <li><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#more">More info</a></li>
+      
+    </ul>
+
+    <hr>
+    <a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a>
+    <a name="introduction"></a>
+    <h2>Introduction</h2>
+
+    <p>This is the practical session for the chapter <b>Biomolecular
+	databases</b> of the course <b>Introduction to bioinformatics</b>.
+      The slides of the lecture are available in various formats.
+      </p><ul>
+	<li>Portable document format (<a href="http://jacques.van-helden.perso.luminy.univmed.fr/bioinfo_intro/pdf_files/02.databases_slides.pdf">pdf</a>)</li>
+    </ul><p></p>
+    
+    <p>During the tutorial part of this practical session, we will define
+      a few biological problems, and see how databases can be used to obtain
+      the answer. </p>
+    
+    <p>It is important to get the answer for the problemss solved in the
+      tutorial, because the results of some database queries will be used as
+      input for the subsequent practicals (sequence alignment, phylogeny).</p>
+    
+    <p>A series of exercises will give you the opportunity to use the
+      concepts seen in the tutorials to answer some concrete biological
+      questions.</p>
+    
+    <p>Students should of course feel free to add their own questions to
+      this list, which can be treated afterwards, if there is some time
+      left.</p>
+    
+
+    <hr>
+    <a name="resources"></a>
+    <a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a>
+    <h2>Resources</h2>
+    
+    <p>This tutorial will be based on the following Web resources. </p>
+    
+    
+    <a name="table_biomolecular_databases"></a>
+    <table>
+      
+      <tbody><tr>
+	<th>Acronym</th>
+	<th>Type</th>
+	<th>Description+URL</th>
+      </tr>
+      
+      <tr valign="top">
+	<td>EMBL</td>
+	<td>Nucleic sequences</td>
+	<td>The EMBL Nucleic Sequence Database (EBI - UK)
+	  <br><a target:="_blank" href="http://www.ebi.ac.uk/embl/">http://www.ebi.ac.uk/embl/</a>
+	</td>
+	
+      </tr><tr valign="top">
+	<td>Genbank</td>
+	<td>Nucleic sequences</td>
+	<td>Genbank (NCBI - USA)
+	  <br><a target="_blank" href="http://www.ncbi.nlm.nih.gov/Genbank/">http://www.ncbi.nlm.nih.gov/Genbank/</a>
+      </td></tr>
+      
+      <tr valign="top">
+	<td>DDBJ</td>
+	<td>Nucleic sequences</td>
+	<td>DDBJ - DNA Data Bank of Japan
+	  <br><a target="_blank" href="http://www.ddbj.nig.ac.jp/">http://www.ddbj.nig.ac.jp/</a>
+	</td>
+      </tr>
+      
+      <tr valign="top">
+	<td>UniProt</td>
+	<td>Protein sequences</td>
+	<td>UniProt - the Universal Protein Resource
+	  <br><a target="_blank" href="http://www.uniprot.org/">http://www.uniprot.org/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>PDB</td>
+	<td>3D structure of macromolecules</td>
+	<td>PDB - The Protein Data Bank
+	  <br><a target="_blank" href="http://www.rcsb.org/pdb/">http://www.rcsb.org/pdb/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>EnsEMBL</td>
+	<td>Genome browser</td>
+	<td>EnsEMBL Genome Browser (Sanger Institute + EBI)
+	  <br><a target="_&#39;blank&#39;" href="http://www.ensembl.org/">http://www.ensembl.org/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>UCSC</td>
+	<td>Genome browser</td>
+	<td>UCSC Genome Browser (University California Santa Cruz - USA)
+	  <br><a target="_&#39;blank&#39;" href="http://genome.ucsc.edu/">http://genome.ucsc.edu/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>ECR</td>
+	<td>Genome browser</td>
+	<td>ECR Browser
+	  <br><a target="_blank" href="http://ecrbrowser.dcode.org/">http://ecrbrowser.dcode.org/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>Integr8</td>
+	<td>Comparative genomics</td>
+	<td>Integr8 - access to complete genomes and proteomes
+	  <br><a target="_blank" href="http://www.ebi.ac.uk/integr8/">http://www.ebi.ac.uk/integr8/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>Prosite</td>
+	<td>Protein domains</td>
+	<td>Prosite - protein domains, families and functional sites
+	  <br><a target="_blank" href="http://www.expasy.ch/prosite/">http://www.expasy.ch/prosite/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>Pfam</td>
+	<td>Protein domains</td>
+	<td>PFAM - Protein families represented by multiple sequence
+	  alignments and hidden Markov models (HMMs) (Sanger Institute - UK)
+	  <br><a target="_blank" href="http://pfam.sanger.ac.uk/">http://pfam.sanger.ac.uk/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>CATH</td>
+	<td>Protein domains</td>
+	<td>CATH - Protein Structure Classification
+	  <br><a target="_blank" href="http://www.cathdb.info/">http://www.cathdb.info/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>InterPro</td>
+	<td>Protein domains</td>
+	<td>InterPro (EBI - UK)
+	  <br><a target="_blank" href="http://www.ebi.ac.uk/interpro/">http://www.ebi.ac.uk/interpro/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>GO</td>
+	<td>Gene ontology</td>
+	<td>Gene Ontology Database
+	  <br><a target="_blank" href="http://www.geneontology.org/">http://www.geneontology.org/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>Entrez</td>
+	<td>Multi-database</td>
+	<td>A collection of biomolecular databases maintained at the <b>NCBI</b> (USA), accessible via an interface called <b>Entrez</b>. 
+	  <br><a target="_blank" href="http://www.ncbi.nlm.nih.gov/Entrez/">http://www.ncbi.nlm.nih.gov/Entrez/</a></td>
+      </tr>
+      
+      <tr valign="top">
+	<td>SRS</td>
+	<td>Data warehouse</td>
+	<td>A collection of biomolecular databases maintained at the European Institute for Bioinformatics (EBI, UK), accessible via an interface called <b>SRS</b>
+	  <br><a target="_blank" href="http://srs.ebi.ac.uk/">http://srs.ebi.ac.uk/</a></td>
+      </tr>
+      
+    </tbody></table>
+    
+    <hr>
+    <a name="quick_tour"></a>
+    <a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a>
+    <h2>A quick tour of selected databases</h2>
+
+    <p>The number of biomolecular databases is growing so fast that it is
+      impossible to give a balanced survey of all the existing resources. We
+      selected here a few databases on the basis of various criteria
+      (popularity, ease of access, ...) to illustrate the type of
+      information that can be retrieved from them. </p>
+
+    <p>As a matter of exercise, we propose to browse some databases in
+      order to grab information about one particular protein. Each student
+      can do the same analysis with some protein of interest to him/her. If
+      you are out of inspiration, you can for example run the exercise with
+      the <i>Drosophila</i> protein <i>Ubx</i>.</p>
+
+    <h3>Exercise</h3>
+
+    <p>Choose a protein for which you have some prior knowledge (e.g. the
+      protein <b>Ubx</b> from <i>Drosophila melanogaster</i>, and try to
+      extract all the information relevant to this protein in the databases
+      listed in the <a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#table_biomolecular_databases">table of biomolecular databases</a> above. </p>
+    
+    <h3>Next steps</h3>
+
+    <p>In the exercise above, we saw that each database an provide us with a
+      piece of information about some aspects of our protein of interest:
+      </p><ul>
+	<li>gene sequence (GenBank, EMBL, DDBJ), </li>
+	<li>genomic context + cross-genome conservation (EnsEMBL, USCS, ECR), </li>
+	<li>orthologous and paralogous genes (Integr8), </li>
+	<li>protein sequence enriched with annotations about functional
+	  features (UniProt),</li>
+	<li>3D structure (PDB), </li>
+	<li>structural domains (CATH), </li>
+	<li>sequential motifs (PROSITE), </li>
+	<li>...<p></p>
+    </li></ul>
+    
+    <p>Note that this is just a very small sample of the information that
+      can be obtained via the hundreds of biomolecular databases distributed
+      around the world.</p>
+    
+    <p>We will now consult two Web servers (NCBI Entrez and EBI SRS) that
+      provide an integrated access to multiple databases, thereby
+      facilitating the consultation of multiple aspects regarding a protein
+      of interest. </p>
+
+
+    <hr>
+    
+    <a name="entrez">
+    </a><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a>
+    <h2>Retrieving information from the NCBI with Entrez</h2>
+      
+      <b><i>Entrez</i></b> is a retrieval system for searching several
+      linked databases stored at the NCBI (National Computational
+      Bioinfology Institute of the United States).
+
+      <h3>Goal</h3>
+      
+      <p>During this tutorial, we will learn to use the interface
+	of <i>NCBI Entrez</i> to retrieve a protein of interest. As
+	will be seen, a simple formulation of the query generally
+	returns too many hits, and the desired answer may be lost in
+	hundreds or thousands of other records. We will see how to use
+	advanced search options in order to refine the query. </p>
+
+      <ul><a target="entrez" href="http://www.ncbi.nlm.nih.gov/Entrez/">http://www.ncbi.nlm.nih.gov/Entrez/</a>
+      </ul>
+      
+
+      <h3>An example of simple query</h3>
+      <ul>
+
+	<div class="tut">
+
+	<p>We will try to retrieve from Entrez the information about
+	  the Gal4 protein from the budding yeast <i>Saccharomyces
+	  cerevisiae</i>.</p>
+	
+	  <h4>Tutorial</h4>
+	<ol>
+	  <li>Open the Entrez home page 
+	    <ul><a target="entrez" href="http://www.ncbi.nlm.nih.gov/Entrez/">http://www.ncbi.nlm.nih.gov/Entrez/</a></ul>
+	  </li>
+	  
+	  <li>You can see a list of the databases supported at Entrez. 
+	    Click on the link <b>Protein: sequence database</b>. 
+	  </li>
+	  
+	  <li>In the query box, type 
+	    <pre>Gal4</pre>
+	  </li>
+	</ol>
+
+	</div>
+
+	<div class="exo">
+	  <h4>Questions</h4>
+	  
+	  <p>How many results do you obtain ? How many of them correspond to your
+	    needs ? How could you try to improve the result ?</p>
+	</div>
+
+	<div class="answer">
+	<h4>Answers</h4>
+
+	<p>The simple query <i>Gal4</i> returned 20,513 proteins (Oct
+	  2011). Needless to say, this is too much for what we search:
+	  the genome of the budding yeast <i>Saccharomyces
+	  cerevisiae</i> contains ~6,000 coding genes, and only one of
+	  them codes for the Gal4 protein.</p>
+	  
+	<p>A first reason is that we did not impose any constraint on the
+	  organism. </p>
+	  
+	<p>A second reason is that, by typing <i>Gal4</i> in the query
+	  box, we asked Entrez to return all the proteins which
+	  contained this string in any field (name, description,
+	  ...). Thus, our answer includes some proteins related with
+	  Gal4, for example because they interact with this protein,
+	  or becausea a Gal4 fragment was used to construct hybrid
+	  proteins (e.g. for enhancer trap experiments).
+
+	</p></div>
+
+      </ul><h3>Logical operators</h3><ul>
+
+	<div class="tut">
+	
+	  <p>A first improvement can be obtained by imposing some additional words
+	    in the query. For instance, we could impose to find the words
+	    "Saccharomyces" and "cerevisiae", in addition to "Gal4".</p>
+	    
+	<p>
+	  For this, you can use the logical operators 'AND', 'OR', and 'NOT'
+	  within the query sentence. <b>Beware !</b> These operators are
+	  case-sensitive, i.e. if you type them in lowercase, they will be
+	  considered as imposed words rather than operators.</p>
+	  
+	  <p>
+	    In the query box, type 
+	    </p><ul><pre>Gal4 AND Saccharomyces AND cerevisiae</pre></ul>
+	  <p></p>
+
+	  <p>An even more precise way to select <i>Saccharomyces
+	      cerevisiae</i> is to quote the pair of words.
+	    </p><ul><pre>Gal4 AND "Saccharomyces cerevisiae"</pre></ul>
+	    This will only retain the records where these two words
+	    are written consecutively.
+	  <p></p>
+	  
+	</div>
+	
+	<div class="exo">
+	  <h4>Questions</h4>
+
+	  <p>What about the result ? Did we obtain an improvement ? How do you
+	    explain the incorrect result ?</p>
+
+	</div>
+
+	<div class="answer">
+
+	  <h4>Answers</h4>
+	  
+	  <p>By combining <i>Gal4</i> and <i>'Saccharomyces
+	      cerevisiae'</i> in the query, we already obtained some
+	    improvement, and he number of results has been
+	    reduced. However, we still obtain a series of proteins
+	    which do not directly correspond to not Gal4, but are
+	    returned because the three words of our query were found
+	    in some field (name, decription, organism, ...).</p>
+	</div>
+
+      </ul><h3>Imposing constraints on a specific field</h3><ul>
+
+	<div class="tut">
+
+	<p>You can refine the selection by specifying the field in which your
+	  query text has to be found. </p>
+	  
+	<p>
+	  </p><ol>
+	    <li>Click on the link <b>Advanced</b> below the query box.</li>
+
+	    <li>In the <b><i>Search builder</i></b>, select the
+	      field <b>Gene name</b> and enter <tt>GAL4</tt>. By
+	      pressing the <i>Enter</i> key, yo obtain a list of
+	      matches for the gene name GAL4.</li>
+
+	    <li>Click the button <b><i>Add to Search box</i></b>. This
+	      will add a structured text in the query box
+	      <pre>GAL4[Gene Name]</pre>
+	    </li>
+
+	    <li>You can now click the <i><b>Search</b></i> link below
+	      the query box.</li>
+	  </ol>
+
+	</div>
+	
+	<div class="exo">
+	  <h4>Questions</h4>
+
+	<p>How many results do we obtain now ? Do they all fit our needs ? How
+	  could we refine the query ?
+	</p></div>
+
+	<div class="answer">
+	  <h4>Answers</h4>
+
+	  <p>We obtained improvement over our first query (<i>Gal4</i>
+	    alone) by imposing that the value <i>GAL4</i> has to be
+	    found in the field <i>Gene name</i>. However, we still did
+	    not acheive the desired precision (in Oct 2011, the query
+	    returns 45 records). There are two reasons:
+	    </p><ol>
+	      <li>We did not impose any constraint on the
+		organism.</li>
+	      <li>We matched any gene whose name contains "gal", for
+		example "galecting-4 [Homo sapiens]"</li>
+	    </ol>
+	  
+	  <p>We would thus like to formulate a query with constraints on
+	    multiple fields: <i>GAL4</i> as gene name and <i>Saccharomyces
+	      cerevisiae</i> as organism.</p>
+	  
+	</div>
+
+      </ul><h3>Specifying constraints on multiple fields</h3><ul>
+
+	<p>We will further use the <b>Advanced</b> query form to
+	  impose constraints simultaneously on gene name and on
+	  organism. </p>
+	
+	<div class="tut">
+	  <ol>
+	    <p></p><li>In the query box, type the structured query obtained
+		in the previous section.
+		<ul><pre>GAL4[Gene Name]</pre></ul>
+		<b>Do not</b> click on the Search button yet ! We still
+		need to add some constraints.
+	    </li><p></p>
+	    
+	    <p></p><li>
+		In the <b>Search builder</b>, select <b>Organism</b>
+		and type <i>Saccharomyces cerevisiae</i>. Click <b>Add
+		  to Search Box</b>. This should display the following query.
+		<ul><pre>(GAL4[Gene Name]) AND Saccharomyces cerevisiae[Organism]</pre></ul>
+	    </li><p></p>
+	    
+	    
+	  </ol>
+	  
+	</div>
+	
+	<div class="exo">
+	  <h4>Questions</h4>
+	  
+	  How many results do yo obtain now ? What is the difference between
+	  these entries ?
+	  
+	</div>
+
+      </ul><h3>Browsing a protein entry</h3><ul>
+
+	<div class="tut">
+
+	<p>Now that we have selected a reasonably low number of proteins, we
+	  can identify the one we were searching for: Gal4p
+	  from <i>Saccharomyces cerevisiae</i>. </p>
+
+	<ol>
+	  <p></p><li>The result list should include a record with the
+	      accession number <b>P04386.2</b>. Click on the link to
+	      display the entire record. </li><p></p>
+
+	  <p></p><li>Browse the resulting page to get an idea about the annotation
+	      content. </li><p></p>
+	</ol>
+
+	</div>
+
+      </ul><h3>Saving the protein sequence in FASTA format</h3><ul>
+
+	<div class="tut">
+	<ol>
+	  <p></p><li>On the top of the window, the option <b>Display</b> allows you
+	      to choose among different formats. Select the
+	      format <b>FASTA</b>. This will display the coding sequence of the
+	      Gal4p protein. </li><p></p>
+
+	  <pre>	    &gt;gi|1169823|sp|P04386.2|GAL4_YEAST RecName: Full=Regulatory protein GAL4
+	    MKLLSSIEQACDICRLKKLKCSKEKPKCAKCLKNNWECRYSPKTKRSPLTRAHLTEVESRLERLEQLFLL
+	    IFPREDLDMILKMDSLQDIKALLTGLFVQDNVNKDAVTDRLASVETDMPLTLRQHRISATSSSEESSNKG
+	    QRQLTVSIDSAAHHDNSTIPLDFMPRDALHGFDWSEEDDMSDGLPFLKTDPNNNGFFGDGSLLCILRSIG
+	    FKPENYTNSNVNRLPTMITDRYTLASRSTTSRLLQSYLNNFHPYCPIVHSPTLMMLYNNQIEIASKDQWQ
+	    ILFNCILAIGAWCIEGESTDIDVFYYQNAKSHLTSKVFESGSIILVTALHLLSRYTQWRQKTNTSYNFHS
+	    FSIRMAISLGLNRDLPSSFSDSSILEQRRRIWWSVYSWEIQLSLLYGRSIQLSQNTISFPSSVDDVQRTT
+	    TGPTIYHGIIETARLLQVFTKIYELDKTVTAEKSPICAKKCLMICNEIEEVSRQAPKFLQMDISTTALTN
+	    LLKEHPWLSFTRFELKWKQLSLIIYVLRDFFTNFTQKKSQLEQDQNDHQSYEVKRCSIMLSDAAQRTVMS
+	    VSSYMDNHNVTPYFAWNCSYYLFNAVLVPIKTLLSNSKSNAENNETAQLLQQINTVLMLLKKLATFKIQT
+	    CEKYIQVLEEVCAPFLLSQCAIPLPHISYNNSNGSAIKNIVGSATIAQYPTLPEENVNNISVKYVSPGSV
+	    GPSPVPLKSGASFSDLVKLLSNRPPSRNSPVTIPRSTPSHRSVTPFLGQQQQLQSLVPLTPSALFGGANF
+	    NQSGNIADSSLSFTFTNSSNGPNLITTQTNSQALSQPIASSNVHDNFMNNEITASKIDDGNNSKPLSPGW
+	    TDQTAYNAFGITTGMFNTTTMDDVYNYLFDDEDTPPNPKKE
+	  </pre>
+
+	  <p></p><li>You can store this result in some file on your computer, in order
+	      to use it for further analyses. </li><p></p>
+	</ol>
+
+	</div>
+
+      </ul><h3>Getting the query history</h3><ul>
+	
+	<div class="tut">
+	  <p>An interesting feature of Entrez is the history. By
+	    clicking on the link <b>Advanced</b> below the query box,
+	    below <b>Search builder</b> you will see a section
+	    entitled <b>Search history</b>. You can select any of
+	    these previous queries in order to come back to its
+	    results, or edit it, or combine them to refine the
+	    selection.</p>
+	</div>
+
+      </ul>
+      
+      
+      
+    
+    <hr>
+    <a name="srs">
+      </a><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a><h2>Retrieving information from various databases with SRS</h2>
+      <ul>
+
+	  <p>We will now illustrate how the same query can be performed with SRS,
+	    the EMBL/EBI information retrieval system.  </p>
+
+	  <ul><a target="srs" href="http://srs.ebi.ac.uk/">http://srs.ebi.ac.uk</a></ul>
+
+	  <!--<b>Note for students of Cochabamba:</b> if the connection to Europe is
+	      too slow, you can try to use another SRS server, closer from your
+	      location. You can find a list of SRS servers at the following URL.-->
+
+	  <ul><a target="_blank" href="http://downloads.lionbio.co.uk/publicsrs.html">http://downloads.lionbio.co.uk/publicsrs.html</a></ul>
+
+	  <a name="srs_library"><h3>Selecting a database</h3></a><ul><a name="srs_library">
+
+	      SRS interface is more powerful but also more complex than what we saw
+	      with Entrez. The reason is that SRS allows to perform more complex
+	      queries. But for this, you must first get familiar with the basic
+	      concepts.
+
+	      <p>
+		SRS is a multi-database retrieval system, and the first step is to
+		select one or several databases on which the query will be
+		performed. For our first exercise, it will be sufficient to select a
+		single database : UniProt, the non-redundant database of protein
+		sequences. As we saw during the course, this database contains two
+		sections : Swiss-Prot (proteins wih experimental characterization,
+		annotated with many references to the literature), and TREMBL
+		(translation of all the coding sequences from the EMBL nucleotide
+		sequence database).
+
+	      </p><p>
+
+		</p></a><ol><a name="srs_library">
+
+		  <p></p></a><li><a name="srs_library">Go to </a><a target="srs" href="http://srs.ebi.ac.uk/">SRS home
+			page</a>, and click <b>Start a permanent project</b>. 
+
+		      <p>You will be prompted for a user ID, type the login name you would
+			like to use in the future, and click OK. From now on, the server will
+			store your queries, and the next time you connect to SRS with the same
+			login name, you will be able to get back any previous result.
+
+		      </p><p></p></li><li>On the top of the page, there is a series of "tabs", which
+			  allow you to select different tasks: <b>Quick query</b>, <b>Library
+			    page</b>, <b>Query form</b>, ....  
+
+			  <p></p></li><li>Try a <b>Quick Search</b>: select the database <i>Proteins</i>
+			      in the pop-up menu, and type the protein name <tt>Gal4p</tt> as
+			      query. Do you obtain the right result ?
+
+			      <p></p></li><li>Try the same query with the gene name (<tt>GAL4</tt>) instead
+				  of the protein name (Gal4p). How many results do you obtain ?
+
+		</li></ol>
+
+		<a name="srs_field"></a></ul><h3><a name="srs_field">Imposing constraints on field contents</a></h3><ul><a name="srs_field">
+
+	      <p>We will now refine the query by imposing constraints on specific
+		fields. For this, we will use the standard query form.
+
+	      </p><p>
+
+		</p><ol>
+
+		  <p></p><li>Before using a query form, you need to specify which databases you
+		      want to include in your search. 
+
+		      <p>For this, clik on the tab
+			<b>Library page</b>. This page displays the list of databases
+			supported by SRS at EBI. Select <b>Uniprot-KB</b> by clicking on the check
+			box besides it.
+
+
+		      </p><p></p></li><li>You can now open the query form by selecting the tab <b>Query</b>
+			  at the top of the page.
+
+			  <p></p></li><li>You should see a form with 4 text boxes, which will allow you to
+			      select proteins on the basis of 4 criteria. Each text box is preceded
+			      by a pop-up menu, permitting to select a field on which the constraint
+			      will be imposed.
+
+			      <p></p></li><li>For the first criterion, select <b>Gene Name</b> in the pop-up
+				  menu, and type <tt>GAL4</tt> in the text box.
+
+				  <p>Click <b>Search</b>. How many results do you obtain ? Check
+				    the gene names associated to these proteins. Do they all correspond to
+				    your query (GAL4) ? In which organisms did you find a protein ? 
+
+
+				  </p><p></p></li><li>We will not add a second criterion of selection, the
+				      organism. Come back to the query form. For the first criterion,
+				      select <tt>GAL4</tt> as <b>Gene name</b> as previously. For the
+				      secondd query field, select <b>Organism</b> and enter
+				      <tt>Saccharomyces cerevisiae</tt>. Click <b>Search</b> and compare the
+				      results with the previous search.
+
+
+		</li></ol>
+
+
+		</a><a name="srs_sequences"></a></ul><h3><a name="srs_sequences">Selecting multiple sequences</a></h3><ul><a name="srs_sequences">
+
+	      <i>Saccharomyces cerevisiae</i>, together with their description.
+
+	      <p>Gal4p belong to a family of proteins containing a domain called
+		commonly Zinc cluster. This domain contains 6 cysteins, which interact
+		with 2 atoms of Zinc. To date, this domain has only been found in
+		fungi.
+
+
+		</p><h4>Exercise</h4>
+
+		<ul>
+
+		  <li>Retrieve the peptidic sequence of all proteins from the yeast
+		    <i>Saccharomyces cerevisiae</i> which contain a binuclear Zn cluster
+		    domain. Retrieve the peptidic sequences of these proteins and save
+		    them in a file. <b>Beware</b>: this sequence file will be used for
+		    subsequent tutorials.
+
+		  </li><li>Perform the same query as above with the yeast
+		    <i>Schizosaccharomyces pombe</i>.
+
+		</li></ul>
+
+	      <p>We will try two different approaches to select all the Zinc cluster
+		proteins from UniProt. 
+
+	      </p><p></p><ol>
+
+		  <li>A simple but not very accurate method : searching the Zinc
+		    cluster-characteristic keyword in the UniProt entries
+		    themselves. </li>
+
+		  <li>A more complex but more accurate method : identify the Zinc
+		    cluster family in the PFAM database (a database specialized in the
+		    annotation of protein families), and find the links between this
+		    family and UniProt proteins. </li>
+
+		</ol>
+
+		<h4>Search by keywords</h4>
+
+
+	      <p>
+		</p><ol>
+		  <p></p><li>Read carefully the swissprot entry for GAL4, and try to find a
+		      way to select all the yeast protein having the Zinc cluster
+		      domain. For this, you need to identify the part of the form where this
+		      domain is mentionned, and think about the best way to select all the
+		      proteins having the same key words in the same field of their Uniprot
+		      record.
+
+		      <p></p></li><li>Come back to the <b>Query</b> form, and select all proteins from
+			  <i>Saccharomyces cerevisiae</i> which contain a Zinc cluster
+			  domain. <b>Beware</b>, this exercise is difficult. Try to find the
+			  solution by yourself, and, if you don't succeed, read the following.
+
+
+			  <p></p></li><li>In the GAL4_YEAST record, the zinc finger domain is indicated in
+			      the comment field, with the following sentence.
+
+			      <ul><i>Contains 1 Zn(2)-C6 fungal-type DNA-binding domain.</i></ul>
+
+			      <p>We will use the substring <tt>Zn(2)-C6</tt> which seems to
+				characterize this domain.
+
+				</p></li><li><p>You can come back to the <b>Query</b> form and impose, as a first
+				    restriction, the <b>Organism name</b> to be <tt>Saccharomyces
+				      cerevisiae</tt>. For the second restriction, select the
+				    field <b>Comment: comment</b> in the pop-up menu, and
+				    type <tt>Zn(2)-C6</tt> in the text box. 
+
+				    </p></li><li><p>If you run the query now, you will obtain a syntax error. This
+					error comes from the presence of parentheses in the query
+					text. Parentheses have a specific meaning in SRS queries : they are
+					used to separate logical operations (AND, OR, NOT, ...).
+
+					</p></li><li><p>We need thus to indicate that the string <tt>Zn(2)-C6</tt> is a
+					    query as a whole. For this, we have to quote the
+					    string. Type <tt>"Zn(2)-C6"</tt> (with the quotes) in the query box
+					    and run the query. We now obtain 50 proteins (in May 2006), which
+					    corresponds to the number of Zn cluster proteins identified in the
+					    genome of <i>Saccharomyces cerevisiae</i>.
+
+		</p></li></ol>
+
+		<h4>Search with a link between PFAM and Uniprot</h4>
+
+		<ol>
+		  <p></p><li><font color="red">TO BE WRITTEN</font>
+
+		</li></ol>
+
+		<h4>Saving the sequences in a text file</h4>
+
+		<ol>
+
+		  <p></p><li>In the left panel, you can see a button <b>View</b>. Below this
+		      button, there is a pop-up menu proposing different viewing options for
+		      the database you selected. Select <b>FastaSeqs</b> and click <b>View</b>.
+
+		      <p></p></li><li>Click on the <b>Save</b> button in the left panel.  This leads
+			  you to another form, displaying the saving options. Select the
+			  option <b>Text file</b>, and chec that the output format is set
+			  to <b>FastaSeq</b>. Now click <b>Save</b>. You will be prompted to
+			  indicate the foldeer and file name. Let us save the result in a folder
+			  <tt>Desktop/bioinfo/Zinc_cluster</tt>, in a file
+			  <tt>Saccharomyces_Zinc_cluster.fasta</tt>.
+
+			  <p></p></li><li>Perform the same query for <i>Schizosaccharomyces pombe</i> and
+			      save the result in a separate file. We will use these files for the
+			      following tutorials.
+
+		</li></ol>
+
+
+
+
+
+	
+	
+	</a><div class="exo"><a name="srs_sequences">
+<h4>Questions</h4>
+
+</a><p><a name="srs_sequences">
+  Compare the number of entries selected with the query on
+  "description", on "comments" and on either of those fields. Do you
+  feel confident about your retrieval ? How would you envisage to refine
+  the query to obtain a more complete list of transcription factors.
+
+  </a><a name="srs_output_fields"></a></p></div></ul><h3><a name="srs_output_fields">Selecting multiple output fields</a></h3><ul><a name="srs_output_fields">
+
+  There are various ways to customize the fields to be returned. The
+  simplest way is to select them from the list on the query form. 
+
+  <h4>Exercise</h4>
+
+  Select all transcription factors from the yeast
+  <i>Saccharomyces cerevisiae</i>.  Retrieve for each of them the
+  following information:
+  <ol>
+    <li>Identifier
+    </li><li>Accession number
+    </li><li>Description
+    </li><li>Organism
+  </li></ol>
+
+  <h4>Protocol</h4>
+
+  <p>
+    </p><ol>
+      <p></p><li>Open the Query form
+
+	  <p></p></li><li>Fill the form to retrieve all proteins from <i>Saccharomyces
+		cerevisiae</i> whose comment contains the substring <tt>transcription
+		factor</tt>. <b>Do not submit yet</b>.
+
+	      <p></p></li><li>At the bottom of the form, you can see <b>Create your own
+		    view</b>, with a list of fields. Select the required fields (see
+		  above). <b>Note</b>: for selecting multiple fields, you need to
+		  maintain the Ctrl key pressed.
+
+		  <p></p></li><li>You can now submit the query.
+
+    </li></ol>
+
+
+
+    </a><a name="srs_links"></a></ul><h3><a name="srs_links">Linking databases</a></h3><ul><a name="srs_links">
+
+  The next exercise illustrate how to link several databases.
+
+  <h4>Exercise</h4>
+
+  <ul>
+    <li>Find all the yeast genes coding for a metabolic enzyme (tip: start
+      from the LENZYME database).</li>
+
+    <li>Retrieve all <i>Saccharomyces cerevisiae</i> enzymes, together
+      with their substrates and products.
+  </li></ul>
+
+  <h4>Protocol</h4>
+
+  <p>
+    </p><ol>
+      
+      <p></p><li>Select in UniProt all proteins from <i>Saccharomyces
+	    cerevisiae</i>.
+	  
+	  <p></p></li><li>When you have the result, click on the <b>Link</b>
+	      button in the left panel. The list of libraries is now
+	      displayed.
+
+	      <p></p></li><li>In Metabolic databases, select <b>LENZYME</b> (this is the enzyme
+		  section of LIGAND). To avoid massive data transfer, select the view
+		  <b>*Names only*</b> rather than the default view. Submit the link.
+
+		  <p></p></li><li>Link the new result to the database <b>LCOMPOUND</b> (Select the
+		      view <b>*Names only*</b>. ).
+
+    </li></ol>
+
+    </a><a name="srs_fields_multidb"></a></ul><h3><a name="srs_fields_multidb">Selecting custom fields across multiple databases</a></h3><ul><a name="srs_fields_multidb">
+
+
+  <p>
+    The previous query was interesting, but at each step we were able to
+    display the result of the target of the link (e.g. LENZYME), and we
+    lost the information about the origin (e.g. UniProt).
+
+  </p><p>
+    SRS allow to go further, by defining custom views on linked databases. 
+
+  </p><p>
+    </p><ol>
+      <p></p><li>In the tabs at the top of the form, click the <b>View</b> tab.
+	  <p></p></li><li>In the left panel, fill the <b>View name</b> box with
+	      "UniProt_substrates_products".
+
+	      <p></p></li><li>You can see two list of databases. The left list is the origin
+		  database, the right one is the target database. Select <b>UniProt-KB</b> as
+		  origin and <b>LENZYME</b> as target. Click <b>Create new view</b>.
+
+		  <p></p></li><li> Select the output fields of your choice, within UniProt-Kb and LENZYME
+		      (do not forget to include LENZYME substrates and products).
+
+		      <p></p></li><li>Click <b>Save view</b> (top of the form).
+
+			  <p></p></li><li>Open the <b>Results</b> form. Check the previous query where you
+			      linked UniProt to LENZYME (when writing this tutorial, it selected 457
+			      proteins).
+
+			      <p></p></li><li>Come back the the <b>Query form</b>. Select all <i>Saccharomyces
+				    cerevisiae</i> enzymes having the string "EC 2.4" in their
+				  description. Select your new view before submitting the query.
+
+    </li></ol>
+
+</a></ul><a name="srs_fields_multidb">
+
+</a><a name="exercises">
+</a></ul><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a><h2>Additonal exercises</h2><ul>
+
+  The following problems can be solved on the SRS server. 
+
+  <p>
+    </p><ol>
+
+      <li>In UniProt, select all the proteins belonging to the
+	species <i>Saccharomyces cerevisiae</i>.</li>
+
+      <li>Using the PATHWAY database (a mirror of KEGG), get all the yeast
+	genes involved in galactose metabolism.</li>
+
+      <li>Find all the proteins of Escherichia coli for which there is a
+	structure in PDB.</li>
+
+      <li>In UniProt, find all the enzymes with an aspartokinase catalytic
+	domain.</li>
+
+      <li>Calculate, year per year, the number of entries submitted to
+	UniProt during the 10 last years.
+
+      </li><li>Calculate the frequency distribution of polypeptide lengths in
+	Swissprot, with a class intervl of 100.
+
+    </li></ol>
+
+    <a name="more">
+</a></ul><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a><h2>More info</h2><ul>
+
+  <p>
+    This tutorial only illustrates the basic features of Entrez and SRS,
+    you will find more information on the following sites :
+
+    </p><ol>
+      <p></p><li><a target="srs_manual" href="http://srs.ebi.ac.uk/srs6bin/cgi-bin/wgetz?-id+5UMXm1JQJNX+-page+docoPage+-e+[srsbooks:usr1_1]">SRS
+	    user guide</a>, which is available on SRS web site.
+
+	  <p></p></li><li> SRS exercises by Thure Etzold <a target="_blank" href="http://downloads.lionbio.co.uk/pharm/ex.html">http://downloads.lionbio.co.uk/pharm/ex.html</a>
+
+    </li></ol>
+
+</ul><a href="http://bioinf.ibun.unal.edu.co/servicios/electiva/practica/Practicals%20of%20Bioinformatics%20-%20Biomolecular%20databases.html#contents"><font size="-2">[back to contents]</font></a><h2></h2><ul>
+</ul>
+
+
+<hr><address>Jacques van Helden (<a href="mailto:van-helden.j@univmed.fr">van-helden.j@univmed.fr</a>)</address>
+
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.1792763179712773', methodName, methodArgs }, 'http://bioinf.ibun.unal.edu.co');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script><div style="background-color: rgb(255, 143, 0); display: none; color: white; text-align: center; position: fixed; top: 0px; left: 0px; width: 100%; height: auto; min-width: 100%; min-height: auto; max-width: 100%; font: 12px &quot;Helvetica Neue&quot;, Helvetica, Arial, Geneva, sans-serif; cursor: pointer; padding: 5px;"><span style="color: white; font: 12px &quot;Helvetica Neue&quot;, Helvetica, Arial, Geneva, sans-serif;">You have turned off the paragraph player. You can turn it on again from the options page.</span><img src="chrome-extension://gfjopfpjmkcfgjpogepmdjmcnihfpokn/img/icons/icon-close_16.png" style="width: 20px; height: auto; min-width: 20px; min-height: auto; max-width: 20px; float: right; margin-right: 10px;"></div></body></html>

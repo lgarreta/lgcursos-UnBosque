@@ -1,0 +1,35 @@
+# This file was created Wed Mar 22 11:13:13 2023
+# Created by:
+#              :-) GROMACS - gmx energy, 2021.4-Ubuntu-2021.4-2 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+# Command line:
+#   gmx energy -f simulacion_npt.edr -o presion.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  -67.393120
+    0.200000  -18.679575
+    0.400000    7.160940
+    0.600000    1.816905
+    0.800000   23.582861
+    1.000000  126.833923
+    1.200000  -240.566788
+    1.400000  -91.835655
+    1.600000  -26.594507
+    1.800000   52.297558
+    2.000000  -157.815491

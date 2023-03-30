@@ -1,0 +1,20 @@
+; jz4_H_GMX.top created by acpype (v: 2022.7.21) on Mon Mar 20 20:57:12 2023
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include jz4_H_GMX.itp topology
+#include "jz4_H_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_jz4_H.itp"
+#endif
+
+[ system ]
+ jz4_H
+
+[ molecules ]
+; Compound        nmols
+ jz4_H            1     

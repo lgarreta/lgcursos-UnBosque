@@ -1,0 +1,73 @@
+                 :-) GROMACS - gmx grompp, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX2_256/gmx
+Data prefix:  /usr/local
+Working dir:  /jetstream2/scratch/main/jobs/48989328/working
+Command line:
+  gmx grompp -f ./minim.mdp -c ./solv_ions.gro -r ./solv_ions.gro -p ./top_input.top -o em.tpr -maxwarn 0
+
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file ./minim.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 69717.00
+
+There was 1 note
+
+GROMACS reminds you: "Do you have mole problems? If so, call Avogadro at 602-1023." (Jay Leno)
+
+Setting the LD random seed to -33633943
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 1 bonded neighbours molecule type 'CL'
+Analysing residue names:
+There are:   129    Protein residues
+There are: 10636      Water residues
+There are:     8        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.443 nm
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 60x60x60, spacing 0.117 0.117 0.117
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 3 Mb of data
+                 :-) GROMACS - gmx mdrun, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX2_256/gmx
+Data prefix:  /usr/local
+Working dir:  /jetstream2/scratch/main/jobs/48989328/working
+Command line:
+  gmx mdrun -nt 8 -deffnm em
+
+Reading file em.tpr, VERSION 2022-conda_forge (single precision)
+Using 1 MPI thread
+Using 8 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =        50000
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 1000 in 917 steps
+Potential Energy  = -5.8847438e+05
+Maximum force     =  8.8858514e+02 on atom 736
+Norm of force     =  1.9921225e+01
+
+GROMACS reminds you: "How will I know it's working right?" (MGMT)
+

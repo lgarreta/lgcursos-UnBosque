@@ -1,0 +1,1961 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{/Amsterdamred}
+\usepackage[T1]{fontenc}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Biological Database
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Institute
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What is a database? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+An organized collection of data or information that is electronically stored
+ and accessible from a computer system
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/what-is-database.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The organized nature of the database makes it easy to access, manage, periodical
+ly update, and rapidly search the required data/information from a suitable
+ computer system
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Biological databases 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Datasets relevant to biological sciences such as 
+\series bold
+molecular biology
+\series default
+ and 
+\series bold
+bioinformatics
+\series default
+ are called biological databases
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/biological-databases-net.png
+	lyxscale 10
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why are Biological DBs important? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Advances in molecular biology and technology
+\end_layout
+
+\begin_layout Enumerate
+Data analysis
+\end_layout
+
+\begin_layout Enumerate
+Data indexing and helps remove the data redundancy
+\end_layout
+
+\begin_layout Enumerate
+Central component of bioinformatics: data mining tools
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1.
+ Advances in molecular biology and sequencing technology
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Due to rapidly advancing molecular biology, proteomics, and low-cost high-throug
+hput genome sequencing technologies,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/biological-DBs-stats-chart.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Huge amounts of biological information such as raw sequencing datasets,
+ proteomes, etc.
+ are being generated at a very rapid rate.
+  
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2.
+ Biological analysis and drawing of meaningful conclusions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Biological analysis helps researchers transform statistically significant
+ data into evidence-backed insights about affected biology by leveraging
+ biological knowledge
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/biological-analysis-workflow.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Components of biological database 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Entity
+\color inherit
+ 
+\series default
+- An entity refers to the thing we want to store in a database.
+ Eg.
+ DNA sequences, Genes, Bibliographic references, etc.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Fields
+\series default
+\color inherit
+ - The properties of an entity are called fields.
+ Eg.
+ Gene name, gene sequence, mutation (if any), etc.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Records
+\series default
+\color inherit
+ - A record typical refers to a combination of all the fields for a given
+ entity.
+ For eg.
+ Record for gene BRCA1 in GenBank 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Identifier
+\series default
+\color inherit
+ - The unique name which identifies a record.
+ In the case of a simple database, a single file contains multiple records.
+ Among these 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example of a tabular database
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/example-tabular-database.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Types of biological databases 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/biological-databases-types.pdf
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Primary databases 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Archival databases
+\end_layout
+
+\begin_layout Itemize
+Contain experimentally derived datasets such as:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+nucleotide sequences
+\end_layout
+
+\begin_layout Itemize
+protein sequences
+\end_layout
+
+\begin_layout Itemize
+structural information of macromolecules.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This basic information can be accompanied by:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+functional annotation, 
+\end_layout
+
+\begin_layout Itemize
+bibliographies, and 
+\end_layout
+
+\begin_layout Itemize
+links to other databases.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Data is directly submitted by researchers.
+ 
+\end_layout
+
+\begin_layout Itemize
+Once submitted, the data is assigned an 
+\series bold
+\color blue
+accession number
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It is permanent and becomes a part of the scientific record
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Primary databases:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Nucleotide sequence databases
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "The European Nucleotide Archive (ENA - EMBL)"
+target "https://www.ebi.ac.uk/ena/browser/home"
+
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "The National Center for Biotechnology Information GenBank (NCBI GenBank)"
+target "https://www.ncbi.nlm.nih.gov/genbank/"
+
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "The DNA Data Bank of Japan (DDBJ)"
+target "http://www.ddbj.nig.ac.jp/"
+
+\end_inset
+
+, 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/primary-biological-databases.png
+	lyxscale 50
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Primary databases:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Microarray/Functional genomics database
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Gene Expression Omnibus (GEO) "
+target "https://www.ncbi.nlm.nih.gov/geo/info/overview.html"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Array Express Archives"
+target "https://www.ebi.ac.uk/arrayexpress/"
+
+\end_inset
+
+etc.
+\end_layout
+
+\begin_layout Itemize
+....
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Primary databases:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Protein sequences and structure databases
+\end_layout
+
+\begin_layout Itemize
+Protein sequences:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Swiss-Prot "
+target "https://www.expasy.org/resources/uniprotkb-swiss-prot"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Protein Information Resource (PIR)"
+target "https://proteininformationresource.org/"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Protein structures:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Protein Databank (PDB)"
+target "https://www.rcsb.org/"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secondary databases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/biological-databases-types-secondary.pdf
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secondary databases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Store the information derived from the analysis of primary datasets.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Contain 
+\series bold
+\color blue
+highly curated information
+\series default
+\color inherit
+ derived from analysis of primary resources and literature, using:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Complex computational analysis
+\end_layout
+
+\begin_layout Itemize
+Manual analysis
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+These databases often store information about:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+conserved domain structure/sequences, 
+\end_layout
+
+\begin_layout Itemize
+signal sequences, and 
+\end_layout
+
+\begin_layout Itemize
+active site residues
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secondary databases:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Protein families, domains and structure databases
+\end_layout
+
+\begin_layout Itemize
+InterPro
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "PROSITE"
+target "https://prosite.expasy.org/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "SCOP"
+target "https://scop.mrc-lmb.cam.ac.uk/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "CATH"
+target "https://www.cathdb.info/"
+
+\end_inset
+
+and 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "NCBI Conserved Domain Database (CDD) "
+target "https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secondary databases:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Protein sequences and functional information databases
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "UniProt Knowledgebase (UniProtKB) "
+target "https://www.uniprot.org/help/uniprotkb"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secondary databases:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Nucleotide (Genes/Genomes) sequence and annotation databases
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Ensembl"
+target "https://www.ensembl.org/index.html"
+
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+NCBI UniGene, 
+\end_layout
+
+\begin_layout Itemize
+The European Bioinformatics Institute (EBI) Genomes (EBI Genomes),
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Specialized databases 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+These databases cater to the needs of specific research interests.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Ribosomal Project Database (RDP)"
+target "http://rdp.cme.msu.edu/"
+
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+HIV sequence database, 
+\end_layout
+
+\begin_layout Itemize
+The Saccharomyces Genome Database (SGD), 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Mouse Genome Database (MGD)"
+target "http://www.informatics.jax.org/"
+
+\end_inset
+
+, and 
+\end_layout
+
+\begin_layout Itemize
+Antibiotic Resistance Genes Database (ARDB), 
+\end_layout
+
+\begin_layout Itemize
+etc.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Important biological databases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The National Center for Biotechnology Information GenBank (NCBI GenBank)
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NCBI is a part of the National Library of Medicine (NLM) under the U.S.
+ National Institute of Health (NIH).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+NCBI has been playing a leading role in bioinformatics by providing online
+ access to:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+biological datasets
+\end_layout
+
+\begin_layout Itemize
+biological information, and 
+\end_layout
+
+\begin_layout Itemize
+computational resources/tools to the millions of researchers across the
+ world.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+NCBI hosts approximately 40 online biological databases , 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+GenBank is one among them.
+ 
+\end_layout
+
+\begin_layout Itemize
+Accessible online at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ncbi.nlm.nih.gov/ "
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GenBank at NCBI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/genbank.png
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GenBank is part of the International 
+\begin_inset Newline newline
+\end_inset
+
+Nucleotide Sequence Database Collaboration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title[<short title>]{<title>}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/primary-biological-databases.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+GenBank is a publically available collection of nucleotide sequences, their
+ protein sequences along with annotations.
+\end_layout
+
+\begin_layout Itemize
+These three organizations exchange 
+\begin_inset Newline newline
+\end_inset
+
+data on daily basis.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Who can submit data to GenBank?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Being a primary database, the GenBank accepts:
+\end_layout
+
+\begin_layout Itemize
+Sequence submission directly from 
+\series bold
+\color blue
+individual scientists
+\series default
+\color inherit
+ and 
+\series bold
+\color blue
+laboratories
+\series default
+\color inherit
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+It also accepts batch submissions from 
+\series bold
+\color blue
+large-scale sequencing projects
+\series default
+\color inherit
+.
+ 
+\begin_inset Newline linebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Being a free public repository, 
+\series bold
+\color blue
+any researcher
+\series default
+\color inherit
+ can submit the sequences to GenBank without incurring any financial cost.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What Kind of Data Can be Submitted to GenBank?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Examples of submission types included in GenBank
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+mRNA Sequences
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Prokaryotic Genes
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Eukaryotic Genes
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+rRNA and/or ITS
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Viral Sequences
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Transposon or Insertion Sequences
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Microsatellite Sequences
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Pseudogenes
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Cloning Vectors
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Phylogenetic or Population Sets
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Non-coding RNAs
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ncbi.nlm.nih.gov/books/NBK566998/"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GenBank thirty years of growth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/genbank-growth-30years.png
+	width 11cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sequence Read Archive (SRA) at NCBI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The SRA stores raw sequencing data from the next generation of sequencing
+ platforms including:
+\end_layout
+
+\begin_layout Itemize
+Roche 454 GS System®, 
+\end_layout
+
+\begin_layout Itemize
+Illumina Genome Analyzer®, 
+\end_layout
+
+\begin_layout Itemize
+Life Technologies AB SOLiD System® , 
+\end_layout
+
+\begin_layout Itemize
+Helicos Biosciences Heliscope®, 
+\end_layout
+
+\begin_layout Itemize
+Complete Genomics®, and 
+\end_layout
+
+\begin_layout Itemize
+Pacific Biosciences SMRT®.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ncbi.nlm.nih.gov/sra"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "20col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SRA-NCBI-growth.png
+	lyxscale 20
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Some of the unique features of Genbank 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For the same gene or genome, multiple sequences of varying quality are available
+ in GenBank.
+ 
+\end_layout
+
+\begin_layout Itemize
+Essentially, anything submitted to GenBank is stored.
+\end_layout
+
+\begin_layout Itemize
+A sequence can have several versions to represent the various modification
+ done by the author, 
+\end_layout
+
+\begin_layout Itemize
+Unique identifier (
+\color blue
+Accession number
+\color inherit
+) for each GenBank record
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The accession number is permanent, and it stays the same throughout the
+ life of the record.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Only changes may occur in the sequence version but not in the accession
+ number.
+ 
+\end_layout
+
+\begin_layout Itemize
+For eg.
+ ACCESSION AF000001, VERSION AF000001.5
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Once a record is submitted to GenBank, it is assigned to a specific division
+ based on the Source taxonomy or Sequencing strategy used to obtain the
+ data.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There are 12 taxonomic divisions and 8 functional divisions 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

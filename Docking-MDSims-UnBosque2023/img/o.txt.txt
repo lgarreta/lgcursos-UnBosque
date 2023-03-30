@@ -1,0 +1,14 @@
+* It is the key to rational drug design.
+
+* The results of docking can be used to find inhibitors for specific target proteins
+and thus to design new drugs.
+
+* It is gaining importance as the number of proteins whose structure is known
+increases.
+
+* Identification of the ligand’s Correct binding geometry (pose) in the binding site.
+
+@
+
+* Signal transduction
+

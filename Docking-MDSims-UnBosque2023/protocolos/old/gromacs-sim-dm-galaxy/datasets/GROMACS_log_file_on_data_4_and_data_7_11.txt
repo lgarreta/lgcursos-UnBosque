@@ -1,0 +1,154 @@
+                :-) GROMACS - gmx solvate, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX_256/gmx
+Data prefix:  /usr/local
+Working dir:  /corral4/main/jobs/048/989/48989286/working
+Command line:
+  gmx solvate -cp ./gro_input.gro -cs spc216.gro -o solv.gro -p ./top_input.top
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+         based on residue and atom names, since they could not be
+         definitively assigned from the information in your input
+         files. These guessed numbers might deviate from the mass
+         and radius of the atom type. Please check the output
+         files if necessary. Note, that this functionality may
+         be removed in a future GROMACS version. Please, consider
+         using another file format for your input.
+
+NOTE: From version 5.0 gmx solvate uses the Van der Waals radii
+from the source below. This means the results may be different
+compared to previous GROMACS versions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+A. Bondi
+van der Waals Volumes and Radii
+J. Phys. Chem. 68 (1964) pp. 441-451
+-------- -------- --- Thank You --- -------- --------
+
+Generating solvent configuration
+Will generate new solvent configuration of 4x4x4 boxes
+Solvent box contains 39252 atoms in 13084 residues
+Removed 5451 solvent atoms due to solvent-solvent overlap
+Removed 1869 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+    SOL (   3 atoms): 10644 residues
+Generated solvent containing 31932 atoms in 10644 residues
+Writing generated configuration to solv.gro
+
+Output configuration contains 33892 atoms in 10773 residues
+Volume                 :     344.484 (nm^3)
+Density                :     997.935 (g/l)
+Number of solvent molecules:  10644   
+
+Processing topology
+
+Back Off! I just backed up ./top_input.top to ./#top_input.top.1#
+
+GROMACS reminds you: "More than 10000000 total errors detected.  I'm not reporting any more. Final error counts will be inaccurate.  Go fix your program!" (Valgrind while memory debugging mdrun)
+
+Adding line for 10644 solvent molecules with resname (SOL) to topology file (./top_input.top)
+                 :-) GROMACS - gmx grompp, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX_256/gmx
+Data prefix:  /usr/local
+Working dir:  /corral4/main/jobs/048/989/48989286/working
+Command line:
+  gmx grompp -f ./ions.mdp -c solv.gro -p ./top_input.top -o ions.tpr -maxwarn 0
+
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file ./ions.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 2 [file top_input.top, line 18409]:
+  System has non-zero total charge: 8.000000
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+Number of degrees of freedom in T-Coupling group rest is 69741.00
+
+NOTE 3 [file ./ions.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+There were 3 notes
+
+GROMACS reminds you: "Cut It Deep and Cut It Wide" (The Walkabouts)
+
+Setting the LD random seed to -268508689
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+Analysing residue names:
+There are:   129    Protein residues
+There are: 10644      Water residues
+Analysing Protein...
+
+This run will generate roughly 3 Mb of data
+                 :-) GROMACS - gmx genion, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX_256/gmx
+Data prefix:  /usr/local
+Working dir:  /corral4/main/jobs/048/989/48989286/working
+Command line:
+  gmx genion -s ions.tpr -o solv_ions.gro -p ./top_input.top -pname NA -nname CL -neutral -conc 0.0 -seed 1
+
+Reading file ions.tpr, VERSION 2022-conda_forge (single precision)
+Reading file ions.tpr, VERSION 2022-conda_forge (single precision)
+Group     0 (         System) has 33892 elements
+Group     1 (        Protein) has  1960 elements
+Group     2 (      Protein-H) has  1001 elements
+Group     3 (        C-alpha) has   129 elements
+Group     4 (       Backbone) has   387 elements
+Group     5 (      MainChain) has   517 elements
+Group     6 (   MainChain+Cb) has   634 elements
+Group     7 (    MainChain+H) has   646 elements
+Group     8 (      SideChain) has  1314 elements
+Group     9 (    SideChain-H) has   484 elements
+Group    10 (    Prot-Masses) has  1960 elements
+Group    11 (    non-Protein) has 31932 elements
+Group    12 (          Water) has 31932 elements
+Group    13 (            SOL) has 31932 elements
+Group    14 (      non-Water) has  1960 elements
+Select a group: Number of (3-atomic) solvent molecules: 10644
+
+Back Off! I just backed up ./top_input.top to ./#top_input.top.2#
+Using random seed 1.
+Replacing solvent molecule 5234 (atom 17662) with CL
+Replacing solvent molecule 3946 (atom 13798) with CL
+Replacing solvent molecule 1502 (atom 6466) with CL
+Replacing solvent molecule 2155 (atom 8425) with CL
+Replacing solvent molecule 10024 (atom 32032) with CL
+Replacing solvent molecule 6377 (atom 21091) with CL
+Replacing solvent molecule 7981 (atom 25903) with CL
+Replacing solvent molecule 637 (atom 3871) with CL
+
+
+GROMACS reminds you: "Cut It Deep and Cut It Wide" (The Walkabouts)
+
+Will try to add 0 NA ions and 8 CL ions.
+Select a continuous group of solvent molecules
+Selected 13: 'SOL'
+
+Processing topology
+Replacing 8 solute molecules in topology file (./top_input.top)  by 0 NA and 8 CL ions.

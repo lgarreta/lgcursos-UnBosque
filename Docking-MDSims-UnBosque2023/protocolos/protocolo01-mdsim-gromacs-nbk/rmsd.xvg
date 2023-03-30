@@ -1,0 +1,29 @@
+# This file was created Wed Mar 22 11:40:37 2023
+# Created by:
+#               :-) GROMACS - gmx rms, 2021.4-Ubuntu-2021.4-2 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+# Command line:
+#   gmx rms -s simulacion_prod.tpr -f simulacion_prod_noPBC.xtc -o rmsd.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "Backbone after lsq fit to Backbone"
+   0.0000000    0.0005006
+   0.0002000    0.0335360
+   0.0004000    0.0455988
+   0.0006000    0.0575842
+   0.0008000    0.0625469
+   0.0010000    0.0645666
+   0.0012000    0.0666613
+   0.0014000    0.0672484
+   0.0016000    0.0697434
+   0.0018000    0.0721377
+   0.0020000    0.0740317

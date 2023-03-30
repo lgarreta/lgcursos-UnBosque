@@ -1,0 +1,79 @@
+===========================================================================
+| ACPYPE: AnteChamber PYthon Parser interfacE v. 2022.7.21 (c) 2023 AWSdS |
+===========================================================================
+DEBUG: CLI: -i ligandH.pdb -a gaff -o gmx
+DEBUG: Python Version 3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0]
+DEBUG: Max execution time tolerance is 3h
+DEBUG: setResNameCheckCoords done
+WARNING: no charge value given, trying to guess one...
+DEBUG: guessCharge: /usr/bin/obabel -ipdb ligandH.pdb -omol2 -O ligandH.mol2
+DEBUG: 1 molecule converted
+DEBUG: /home/lg/.local/lib/python3.10/site-packages/acpype/amber21-11_linux/bin/antechamber -dr no -i /home/lg/repos/lgcursos/DockingMDSims-UnBosque2023/practicas/notebook-gromacs/.acpype_tmp_ligandH/ligandH.mol2 -fi mol2 -o tmp -fo mol2 -c gas -pf n
+DEBUG: /home/lg/.local/lib/python3.10/site-packages/acpype/amber21-11_linux/bin/antechamber -dr no -i tmp -fi mol2 -o tmp -fo mol2 -c wc -cf tmp.crg -pf n
+DEBUG: ++++++++++start_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DEBUG: 
+Welcome to antechamber 21.0: molecular input file processor.
+
+The atom type is set to gaff; the options available to the -at flag are
+ gaff, gaff2, amber, bcc, and sybyl.
+
+DEBUG: ++++++++++end_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DEBUG: readMol2TotalCharge: 1.9999999999742446e-06
+DEBUG: Net charge drift '0.000002'
+==> ... charge set to 0
+==> ... converting pdb input file to mol2 input file
+DEBUG: /usr/bin/obabel -ipdb ligandH.pdb -omol2 -O ligandH.mol2
+==> * Babel OK *
+==> Executing Antechamber...
+DEBUG: /home/lg/.local/lib/python3.10/site-packages/acpype/amber21-11_linux/bin/antechamber -dr no -i ligandH.mol2 -fi mol2 -o ligandH_bcc_gaff.mol2 -fo mol2 -c bcc -nc 0 -m 1 -s 2 -df 2 -at gaff -pf n 
+==> AC output file present... doing nothing
+==> * Antechamber OK *
+DEBUG: /home/lg/.local/lib/python3.10/site-packages/acpype/amber21-11_linux/bin/parmchk2 -i ligandH_bcc_gaff.mol2 -f mol2 -o ligandH_AC.frcmod
+==> * Parmchk OK *
+==> Topologies files already present... doing nothing
+==> * Tleap OK *
+==> Removing temporary files...
+DEBUG: prmtop and inpcrd files loaded
+DEBUG: basename defined = 'ligandH'
+DEBUG: getCoords done
+DEBUG: getABCOEFs done
+DEBUG: charge to be balanced: total 0.0010000000
+DEBUG: balanceCharges done
+DEBUG: Balanced TotalCharge -0.0000000000
+DEBUG: PBC = None
+DEBUG: getAtoms done
+DEBUG: getBonds done
+DEBUG: getAngles done
+DEBUG: getDihedrals done
+==> Using OpenBabel v.3.1.1
+
+==> Writing GROMACS files
+
+==> Disambiguating lower and uppercase atomtypes in GMX top file, even if identical.
+
+DEBUG: writing GRO file
+DEBUG: Box size estimated
+DEBUG: writing POSRE file
+DEBUG: atomTypes 11
+DEBUG: GMX atomtypes done
+DEBUG: atoms 31
+DEBUG: GMX atoms done
+DEBUG: bonds 33
+DEBUG: GMX bonds done
+DEBUG: atomPairs 65
+DEBUG: GMX pairs done
+DEBUG: angles 51
+DEBUG: GMX angles done
+DEBUG: setProperDihedralsCoef done
+DEBUG: properDihedralsCoefRB 76
+DEBUG: properDihedralsAlphaGamma 0
+DEBUG: properDihedralsGmx45 76
+==> Writing GMX dihedrals for GMX 4.5 and higher.
+
+DEBUG: GMX special proper dihedrals done
+DEBUG: improperDihedrals 16
+DEBUG: GMX improper dihedrals done
+==> Pickle file ligandH.pkl already present... doing nothing
+==> Removing temporary files...
+Total time of execution: less than a second
+DEBUG: No tmp folder left to be removed

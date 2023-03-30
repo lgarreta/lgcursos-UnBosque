@@ -1,0 +1,26 @@
+                :-) GROMACS - gmx editconf, 2022-conda_forge (-:
+
+Executable:   /usr/local/bin.AVX_256/gmx
+Data prefix:  /usr/local
+Working dir:  /corral4/main/jobs/048/989/48989269/working
+Command line:
+  gmx editconf -f ./input.gro -o ./output.gro -d 1.0 -bt cubic
+
+
+GROMACS reminds you: "Check Your Input" (D. Van Der Spoel)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 1960 atoms
+Volume: 123.376 nm^3, corresponds to roughly 55500 electrons
+No velocities found
+    system size :  3.817  4.234  3.454 (nm)
+    diameter    :  5.010               (nm)
+    center      :  2.781  2.488  0.017 (nm)
+    box vectors :  5.906  6.845  3.052 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 123.38               (nm^3)
+    shift       :  0.724  1.017  3.488 (nm)
+new center      :  3.505  3.505  3.505 (nm)
+new box vectors :  7.010  7.010  7.010 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 344.48               (nm^3)

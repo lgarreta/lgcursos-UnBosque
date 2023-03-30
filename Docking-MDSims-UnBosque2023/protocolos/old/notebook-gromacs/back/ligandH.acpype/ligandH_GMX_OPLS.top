@@ -1,0 +1,19 @@
+; ligandH_GMX_OPLS.top created by acpype (v: 2022.7.21) on Mon Mar 20 11:55:59 2023
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include ligandH_GMX.itp topology
+#include "ligandH_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_ligandH.itp"
+#endif
+
+[ system ]
+ ligandH
+
+[ molecules ]
+; Compound        nmols
+ ligandH          1     

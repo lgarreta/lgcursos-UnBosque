@@ -1,0 +1,1926 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{/Amsterdamred}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{movie15}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Plegamiento de Proteínas
+\begin_inset Newline newline
+\end_inset
+
+y
+\begin_inset Newline newline
+\end_inset
+
+Predicción de Estructura de Proteínas
+\end_layout
+
+\begin_layout Author
+Luis Garreta
+\end_layout
+
+\begin_layout Institute
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Temás
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Problema del plegamiento de las proteínas
+\end_layout
+
+\begin_layout Itemize
+Problema de la predicción de la estructura proteíca
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Importancia de las Proteínas
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Las proteínas son macromoléculas complejas desde los puntos de vista físico
+ y funcional, que desempeñan múltiples funciones de importancia crucial:
+\end_layout
+
+\begin_layout Itemize
+Construir, mantener y regenerar las células de nuestro cuerpo.
+\end_layout
+
+\begin_layout Itemize
+Producir enzimas y hormonas.
+\end_layout
+
+\begin_layout Itemize
+Componente importante de los huesos, músculos, cartílagos, piel y sangre.
+\end_layout
+
+\begin_layout Itemize
+Las enzimas catalizan reacciones que generan energía, sintetizan biomoléculas
+ y las degradan, replican genes y los transcriben, procesan mRNA (ácido
+ ribonucleico mensajero).
+\end_layout
+
+\begin_layout Itemize
+La hemoglobina transporta oxígeno, mientras que los anticuerpos circulantes
+ defienden contra invasores extraños.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Las proteínas se componen de aminoácidos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Una secuencia de aminoácidos
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/protein-chain.jpeg
+	lyxscale 50
+	scale 45
+	BoundingBox 0bp 0bp 638bp 52bp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Los aminoácidos se component de átomos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Carbono
+\end_layout
+
+\begin_layout Itemize
+Oxigeno
+\end_layout
+
+\begin_layout Itemize
+Hidrógeno
+\end_layout
+
+\begin_layout Itemize
+Nitrógeno 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/protein-chain-aminoacid.jpeg
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Niveles de estructura in proteínas
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/protein-levels.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Levels of structure in proteins
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+The primary structure consists of a sequence of amino acids linked together
+ by peptide bonds and includes any disulfide bonds.
+ 
+\end_layout
+
+\begin_layout Itemize
+The resulting polypeptide can be arranged into units of secondary structure,
+ such as an α - helix.
+ 
+\end_layout
+
+\begin_layout Itemize
+The helix is a part of the tertiary structure of the folded polypeptide,
+ 
+\end_layout
+
+\begin_layout Itemize
+Which is itself one of the subunits that make up the quaternary structure
+ of the multi-subunit protein, in this case hemoglobin.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Plegamiento
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Las proteínas se pliegan en estructuras tridimensionales
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/protein-shapes-examples.png
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size tiny
+\color blue
+\begin_inset CommandInset href
+LatexCommand href
+name "https://figshare.com/articles/Hemoglobin_is_a_Flexible_Protein_NMR_Structure_2M6Z_/903674"
+target "https://figshare.com/articles/Hemoglobin_is_a_Flexible_Protein_NMR_Structure_2M6Z_/903674"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+¿ Cómo se pliegan las proteínas?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Las proteínas se pliegan desde una secuencia lineal de aminoácidos, sin
+ actividad, hacia una única estructura 3D biológicamente activa.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/how-proteins-fold.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+Proceso de plegamiento de las proteínas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+¿Porqué es importante entender el proceso de plegamiento?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+La estructura de la proteína es crucial a su función.
+\end_layout
+
+\begin_layout Itemize
+Si entendemos cómo se pliegan las proteínas, podríamos predecir su estructura
+ 3D solo a partir de la información de la secuencia.
+\end_layout
+
+\begin_layout Itemize
+El plegamiento incorrecto de proteínas se ha relacionado con muchas enfermedades
+ humanas (Alzheimer, Parkinson, ...)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+¿Qué se conoce del Proceso de Plegamiento?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Itemize
+Proceso complejo en biología
+\end_layout
+
+\begin_layout Itemize
+Difícil de entender para los científicos
+\end_layout
+
+\begin_layout Itemize
+Desafío para biólogos, biofísicos e informáticos
+\end_layout
+
+\begin_layout Itemize
+Muy importante:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Medicina
+\end_layout
+
+\begin_layout Itemize
+Descubrimiento de drogas
+\end_layout
+
+\begin_layout Itemize
+Tratamiento de enfermedades
+\end_layout
+
+\begin_layout Itemize
+Entre otros...
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/protein-folding.jpg
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El plegamiento de proteínas in vitro suele ser reversible 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Lo que indica que la estructura plegada final está determinada por su secuencia
+ de aminoácidos
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/anfinsen-experiment-protein-folding.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Chris Anfinsen - 1957 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El plegamiento no es un proceso aleatorio ni exaustivo
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Levintal Paradox:
+\end_layout
+
+\begin_layout Itemize
+250 amino acid protein 
+\end_layout
+
+\begin_layout Itemize
+3 orientations for each amino acid 
+\end_layout
+
+\begin_layout Itemize
+1/10th of a trillionth of a second per orientation 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3^{250}$
+\end_inset
+
+ conform.
+ X 
+\begin_inset Formula $10^{-13}$
+\end_inset
+
+ sec per conform.= 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $10^{106}$
+\end_inset
+
+ sec = 3.2 x 
+\begin_inset Formula $10^{198}$
+\end_inset
+
+ years 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Universe is 2 X 
+\begin_inset Formula $10^{10}$
+\end_inset
+
+ years 
+\end_layout
+
+\begin_layout Itemize
+Life on Earth 3.5 X 
+\begin_inset Formula $10^{9}$
+\end_inset
+
+ years
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/levinthal-paradox-multiple-conformaciones.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Levinthal (1968)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorías
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Plegamiento de proteínas visto como un colapso hidrofobico
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/moten-globule-protein-folding.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A common theme in protein folding is ‘hydrophobics inside’.
+ Given that this hydrophobic
+\end_layout
+
+\begin_layout Plain Layout
+effect is a major contributor to protein stability, it may well be an important
+ aspect of the
+\end_layout
+
+\begin_layout Plain Layout
+process of folding.
+\end_layout
+
+\begin_layout Plain Layout
+The idea is as follows.
+ In an unfolded protein chain, many hydrophobic sidechains will be
+\end_layout
+
+\begin_layout Plain Layout
+in contact with water.
+ This is highly unfavourable, thus a first, and fast, step will be the
+\end_layout
+
+\begin_layout Plain Layout
+aggregation of many of these sidechains; this is called the hydrophobic
+ collapse and
+\end_layout
+
+\begin_layout Plain Layout
+basically is the step that forms the hydrophobic protein interior.
+\end_layout
+
+\begin_layout Plain Layout
+The structure that is now created is characterized by a much smaller (average)
+ radius than
+\end_layout
+
+\begin_layout Plain Layout
+the unfolded state, however, not all native contacts have yet been formed.
+ In particular, β-
+\end_layout
+
+\begin_layout Plain Layout
+strands of high contact order will not have formed, while α-helices and
+ low contact order
+\end_layout
+
+\begin_layout Plain Layout
+β-sheets (like β-hairpins) may already be present.
+ This state is called the ‘molten globule’
+\end_layout
+
+\begin_layout Plain Layout
+to indicate that the folding chain has achieved compactness, but the interior
+ has not
+\end_layout
+
+\begin_layout Plain Layout
+settled into a stable structure and may therefore be thought of as being
+ liquid-like.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Plegamiento de proteínas visto como un proceso de dos estados
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/two-state-protein-folding.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The simplest way to think about protein folding is as a transition between
+ two more or less well defined states: the folded (native, functional) state,
+ and the unfolded (denatured, non-functional).
+ Sketching this in a diagram of free energy (measuring stability – lower
+ is more stable) versus distance to native (here, RMSD to the crystal structure)
+, yields two ‘vallies’ corresponding to those states.
+ Protein molecules are not fixed in one of the states; in stead, a folded
+ protein molecule will, after some time, spontaneously un-fold, and usually
+ after a short amount of time, again re-fold.
+ This is called a dynamic equilibrium.
+ Moreover, here, the folded state has the lowest free energy, indicating
+ that it is the most stable (note, that in different conditions, like high
+ temperature, this may be different and the native state may not be the
+ most stable with the lowest free energy).
+ When free energy levels change, so will the stability of the states, and
+ the equilibrium will shift along with that; e.g.
+ as the folded state becomes less stable (with respect to the unfolded)
+ when temperature is increased, we will find fewer molecules folded, and
+ increasingly more unfolded.
+ In reality, things are often more complicated; both states are not so well
+ defined, and may actually consist out of multiple (sub)states.
+ We will go a bit further into this in the rest of this lecture, and in
+ later lectures.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Plegamiento de proteínas representado como un tunel de plegamiento energético
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/folding-funel-protein-folding.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Eventos de plegamiento
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/folding-funnel-events.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Energetic funnel representing protein folding events in the cell.
+ Upon ribosomal biosynthesis a large ensemble of random conformations is
+ produced from which partially folded intermediate states are formed.
+ Interaction of the latter with molecular chaperones leads to folding into
+ a native structure.
+ Concomitant misfolding and aggregation pathways are also available (left),
+ and upon chaperone association-dissociation interactions the free energy
+ of these states is raised, enabling productive folding to occur (right).
+ Mutations or adverse physiological conditions may trap destabilised/misfolded
+ conformations either at low free energy depressions or at a point from
+ which aggregates could also be formed.
+ Adapted from Gregersen and colleagues 1 and Clark and colleagues [1,77].
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Predicción
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problema de predicción de la estructura proteíca
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+El problema de la predicción de la estructura de la proteína es el problema
+ de determinar la estructura nativa de una proteína, dada su secuencia de
+ aminoácidos.
+
+\color blue
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/sequence-to-estructure-problem.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color blue
+Predecir la estructura de una proteína a partir de su secuencia de aminoácidos
+ sigue siendo un problema sin resolver después de varias décadas de esfuerzos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Métodos computacionales de predicción de la estructura
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/methods-structure-prediction.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Podemos clasificar la predicción de estructura aproximadamente en tres categoría
+s: modelado de homología, reconocimiento de pliegues y predicción de estructura
+ ab initio.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Modelado de homología
+\series default
+: podemos encontrar un homólogo (basado en una búsqueda de secuencia) en
+ el PDB.
+ Este homólogo se puede utilizar como plantilla para un posterior modelado.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Reconocimiento de pliegues
+\series default
+: una búsqueda de secuencia inicial no da ningún resultado significativo
+ claro en el PDB.
+ Las estructuras de las entradas PDB deben tenerse en cuenta para la búsqueda
+ (por ejemplo, enhebrado).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Predicción de la estructura ab initio
+\series default
+: no se pueden encontrar buenas plantillas estructurales.
+ Los enfoques típicos ensamblan una estructura a partir de fragmentos de
+ estructuras PDB.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+En todos estos procesos se necesita al final ajustar la estructura predicha
+ y una forma de hacerlo es a través de simulaciones de dinámica molecular.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Complejidad y exactitud de los métodos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/methods-structure-prediction-complexity.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\color blue
+Si la proteína de consulta tiene un homólogo de estructura conocida, la
+ tarea es relativamente fácil y, a menudo, se pueden construir modelos de
+ alta resolución copiando y refinando el marco de la estructura resuelta.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Sin embargo, un procedimiento de modelado basado en plantillas no ayuda
+ a responder las preguntas de cómo y por qué una proteína adopta su estructura
+ específica.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+En particular, si no existen homólogos estructurales, o existen pero no
+ se pueden identificar, los modelos deben construirse desde cero.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Este procedimiento, llamado modelado ab initio, es esencial para una solución
+ completa al problema de predicción de la estructura de la proteína; también
+ puede ayudarnos a comprender el principio fisicoquímico de cómo las proteínas
+ se pliegan en la naturaleza.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Modelado de homología
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/homology-protein-folding.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Steps in Homology Modeling
+\end_layout
+
+\begin_layout Plain Layout
+The overall homology modeling procedure consists of six steps.
+\end_layout
+
+\begin_layout Enumerate
+The first step is template selection, which involves the identification
+ of homologous sequences in the protein structure database to be used as
+ templates for modeling.
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+It most commonly relies on serial pairwise sequence alignments aided by
+ database search techniques such as FASTA and BLAST but may employ other
+ approaches such as PSI-BLAST, Protein threading etc in addition to these.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The second step is the alignment of the target and template sequences.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Once the structure with the highest sequence similarity is identified as
+ a template, the full-length sequences of the template and target proteins
+ need to be realigned using refined alignment algorithms to obtain optimal
+ alignment.
+\end_layout
+
+\begin_layout Itemize
+The best possible multiple alignment algorithms, such as Praline and T-coffee,
+ should be used for this purpose followed by manual refinement of the alignment
+ such as to improve alignment quality.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The third step is to build a framework structure for the target protein
+ consisting of main chain atoms.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Once optimal alignment is achieved, coordinates of the corresponding residues
+ of the template proteins can be simply copied onto the target protein.
+\end_layout
+
+\begin_layout Itemize
+If the two aligned residues are identical, coordinates of the side chain
+ atoms are copied along with the main chain atoms.
+ If the two residues differ, only the backbone atoms can be copied.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The fourth step of model building includes the addition and optimization
+ of side chain atoms and loops.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In the sequence alignment for modeling, there are often regions caused by
+ insertions and deletions producing gaps in the sequence alignment.
+ The gaps cannot be directly modeled, creating “holes” in the model.
+\end_layout
+
+\begin_layout Itemize
+Closing the gaps requires loop modeling, which is a very difficult problem.
+\end_layout
+
+\begin_layout Itemize
+Currently, there are two main techniques used to approach the problem: the
+ database searching method and the ab initio method.
+\end_layout
+
+\begin_layout Itemize
+Once main chain atoms are built, the positions of side chains that are not
+ modeled must be determined.
+\end_layout
+
+\begin_layout Itemize
+Modeling side chain geometry is very important in evaluating protein-ligand
+ interactions at active sites and protein-protein interactions at the contact
+ interface.
+ 
+\end_layout
+
+\begin_layout Itemize
+Most modeling packages incorporate the side chain refinement function.
+ A specialized side-chain modeling program that has reasonably good performance
+ is SCWRL (sidechain placement with a rotamer library), a UNIX program that
+ works by placing side chains on a backbone template according to preferences
+ in the backbone-dependent rotamer library.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The fifth step is to refine and optimize the entire model according to energy
+ criteria.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The entire raw homology model is made free of structural irregularities
+ such as unfavorable bond angles, bond lengths, or close atomic contacts.
+ 
+\end_layout
+
+\begin_layout Itemize
+If structural irregularities are seen, it can be corrected by applying the
+ energy minimization procedure on the entire model.
+ 
+\end_layout
+
+\begin_layout Itemize
+Another often used structure refinement procedure is a molecular dynamics
+ simulation.
+ GROMOS (www.igc.ethz.ch/gromos/) is a UNIX program for molecular dynamics
+ simulation.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The final step involves evaluating the overall quality of the model obtained.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The final homology model has to be evaluated to make sure that the structural
+ features of the model are consistent with the physicochemical rules.
+ 
+\end_layout
+
+\begin_layout Itemize
+If necessary, alignment and model building are repeated until a satisfactory
+ result is obtained.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

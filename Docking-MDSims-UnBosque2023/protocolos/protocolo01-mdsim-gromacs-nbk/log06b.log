@@ -1,0 +1,67 @@
+              :-) GROMACS - gmx mdrun, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/lg/repos/lgcursos/Docking-MDSims-UnBosque2023/practicas/gromacs-mdsim-notebook
+Command line:
+  gmx mdrun -v -deffnm simulacion_prod
+
+
+Back Off! I just backed up simulacion_prod.log to ./#simulacion_prod.log.1#
+Compiled SIMD: SSE4.1, but for this host/run AVX2_256 might be better (see
+log).
+Reading file simulacion_prod.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Changing nstlist from 10 to 50, rlist from 1 to 1.106
+
+Using 1 MPI thread
+Using 4 OpenMP threads 
+
+
+Back Off! I just backed up simulacion_prod.xtc to ./#simulacion_prod.xtc.1#
+
+Back Off! I just backed up simulacion_prod.edr to ./#simulacion_prod.edr.1#
+starting mdrun 'PEPSIN in water'
+1000 steps,      2.0 ps.
+step 0step 100, remaining wall clock time:    37 s          step 200, remaining wall clock time:    33 s          step 300, remaining wall clock time:    29 s          step 400, remaining wall clock time:    25 s          step 500, remaining wall clock time:    21 s          step 600, remaining wall clock time:    17 s          step 700, remaining wall clock time:    12 s          step 800, remaining wall clock time:     8 s          step 900, remaining wall clock time:     4 s          
+Writing final coordinates.
+
+Back Off! I just backed up simulacion_prod.gro to ./#simulacion_prod.gro.1#
+step 1000, remaining wall clock time:     0 s          
+               Core t (s)   Wall t (s)        (%)
+       Time:      175.156       43.789      400.0
+                 (ns/day)    (hour/ns)
+Performance:        3.950        6.076
+
+GROMACS reminds you: "If 10 years from now, when you are doing something quick and dirty, you suddenly visualize that I am looking over your shoulders and say to yourself: 'Dijkstra would not have liked this', well that would be enough immortality for me." (Edsger Dijkstra)
+

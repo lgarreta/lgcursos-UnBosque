@@ -1,0 +1,620 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{charter}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 3cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Task 1: Motif Discovery using Prosite
+\end_layout
+
+\begin_layout Author
+
+\lang spanish
+Luis Garreta
+\begin_inset Newline newline
+\end_inset
+
+Electiva de Bioinformática
+\begin_inset Newline newline
+\end_inset
+
+MAESTRÍA EN INFORMÁTICA BIOMÉDICA
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Bosque
+\begin_inset Newline newline
+\end_inset
+
+Bogotá-Colombia
+\end_layout
+
+\begin_layout Section
+Goal
+\end_layout
+
+\begin_layout Standard
+The aims of this lab are to enable you to gain experience with sequence
+ pattern discovery and pattern searching.
+\end_layout
+
+\begin_layout Standard
+Databases and search tools:
+\end_layout
+
+\begin_layout Itemize
+PROSITE is a database of protein families and domains.
+ It consists of biologically significant sites, patterns and profiles that
+ help to reliably identify to which known protein family (if any) a new
+ sequence belongs.
+ 
+\end_layout
+
+\begin_layout Itemize
+The ScanProsite tool allows users to scan protein sequence(s) (either from
+ UniProt Knowledgebase (Swiss-Prot/TrEMBL) or PDB or provided by the user)
+ for the occurrence of patterns, profiles and rules (motifs) stored in the
+ PROSITE database, or to search protein database(s) for hits by specific
+ motif(s)
+\end_layout
+
+\begin_layout Itemize
+PRATT at EBI, http://ca.expasy.org/tools/pratt/.
+ A quick user guide is here.
+ Note that pratt works by repeated pattern extension, generates regular
+ expression patterns in a Prosite syntax, and can find several patterns
+ which are descriptive of the input sequences.
+ Moreover it can also refine (improve) the pattern set which it finds.
+ 
+\end_layout
+
+\begin_layout Section
+Problem
+\end_layout
+
+\begin_layout Standard
+A medical researcher has aligned a set of sequences that possibly contain
+ an important protein motif (amino acids rather than DNA).
+ The researcher needs the help of bioinformaticians to discover the unknown
+ motif.
+ The aligned sequences are:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+RHSHYLPFRGGARNCIGTLLRFELLPDPTR
+\end_layout
+
+\begin_layout Plain Layout
+
+DPFSAYHFDGGARNCIGKQARLVVDTLREL
+\end_layout
+
+\begin_layout Plain Layout
+
+FDPGRARFFGGARNCIGQFAMKVLTLVRFE
+\end_layout
+
+\begin_layout Plain Layout
+
+DPSRFAPFDGGARNCIGFAMLKVGLRFELL
+\end_layout
+
+\begin_layout Plain Layout
+
+DSFADPRFSGGARNCIGQAMMIVLLRFELL
+\end_layout
+
+\begin_layout Plain Layout
+
+RAPSRSHFRGRARNRIGQFMEKASTLRELP
+\end_layout
+
+\begin_layout Plain Layout
+
+RFPSHHAFRGRARNPIGKQLTLLRFELLPD
+\end_layout
+
+\begin_layout Plain Layout
+
+PAPSRSHFPGRARNAIGKQFMEKAATLRDD
+\end_layout
+
+\begin_layout Plain Layout
+
+AGSSHSHFAGRARNFIGFAMNKVALTLRFE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If there is a significant motif, the researcher wants to confirm and know
+ what protein motif it is and what its biological function is by using the
+ PROSITE database, which is an annotated collection of motif descriptors
+ dedicated to the identification of protein families and domains.
+\end_layout
+
+\begin_layout Standard
+In this realistic exercise, we are going to:
+\end_layout
+
+\begin_layout Itemize
+Construct a motif from aligned sequences
+\end_layout
+
+\begin_layout Itemize
+Search and confirm the motif in Prosite's motif database.
+\end_layout
+
+\begin_layout Itemize
+Retrieve the sequences where the motif is found.
+\end_layout
+
+\begin_layout Itemize
+Use any hits that we find to make some other patterns characteristic of
+ the retrieved set.
+ These patterns will be regular expressions, generated using pratt.
+\end_layout
+
+\begin_layout Section
+Protocol
+\end_layout
+
+\begin_layout Enumerate
+To discover the motif, you can modify the R script for discovering ADN motifs
+ to work with protein motifs (aminoacids).
+ Follow the next steps:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Create a string vector from the sequences
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename img-stringVector.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Convert the string to a character matrix
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length -2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename img-char-matrix.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calculate the position frequency matrix:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Take into account that you are working with aminoacids instead of nucleotides.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size scriptsize
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},frame=lines"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+aminos = c ("A","R","N","D","C","Q","E","G","H","I","L",
+\end_layout
+
+\begin_layout Plain Layout
+
+            "K","M","F","P","S","T", "W","Y","V","B","Z","X")
+\end_layout
+
+\begin_layout Plain Layout
+
+instead of
+\end_layout
+
+\begin_layout Plain Layout
+
+bases = c ("A","C","G","T")
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Add a low pseudocount to the frecuency matrix (0.01).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},frame=lines"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+freqMatrix = freqMatrix + 0.01
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length -2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename img-freq-matrix.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calculate de position weight matrix (PWM):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Take into account the added pseudocount to normalize the frequencies:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},frame=lines"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+probMatrix = freqMatrix/(N+23*0.01)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length -2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename img-prob-matrix.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Create the logo from the PWM, and from it construct the regular expression
+ pattern.
+ For the regular expresion take into account:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The motif must start with a completely conserved aminoacid
+\end_layout
+
+\begin_layout Itemize
+The motif must end with a completely conserved aminoacid
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename img-logo.png
+	lyxscale 50
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Now, search the motif in SwissProt using the ScanProsite:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://prosite.expasy.org/scanprosite/
+\end_layout
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Select 
+\series bold
+\emph on
+"Option 2"
+\series default
+\emph default
+ in the form and enter the motif to search for sequences matching this motif.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\color blue
+Report the name of the motif and its biological function.
+\end_layout
+
+\begin_layout Enumerate
+Retrieve these hits in fasta format, go to "STEP 3" of the form, select
+ a maximum of 10 sequences and save them all in one file.
+ To do this, you have to select either:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+FASTA
+\begin_inset Quotes erd
+\end_inset
+
+ output format, then select the sequences, 
+\series bold
+or
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Graphical view
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+output format, then go to the page for each sequence, hit and click on the
+ 'fasta' button, and save them all in one file.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Report the sequences.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that these sequences are specific to the search motif using the ScanProsit
+e.
+ Select 
+\series bold
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Option 1
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+\emph default
+ in the form, paste the sequences into the ScanProsite input form to search
+ for PROSITE collection of motifs in the sequences.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color blue
+Report the graphical view of the first result.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use PRATT (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.ebi.ac.uk/pratt/
+\end_layout
+
+\end_inset
+
+) as an automated method to construct regular expressions characterising
+ these sequences.
+ To obtain these regular expressions, use the fasta sequences retrieved
+ in the previous step, copy them into the input form and send them to PRATT.
+ Wait for the results and take from them larger regular expression.
+ 
+\color blue
+Report this regular expression.
+\end_layout
+
+\begin_layout Enumerate
+Finally.
+ Search back into SwissProt with ScanProsite using the largest pattern and
+ see what hits are obtained.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Do these searches return all of the original sequences?
+\end_layout
+
+\begin_layout Itemize
+What other sequences (if any) are identified by these patterns? 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
